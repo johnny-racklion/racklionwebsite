@@ -1,0 +1,37 @@
+name: Daily on-prem signal
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 11 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh digest
+        run: npm run scrape
+        env:
+          SCRAPER_USER_AGENT: ${{ vars.SCRAPER_USER_AGENT || 'RacklionOnPremSignal/0.1 (+https://example.com)' }}
+
+      - name: Commit digest update
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh daily on-prem signal"
+          file_pattern: public/data/newsletter-intel.json
