@@ -1,27 +1,32 @@
 {
-  "generatedAt": "2026-07-06T21:05:24.174Z",
+  "generatedAt": "2026-07-06T21:06:17.074Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
-  "sourcesSucceeded": 11,
-  "sourceFailures": [],
-  "recommendedSubject": "On-prem signal: data centers, power and cooling, servers",
+  "sourcesSucceeded": 10,
+  "sourceFailures": [
+    {
+      "source": "Blocks & Files",
+      "message": "HTTP 403"
+    }
+  ],
+  "recommendedSubject": "On-prem signal: data centers, servers, power and cooling",
   "topics": [
     {
       "name": "data-centers",
       "count": 17
     },
     {
+      "name": "servers",
+      "count": 13
+    },
+    {
       "name": "power-cooling",
       "count": 12
     },
     {
-      "name": "servers",
-      "count": 12
-    },
-    {
       "name": "storage",
-      "count": 12
+      "count": 10
     },
     {
       "name": "ai-infrastructure",
@@ -32,16 +37,16 @@
       "count": 6
     },
     {
-      "name": "chips",
-      "count": 5
+      "name": "security",
+      "count": 6
     },
     {
-      "name": "security",
-      "count": 5
+      "name": "chips",
+      "count": 4
     },
     {
       "name": "networking",
-      "count": 4
+      "count": 3
     },
     {
       "name": "private-cloud",
@@ -83,13 +88,6 @@
       "homepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
       "itemCount": 10
-    },
-    {
-      "id": "blocks-and-files",
-      "name": "Blocks & Files",
-      "homepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "itemCount": 12
     },
     {
       "id": "nvidia-technical-blog",
@@ -518,42 +516,6 @@
       "pressure": 58
     },
     {
-      "id": "28ac7a6f4dd5a7",
-      "title": "Samsung and SK Hynix spending big on chip fabs",
-      "url": "https://www.blocksandfiles.com/flash/2026/07/06/samsung-and-sk-hynix-spending-big-on-chip-fabs/5266992",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-07-06T15:56:20.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage",
-        "chips"
-      ],
-      "score": 84,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "570fb81a8604d8",
-      "title": "The iodyne route to Edge 2.0",
-      "url": "https://www.blocksandfiles.com/flash/2026/07/06/the-iodyne-route-to-edge-20/5266783",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-07-06T13:39:55.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage",
-        "networking"
-      ],
-      "score": 83,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
       "id": "1b224b83342bc8",
       "title": "ASRock Rack Had One of the First Arm AGI Servers at Computex 2026",
       "url": "https://www.servethehome.com/asrock-rack-had-one-of-the-first-arm-agi-servers-at-computex-2026/",
@@ -589,23 +551,6 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 84
-    },
-    {
-      "id": "382fcd170336ce",
-      "title": "SurrealDB’s high-speed AI agent context layer",
-      "url": "https://www.blocksandfiles.com/architecture/2026/07/06/surrealdbs-high-speed-ai-agent-context-layer/5266960",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-07-06T15:50:10.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 82,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
     },
     {
       "id": "3ba365e18a37c0",
@@ -854,6 +799,58 @@
       "score": 57,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
+      "pressure": 58
+    },
+    {
+      "id": "3e5747b1c0e7b3",
+      "title": "Confidential computing's core trust mechanism is broken. The fix may not exist",
+      "url": "https://www.theregister.com/security/2026/07/04/confidential-computings-core-trust-mechanism-is-broken-the-fix-may-not-exist/5266056",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-04T10:03:00.000Z",
+      "summary": "Attested TLS: the handshake that can't prove who's on the other end",
+      "tags": [
+        "security"
+      ],
+      "score": 55,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "8d35fbcc7c9e28",
+      "title": "AI bills are baffling the C-suite after shift to usage-based pricing",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/03/ai-bills-are-baffling-the-c-suite-after-shift-to-usage-based-pricing/5266383",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "ai and ml",
+      "publishedAt": "2026-07-03T10:35:00.000Z",
+      "summary": "KPMG finds nearly a third of execs struggle to understand costs as companies rethink deployments",
+      "tags": [
+        "cloud-cost"
+      ],
+      "score": 55,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 60
+    },
+    {
+      "id": "21c01e4750ae0c",
+      "title": "Sandisk and Kioxia Begin Sampling 332-Layer BiCS10 3D NAND",
+      "url": "https://www.storagereview.com/news/sandisk-and-kioxia-begin-sampling-332-layer-bics10-3d-nand",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-03T17:55:54.000Z",
+      "summary": "Sandisk and Kioxia have both begun sampling BiCS10 1Tb TLC 3D NAND, the 10th generation of the BiCS flash memory the two companies jointly develop and manufacture. The announcements land in parallel because the technology is shared: Sandisk is framing it arou...",
+      "tags": [
+        "servers",
+        "storage"
+      ],
+      "score": 52,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     }
   ]
