@@ -3,7 +3,7 @@ name: Daily on-prem signal
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 11 * * *"
+    - cron: "15 */12 * * *"
 
 permissions:
   contents: write
