@@ -35,8 +35,12 @@ create table if not exists public.newsletter_subscribers (
   ip inet
 );
 
+-- Plain-column unique index so the subscribe handler's upsert
+-- `onConflict: 'email'` (ON CONFLICT (email)) has a matching arbiter.
+-- Case-insensitive dedup is preserved because the application layer
+-- (validateSubscribe) lowercases the email before every insert.
 create unique index if not exists newsletter_subscribers_email_key
-  on public.newsletter_subscribers (lower(email));
+  on public.newsletter_subscribers (email);
 create index if not exists newsletter_subscribers_token_idx
   on public.newsletter_subscribers (confirm_token);
 create index if not exists newsletter_subscribers_created_at_idx
