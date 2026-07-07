@@ -14,6 +14,16 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
+function renderBotFields(state) {
+  return `
+    <div class="hp-field" aria-hidden="true">
+      <label>Company URL<input type="text" name="company_url" tabindex="-1" autocomplete="off" /></label>
+    </div>
+    <input type="hidden" name="rendered_at" value="" />
+    <div class="cf-turnstile" data-sitekey="${escapeHtml(state.turnstileSiteKey || '')}"></div>
+  `;
+}
+
 function safeUrl(value) {
   try {
     const url = new URL(value);
@@ -265,7 +275,8 @@ function renderPressureDrivers() {
   `;
 }
 
-function renderConsultationForm(savedLead) {
+function renderConsultationForm(state) {
+  const savedLead = state.savedLead;
   return `
     <section class="consultation-panel primary-lead-panel" id="consultation">
       <div class="section-heading">
@@ -307,6 +318,7 @@ function renderConsultationForm(savedLead) {
           <span>What are you trying to decide?</span>
           <textarea name="message" rows="5" placeholder="Tell us about the workload, cloud concern, timeline, or infrastructure decision." required></textarea>
         </label>
+        ${renderBotFields(state)}
         <button class="form-action" type="submit">
           <i data-lucide="send"></i>
           <span>Request consultation</span>
@@ -483,6 +495,7 @@ function renderSubscribeForm(state, demoSubscriber) {
               .join('')}
           </div>
         </fieldset>
+        ${renderBotFields(state)}
         <button class="form-action" type="submit">
           <i data-lucide="send"></i>
           <span>Subscribe</span>
@@ -691,7 +704,7 @@ function renderConsultingPage(state) {
         </div>
       </section>
       <div class="lead-layout">
-        ${renderConsultationForm(state.savedLead)}
+        ${renderConsultationForm(state)}
         <section class="consulting-aside">
           <span class="eyebrow">Good Fit</span>
           <h2>Useful when the decision has real blast radius.</h2>

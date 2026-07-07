@@ -42,3 +42,16 @@ test('renderPage never throws for any view', () => {
     assert.doesNotThrow(() => renderPage(v, ctx), v);
   }
 });
+
+test('consult and subscribe forms include honeypot + turnstile + rendered_at', () => {
+  const c = { ...ctx, turnstileSiteKey: 'test-site-key' };
+  const consulting = renderPage('consulting', c);
+  assert.match(consulting, /name="company_url"/);
+  assert.match(consulting, /class="cf-turnstile"/);
+  assert.match(consulting, /data-sitekey="test-site-key"/);
+  assert.match(consulting, /name="rendered_at"/);
+  const subscribe = renderPage('subscribe', c);
+  assert.match(subscribe, /name="company_url"/);
+  assert.match(subscribe, /class="cf-turnstile"/);
+  assert.match(subscribe, /name="rendered_at"/);
+});

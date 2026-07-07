@@ -33,8 +33,9 @@ import { metaForView, canonicalForView } from './seo.js';
 import { viewFromPath } from './routes.js';
 
 const app = document.querySelector('#app');
-const newsletterEndpoint = import.meta.env.VITE_NEWSLETTER_ENDPOINT;
-const leadEndpoint = import.meta.env.VITE_LEAD_ENDPOINT;
+const consultEndpoint = import.meta.env.VITE_CONSULT_ENDPOINT;
+const subscribeEndpoint = import.meta.env.VITE_SUBSCRIBE_ENDPOINT;
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '';
 const savedTopicsKey = 'racklion-onprem-topics';
 const savedSubscriberKey = 'racklion-onprem-demo-subscriber';
 const savedLeadKey = 'racklion-consulting-demo-lead';
@@ -158,12 +159,16 @@ function renderApp() {
     subscriberStatus: state.subscriberStatus,
     leadStatus: state.leadStatus,
     savedLead: localStorage.getItem(savedLeadKey),
-    demoSubscriber: localStorage.getItem(savedSubscriberKey)
+    demoSubscriber: localStorage.getItem(savedSubscriberKey),
+    turnstileSiteKey
   };
 
   app.innerHTML = renderPage(state.view, ctx);
   applyHead(state.view);
   createIcons({ icons });
+  document.querySelectorAll('input[name="rendered_at"]').forEach((el) => {
+    el.value = String(Date.now());
+  });
 }
 
 async function loadDigest() {
@@ -190,28 +195,31 @@ async function submitSubscription(form) {
     email,
     topics,
     source: 'racklion-on-prem-signal',
-    subscribedAt: new Date().toISOString()
+    subscribedAt: new Date().toISOString(),
+    company_url: String(formData.get('company_url') || ''),
+    rendered_at: Number(formData.get('rendered_at') || 0),
+    turnstile_token: String(formData.get('cf-turnstile-response') || '')
   };
 
   state.selectedTopics = new Set(topics);
   persistTopics();
 
-  if (!newsletterEndpoint) {
+  if (!subscribeEndpoint) {
     localStorage.setItem(savedSubscriberKey, JSON.stringify(payload));
     state.subscriberStatus =
-      'Preview signup saved locally. Add VITE_NEWSLETTER_ENDPOINT to connect a newsletter provider.';
+      'Preview signup saved locally. Add VITE_SUBSCRIBE_ENDPOINT to connect a newsletter provider.';
     renderApp();
     return;
   }
 
   try {
-    const response = await fetch(newsletterEndpoint, {
+    const response = await fetch(subscribeEndpoint, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload)
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.subscriberStatus = 'Subscription saved.';
+    state.subscriberStatus = 'Almost there — check your email to confirm your subscription.';
   } catch (error) {
     state.subscriberStatus = `Subscription failed: ${error.message}`;
   }
@@ -228,20 +236,22 @@ async function submitLead(form) {
     pressure: String(formData.get('pressure') || '').trim(),
     message: String(formData.get('message') || '').trim(),
     source: 'racklion-consulting-inquiry',
-    submittedAt: new Date().toISOString()
+    company_url: String(formData.get('company_url') || ''),
+    rendered_at: Number(formData.get('rendered_at') || 0),
+    turnstile_token: String(formData.get('cf-turnstile-response') || '')
   };
 
-  if (!leadEndpoint) {
+  if (!consultEndpoint) {
     localStorage.setItem(savedLeadKey, JSON.stringify(payload));
     state.leadStatus =
-      'Preview inquiry saved locally. Add VITE_LEAD_ENDPOINT to send consultation requests to a CRM, webhook, or backend.';
+      'Preview inquiry saved locally. Add VITE_CONSULT_ENDPOINT to send consultation requests to a CRM, webhook, or backend.';
     form.reset();
     renderApp();
     return;
   }
 
   try {
-    const response = await fetch(leadEndpoint, {
+    const response = await fetch(consultEndpoint, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload)
@@ -250,7 +260,7 @@ async function submitLead(form) {
     state.leadStatus = 'Consultation request sent.';
     form.reset();
   } catch (error) {
-    state.leadStatus = `Consultation request failed: ${error.message}`;
+    state.leadStatus = 'Consultation request failed. Please try again.';
   }
 
   renderApp();
