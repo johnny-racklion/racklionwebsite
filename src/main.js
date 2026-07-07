@@ -28,7 +28,7 @@ import {
   Zap
 } from 'lucide';
 import { createIcons } from 'lucide';
-import { renderPage, escapeHtml, getTopics, topicLabel } from './render.js';
+import { renderPage, escapeHtml, getTopics } from './render.js';
 import { metaForView, canonicalForView } from './seo.js';
 import { viewFromPath } from './routes.js';
 
@@ -44,7 +44,7 @@ const state = {
   error: '',
   query: '',
   topic: 'all',
-  sort: 'pressure',
+  sort: 'newest',
   view: viewFromPath(window.location.pathname),
   selectedTopics: new Set(readSavedTopics()),
   subscriberStatus: '',

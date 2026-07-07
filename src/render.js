@@ -131,7 +131,7 @@ function renderSiteHeader(view) {
   return `
     <header class="site-header">
       <a class="brand" href="/" aria-label="Racklion home">
-        <span class="brand-mark"><i data-lucide="server"></i></span>
+        <span class="brand-mark"><img src="/assets/racklion-logo-mark.png" alt="" /></span>
         <span>Racklion</span>
       </a>
       <nav aria-label="Primary navigation">
@@ -344,9 +344,9 @@ function renderToolbar(state, items) {
         </label>
         <div class="segmented" role="group" aria-label="Sort signals">
           ${[
-            ['pressure', 'Pressure'],
             ['newest', 'Newest'],
-            ['source', 'Source']
+            ['pressure', 'Constraints'],
+            ['source', "News' Source"]
           ]
             .map(
               ([value, label]) => `
@@ -591,18 +591,18 @@ function renderHome(state, items) {
           <span class="eyebrow">Signal To Strategy</span>
           <h2>Use the daily brief to spot when cloud convenience starts costing control.</h2>
           <p>
-            Racklion pairs a daily infrastructure brief with advisory and sourcing: decide whether workloads
-            should stay in rented cloud — then get the GPUs, power, colocation, and space to own the ones that shouldn't.
+            Racklion pairs infrastructure news with consulting for teams deciding whether workloads should stay in public cloud,
+            move to colocation, or become part of a private stack.
           </p>
         </div>
         <div class="home-actions">
-          <a class="primary-action" href="/source">
-            <i data-lucide="server"></i>
-            <span>Source GPUs, power &amp; space</span>
-          </a>
-          <a class="secondary-inline" href="/consulting">
+          <a class="primary-action" href="/consulting">
             <i data-lucide="clipboard-check"></i>
-            <span>Pressure-test the decision</span>
+            <span>Discuss your workload</span>
+          </a>
+          <a class="secondary-inline" href="/subscribe">
+            <i data-lucide="mail"></i>
+            <span>Subscribe to the brief</span>
           </a>
         </div>
       </section>

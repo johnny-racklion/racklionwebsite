@@ -17,20 +17,30 @@ const data = JSON.parse(await readFile(join(distDir, 'data', 'newsletter-intel.j
 
 function ssrState(view) {
   return {
-    data, view, query: '', topic: 'all', sort: 'pressure',
+    data, view, query: '', topic: 'all', sort: 'newest',
     selectedTopics: new Set(), subscriberStatus: '', leadStatus: '',
     savedLead: null, demoSubscriber: null
   };
 }
 
+// Replace exactly once, failing loudly if the pattern is missing. Guards
+// against a future Vite version reformatting the template in a way that
+// silently leaves a stale <title>/description or an empty #app div.
+function replaceOnce(html, pattern, replacement, label) {
+  if (!pattern.test(html)) {
+    throw new Error(`prerender: expected to match ${label} in built index.html, found none`);
+  }
+  return html.replace(pattern, replacement);
+}
+
 function buildHtml(view) {
   const body = renderPage(view, ssrState(view));
   const head = headTagsForView(view);
-  return template
-    .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
-    .replace(/<meta\s+name="description"[\s\S]*?\/>\s*/i, '')
-    .replace(/<\/head>/i, `    ${head}\n  </head>`)
-    .replace(/<div id="app">\s*<\/div>/i, `<div id="app">${body}</div>`);
+  let html = replaceOnce(template, /<title>[\s\S]*?<\/title>\s*/i, '', '<title>');
+  html = replaceOnce(html, /<meta\s+name="description"[\s\S]*?\/>\s*/i, '', 'meta description');
+  html = replaceOnce(html, /<\/head>/i, `    ${head}\n  </head>`, '</head>');
+  html = replaceOnce(html, /<div id="app">\s*<\/div>/i, `<div id="app">${body}</div>`, 'empty #app div');
+  return html;
 }
 
 for (const route of ROUTES) {

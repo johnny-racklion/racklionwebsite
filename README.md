@@ -92,3 +92,18 @@ To run it manually after pushing to GitHub:
 2. Go to Actions.
 3. Select `Daily on-prem signal`.
 4. Click `Run workflow`.
+
+## Build & SEO
+
+`npm run build` runs, in order:
+
+1. `vite build` — bundles the app into `dist/`.
+2. `node scripts/prerender.mjs` — writes a crawlable, text-complete HTML file per route (`/`, `/signals`, `/source`, `/consulting`, `/about`, `/faq`, `/subscribe`) with a per-page `<title>`, meta description, canonical, Open Graph/Twitter tags, and JSON-LD injected. This is what lets AI answer-engines and search crawlers (which do not run JavaScript) read the content.
+3. `node scripts/gen-sitemap.mjs` — writes `dist/sitemap.xml` from the route model.
+4. `node scripts/verify-build.mjs` — fails the build (non-zero exit) if any page is missing its content or SEO tags.
+
+Routes and the production origin (`SITE_URL`) are defined once in `src/routes.js`. Per-page titles, descriptions, and JSON-LD live in `src/seo.js`. The view renderers are isomorphic (`src/render.js`) — shared by the browser app and the prerender step, so on-page and prerendered markup never drift.
+
+`public/robots.txt` explicitly allows AI crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended) and points to the sitemap; `public/llms.txt` summarizes the site for them. `vercel.json` enables clean URLs and an SPA fallback for deep links.
+
+Run the unit tests: `npm test` (`node --test`).
