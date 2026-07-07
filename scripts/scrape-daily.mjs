@@ -150,6 +150,10 @@ const pressureKeywords = [
 ];
 
 const exclusionKeywords = [
+  'wifi',
+  'wi-fi',
+  'access point',
+  'wireless router',
   'movie',
   'trailer',
   'game',
