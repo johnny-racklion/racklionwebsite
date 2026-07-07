@@ -14,7 +14,7 @@ const checks = [
   ['about/index.html',      ['About Racklion']],
   ['signals/index.html',    ['On-Prem Signal']],
   ['subscribe/index.html',  ['Subscribe']],
-  ['sitemap.xml',           ['<loc>https://racklion.com/source</loc>']],
+  ['sitemap.xml',           ['<loc>https://www.racklion.com/source</loc>']],
   ['robots.txt',            ['GPTBot', 'Sitemap:']],
   ['llms.txt',              ['Racklion', '/source']]
 ];

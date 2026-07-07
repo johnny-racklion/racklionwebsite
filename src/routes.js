@@ -2,7 +2,7 @@
 // Pure route model shared by the browser app, the prerender script, and the
 // sitemap generator. No browser globals — safe to import in Node.
 
-export const SITE_URL = 'https://racklion.com';
+export const SITE_URL = 'https://www.racklion.com';
 
 export const ROUTES = [
   { path: '/',           view: 'home',       label: 'Home' },
