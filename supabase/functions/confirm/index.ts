@@ -28,7 +28,7 @@ Deno.serve(async (req) => {
 
   const { error } = await supabase
     .from('newsletter_subscribers')
-    .update({ status: 'confirmed', confirmed_at: new Date().toISOString(), confirm_token: null })
+    .update({ status: 'confirmed', confirmed_at: new Date().toISOString() })
     .eq('id', row.id);
   if (error) return redirect('/subscribe?confirm=error');
 

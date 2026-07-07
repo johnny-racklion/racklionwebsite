@@ -1,5 +1,5 @@
 // supabase/functions/subscribe/index.ts
-import { validateSubscribe, checkHoneypot, checkTiming, generateToken, buildConfirmUrl, overRateLimit } from '../_shared/core.mjs';
+import { validateSubscribe, checkHoneypot, checkTiming, generateToken, buildConfirmUrl } from '../_shared/core.mjs';
 import { json, preflight } from '../_shared/http.ts';
 import { verifyTurnstile } from '../_shared/turnstile.ts';
 import { sendEmail } from '../_shared/email.ts';
@@ -32,25 +32,23 @@ Deno.serve(async (req) => {
 
   const supabase = serviceClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
 
-  // Rate limit: max 3 signups/hour per email (covers retries + abuse).
-  const since = new Date(now - 60 * 60 * 1000).toISOString();
-  const { count } = await supabase
-    .from('newsletter_subscribers')
-    .select('*', { count: 'exact', head: true })
-    .eq('email', value.email)
-    .gte('created_at', since);
-  if (overRateLimit(count ?? 0, 3)) return json({ ok: false, error: 'rate_limited' }, 429, origin);
-
   // Already confirmed => silent success (no second email).
   const { data: existing } = await supabase
     .from('newsletter_subscribers')
-    .select('status')
+    .select('status, confirm_sent_at')
     .eq('email', value.email)
     .maybeSingle();
   if (existing?.status === 'confirmed') return json({ ok: true, pending: false }, 200, origin);
 
+  // Per-email cooldown: don't resend a confirmation more than once / 10 min.
+  const COOLDOWN_MS = 10 * 60 * 1000;
+  if (existing?.confirm_sent_at && now - Date.parse(existing.confirm_sent_at) < COOLDOWN_MS) {
+    return json({ ok: true, pending: true }, 200, origin);
+  }
+
   const token = generateToken();
   const expires = new Date(now + 72 * 60 * 60 * 1000).toISOString();
+  const nowIso = new Date(now).toISOString();
 
   // Upsert on email: re-issue token for pending, create if new.
   const { error } = await supabase
@@ -63,6 +61,7 @@ Deno.serve(async (req) => {
         status: 'pending',
         confirm_token: token,
         confirm_expires_at: expires,
+        confirm_sent_at: nowIso,
         ip
       },
       { onConflict: 'email' }

@@ -30,6 +30,7 @@ create table if not exists public.newsletter_subscribers (
     check (status in ('pending', 'confirmed', 'unsubscribed')),
   confirm_token text,
   confirm_expires_at timestamptz,
+  confirm_sent_at timestamptz,
   created_at timestamptz not null default now(),
   confirmed_at timestamptz,
   ip inet
