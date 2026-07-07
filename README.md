@@ -46,41 +46,25 @@ Run a dry scrape before committing source changes:
 npm run scrape:dry
 ```
 
-## Configure Newsletter Signup
+## Lead capture & subscriptions
 
-Create `.env.local` from `.env.example` and set:
+Consultation leads and newsletter signups are captured by three Supabase Edge
+Functions (`supabase/functions/consult`, `subscribe`, `confirm`) backed by two
+RLS-locked tables (`supabase/migrations`). All validation and anti-bot logic
+lives in the pure, unit-tested module `supabase/functions/_shared/core.mjs`
+(`npm test` runs it).
 
-```bash
-VITE_NEWSLETTER_ENDPOINT=https://your-newsletter-endpoint.example/subscribe
-VITE_LEAD_ENDPOINT=https://your-lead-endpoint.example/inquiry
-```
+Anti-bot: honeypot field + submit timing + Cloudflare Turnstile + Postgres rate
+limiting (per-IP for consult; a per-email confirmation cooldown for subscribe).
+Newsletter uses double opt-in; consultation leads notify `consult@racklion.com`
+via Resend. Secrets are server-only (see `.env.example`).
 
-The frontend sends this JSON payload:
+The frontend reads three public vars — `VITE_CONSULT_ENDPOINT`,
+`VITE_SUBSCRIBE_ENDPOINT`, `VITE_TURNSTILE_SITE_KEY`. Server secrets are set
+with `supabase secrets set` and never reach the browser.
 
-```json
-{
-  "email": "reader@example.com",
-  "topics": ["ai-infrastructure", "cloud-cost"],
-  "source": "racklion-on-prem-signal",
-  "subscribedAt": "2026-04-25T12:00:00.000Z"
-}
-```
-
-Use a serverless function, webhook, or backend to connect a newsletter provider. Do not call provider APIs directly from the browser if they require secret keys.
-
-The consultation form sends this JSON payload:
-
-```json
-{
-  "name": "Reader Name",
-  "email": "reader@company.com",
-  "company": "Company",
-  "pressure": "cloud-cost",
-  "message": "We need to decide whether this workload should stay in cloud.",
-  "source": "racklion-consulting-inquiry",
-  "submittedAt": "2026-04-25T12:00:00.000Z"
-}
-```
+Local dev uses Cloudflare's always-pass Turnstile test keys (site
+`1x00000000000000000000AA`, secret `1x0000000000000000000000000000000AA`).
 
 ## Daily Cron
 
