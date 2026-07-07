@@ -69,7 +69,12 @@ Deno.serve(async (req) => {
   if (error) return json({ ok: false, error: 'server' }, 500, origin);
 
   try {
-    const confirmUrl = buildConfirmUrl(Deno.env.get('CONFIRM_BASE_URL') ?? 'https://racklion.com', token);
+    // The confirm link must hit the confirm EDGE FUNCTION, not the static site.
+    // SUPABASE_URL is auto-injected (https://<ref>.supabase.co); the functions
+    // live under /functions/v1. The confirm function then redirects the user
+    // back to the site (CONFIRM_BASE_URL) after flipping status to confirmed.
+    const functionsBase = `${Deno.env.get('SUPABASE_URL')}/functions/v1`;
+    const confirmUrl = buildConfirmUrl(functionsBase, token);
     await sendEmail({
       apiKey: Deno.env.get('RESEND_API_KEY')!,
       from: Deno.env.get('NOTIFY_FROM') ?? 'noreply@racklion.com',
