@@ -36,6 +36,11 @@ const app = document.querySelector('#app');
 const consultEndpoint = import.meta.env.VITE_CONSULT_ENDPOINT;
 const subscribeEndpoint = import.meta.env.VITE_SUBSCRIBE_ENDPOINT;
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '';
+// Stable page-load timestamp for the anti-bot timing check. Using a fixed
+// value (not per-render) means legitimate users always clear the min-time
+// threshold, while instant bot POSTs still fail — and unrelated re-renders
+// never reset the clock.
+const pageLoadedAt = Date.now();
 const savedTopicsKey = 'racklion-onprem-topics';
 const savedSubscriberKey = 'racklion-onprem-demo-subscriber';
 const savedLeadKey = 'racklion-consulting-demo-lead';
@@ -167,9 +172,26 @@ function renderApp() {
   applyHead(state.view);
   createIcons({ icons });
   document.querySelectorAll('input[name="rendered_at"]').forEach((el) => {
-    el.value = String(Date.now());
+    el.value = String(pageLoadedAt);
+  });
+  renderTurnstile();
+}
+
+// Explicitly render Turnstile widgets. The forms are injected after an async
+// data fetch and re-injected on client-side navigation, so Cloudflare's
+// implicit auto-render (which only scans elements present when its script
+// runs) is unreliable here. We render each fresh `.cf-turnstile` once; the
+// `data-rendered` guard prevents double-rendering the same element. If the
+// Turnstile script has not loaded yet, its `onload=onloadTurnstile` callback
+// runs this again once it is ready.
+function renderTurnstile() {
+  if (!window.turnstile || !turnstileSiteKey) return;
+  document.querySelectorAll('.cf-turnstile:not([data-rendered])').forEach((el) => {
+    el.dataset.rendered = '1';
+    window.turnstile.render(el, { sitekey: turnstileSiteKey });
   });
 }
+window.onloadTurnstile = renderTurnstile;
 
 async function loadDigest() {
   state.error = '';
@@ -283,7 +305,9 @@ app.addEventListener('change', (event) => {
   if (target.checked) state.selectedTopics.add(target.dataset.prefTopic);
   else state.selectedTopics.delete(target.dataset.prefTopic);
   persistTopics();
-  renderApp();
+  // Do NOT re-render here: the browser already reflects the checkbox state,
+  // and a full renderApp() would destroy the form's entered email, the
+  // Turnstile token, and the timing stamp — silently breaking a real submit.
 });
 
 app.addEventListener('submit', (event) => {
