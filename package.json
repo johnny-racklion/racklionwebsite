@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs && node scripts/gen-sitemap.mjs && node scripts/verify-build.mjs",
+    "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "scrape": "node scripts/scrape-daily.mjs",
-    "scrape:dry": "node scripts/scrape-daily.mjs --dry-run"
+    "scrape:dry": "node scripts/scrape-daily.mjs --dry-run",
+    "test": "node --test"
   },
   "dependencies": {
     "fast-xml-parser": "^5.7.2",
