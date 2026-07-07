@@ -587,11 +587,11 @@ function renderHomeSignal(item) {
   if (!item) return '';
 
   return `
-    <article class="mini-signal">
+    <a class="mini-signal" href="${safeUrl(item.url)}" target="_blank" rel="noreferrer">
       <span>${escapeHtml(item.onPremAngle || item.source)}</span>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.source)} · ${escapeHtml(relativeTime(item.publishedAt))}</p>
-    </article>
+    </a>
   `;
 }
 

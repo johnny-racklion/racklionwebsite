@@ -402,6 +402,17 @@ svg {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.mini-signal:hover {
+  border-color: rgba(13, 95, 83, 0.42);
+  background: #fff;
+}
+
+.mini-signal:hover h3 {
+  color: var(--evergreen-dark);
 }
 
 .mini-signal span {
