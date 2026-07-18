@@ -1,55 +1,46 @@
 {
-  "generatedAt": "2026-07-18T07:12:19.036Z",
+  "generatedAt": "2026-07-18T15:34:35.137Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
-  "sourcesSucceeded": 9,
-  "sourceFailures": [
-    {
-      "source": "The Register",
-      "message": "No RSS items or Atom entries were found"
-    },
-    {
-      "source": "Blocks & Files",
-      "message": "No RSS items or Atom entries were found"
-    }
-  ],
-  "recommendedSubject": "On-prem signal: AI infrastructure, servers, data centers",
+  "sourcesSucceeded": 11,
+  "sourceFailures": [],
+  "recommendedSubject": "On-prem signal: servers, data centers, AI infrastructure",
   "topics": [
     {
-      "name": "ai-infrastructure",
-      "count": 17
-    },
-    {
       "name": "servers",
-      "count": 17
-    },
-    {
-      "name": "data-centers",
       "count": 16
     },
     {
+      "name": "data-centers",
+      "count": 15
+    },
+    {
+      "name": "ai-infrastructure",
+      "count": 14
+    },
+    {
       "name": "storage",
-      "count": 13
+      "count": 14
     },
     {
       "name": "power-cooling",
       "count": 10
     },
     {
-      "name": "networking",
-      "count": 8
+      "name": "security",
+      "count": 9
     },
     {
-      "name": "security",
+      "name": "networking",
       "count": 7
     },
     {
-      "name": "chips",
-      "count": 3
+      "name": "cloud-risk",
+      "count": 5
     },
     {
-      "name": "cloud-risk",
+      "name": "chips",
       "count": 3
     },
     {
@@ -63,6 +54,13 @@
       "name": "Data Center Knowledge",
       "homepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
+      "itemCount": 12
+    },
+    {
+      "id": "the-register-infrastructure",
+      "name": "The Register",
+      "homepage": "https://www.theregister.com/on-prem/",
+      "category": "Infrastructure",
       "itemCount": 12
     },
     {
@@ -84,6 +82,13 @@
       "name": "StorageReview",
       "homepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
+      "itemCount": 12
+    },
+    {
+      "id": "blocks-and-files",
+      "name": "Blocks & Files",
+      "homepage": "https://blocksandfiles.com",
+      "category": "Storage",
       "itemCount": 12
     },
     {
@@ -137,7 +142,7 @@
         "power-cooling",
         "networking"
       ],
-      "score": 141,
+      "score": 137,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -156,7 +161,7 @@
         "servers",
         "chips"
       ],
-      "score": 140,
+      "score": 136,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 92
@@ -174,7 +179,7 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 129,
+      "score": 124,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
@@ -194,7 +199,7 @@
         "servers",
         "storage"
       ],
-      "score": 128,
+      "score": 124,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
@@ -214,30 +219,9 @@
         "storage",
         "networking"
       ],
-      "score": 127,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 100
-    },
-    {
-      "id": "0f7b6e485301ee",
-      "title": "IBM Power S1112 Brings Local AI Inference to the Edge as Power Goes Autonomous",
-      "url": "https://www.storagereview.com/news/ibm-power-s1112-brings-local-ai-inference-to-the-edge-as-power-goes-autonomous",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-15T15:06:40.000Z",
-      "summary": "IBM has expanded its Power server lineup with new software to automate infrastructure management and application development. The announcements include IBM Power Autonomous Operations, an agentic control layer for system management, and the IBM Bob Premium Pa...",
-      "tags": [
-        "ai-infrastructure",
-        "power-cooling",
-        "servers",
-        "storage",
-        "networking"
-      ],
       "score": 123,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
+      "onPremAngle": "AI compute pressure",
       "pressure": 100
     },
     {
@@ -283,6 +267,27 @@
       "pressure": 100
     },
     {
+      "id": "0f7b6e485301ee",
+      "title": "IBM Power S1112 Brings Local AI Inference to the Edge as Power Goes Autonomous",
+      "url": "https://www.storagereview.com/news/ibm-power-s1112-brings-local-ai-inference-to-the-edge-as-power-goes-autonomous",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-15T15:06:40.000Z",
+      "summary": "IBM has expanded its Power server lineup with new software to automate infrastructure management and application development. The announcements include IBM Power Autonomous Operations, an agentic control layer for system management, and the IBM Bob Premium Pa...",
+      "tags": [
+        "ai-infrastructure",
+        "power-cooling",
+        "servers",
+        "storage",
+        "networking"
+      ],
+      "score": 119,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 100
+    },
+    {
       "id": "cd7e43546ae63f",
       "title": "TSMC Expands Arizona Campus to $265B as AI Demand Surges",
       "url": "https://www.datacenterknowledge.com/infrastructure/tsmc-expands-arizona-campus-to-265b-as-ai-demand-surges",
@@ -295,7 +300,7 @@
         "data-centers",
         "ai-infrastructure"
       ],
-      "score": 120,
+      "score": 116,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 84
@@ -313,7 +318,7 @@
         "data-centers",
         "ai-infrastructure"
       ],
-      "score": 117,
+      "score": 112,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 76
@@ -331,7 +336,7 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 112,
+      "score": 107,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 78
@@ -351,7 +356,7 @@
         "storage",
         "networking"
       ],
-      "score": 108,
+      "score": 104,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 82
@@ -370,7 +375,7 @@
         "ai-infrastructure",
         "servers"
       ],
-      "score": 108,
+      "score": 103,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 76
@@ -389,47 +394,10 @@
         "servers",
         "storage"
       ],
-      "score": 100,
+      "score": 97,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 92
-    },
-    {
-      "id": "28604286215174",
-      "title": "NVIDIA Announces Expanded Jetson Thor Lineup with Mid-Range T3000 and T2000 Modules",
-      "url": "https://www.servethehome.com/nvidia-announces-expanded-jetson-thor-lineup-with-mid-range-t3000-and-t2000-modules/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-16T17:00:41.000Z",
-      "summary": "NVIDIA has announced the addition of two new mid-range boards to their Jetson Thor lineup, the T3000 and T2000, which will arrive in Q1'27. The new boards aim to be a cheaper offering for customers feeling pressured by the high cost of memory The post NVIDIA...",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 91,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 68
-    },
-    {
-      "id": "1feca6a69b77b8",
-      "title": "Axelera’s Voyager Wingman Pitches 20-30% Better Results Than Claude Code for Edge AI Development",
-      "url": "https://www.storagereview.com/news/axeleras-voyager-wingman-pitches-20-30-better-results-than-claude-code-for-edge-ai-development",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-16T15:14:48.000Z",
-      "summary": "Axelera AI has launched Voyager Wingman, an AI-powered assistant designed to accelerate development with its Voyager Toolkit. The tool was first shown at CES in January and has since undergone extensive testing ahead of this broader release. Wingman lets deve...",
-      "tags": [
-        "servers",
-        "storage",
-        "networking"
-      ],
-      "score": 90,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
     },
     {
       "id": "f826c68b2e7a6b",
@@ -491,40 +459,76 @@
       "pressure": 92
     },
     {
-      "id": "dd57af9bd1fc2f",
-      "title": "Community Partnerships Are Becoming Data Centers’ Most Valuable Asset",
-      "url": "https://www.datacenterknowledge.com/data-center-site-selection/community-partnerships-are-becoming-data-centers-most-valuable-asset",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-07-15T19:53:39.000Z",
-      "summary": "Community trust is now a core input to capacity. Here’s how developers can align projects with local priorities on culture, jobs, and long-term sustainability.",
+      "id": "a7efb0d941ebf4",
+      "title": "NTP server that traveled back in time caused massive Aussie mobile outage",
+      "url": "https://www.theregister.com/networks/2026/07/17/ntp-server-that-traveled-back-in-time-caused-massive-aussie-mobile-outage/5274059",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "networks",
+      "publishedAt": "2026-07-17T04:48:45.000Z",
+      "summary": "Telstra skipped a patch, didn’t record changes, had no idea it was an accident waiting to happen",
       "tags": [
-        "data-centers",
-        "capacity"
+        "cloud-risk",
+        "servers"
       ],
-      "score": 87,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Capacity pressure",
+      "score": 86,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
       "pressure": 68
     },
     {
-      "id": "f719b2adfadb0e",
-      "title": "Advances in fine-tuning reduce total volume of AI training",
-      "url": "https://journal.uptimeinstitute.com/advances-in-fine-tuning-reduce-total-volume-of-ai-training/",
-      "source": "Uptime Institute Journal",
-      "sourceHomepage": "https://journal.uptimeinstitute.com",
-      "category": "Resilience",
-      "publishedAt": "2026-07-15T22:00:00.000Z",
-      "summary": "In the early days of generative AI, much attention was focused on the process of training new models from zero. As the technology matures, organizations are increasingly looking for ways to adapt existing large language models (LLMs) to their specific require...",
+      "id": "28604286215174",
+      "title": "NVIDIA Announces Expanded Jetson Thor Lineup with Mid-Range T3000 and T2000 Modules",
+      "url": "https://www.servethehome.com/nvidia-announces-expanded-jetson-thor-lineup-with-mid-range-t3000-and-t2000-modules/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-07-16T17:00:41.000Z",
+      "summary": "NVIDIA has announced the addition of two new mid-range boards to their Jetson Thor lineup, the T3000 and T2000, which will arrive in Q1'27. The new boards aim to be a cheaper offering for customers feeling pressured by the high cost of memory The post NVIDIA...",
       "tags": [
         "ai-infrastructure",
-        "cloud-risk",
-        "resilience"
+        "servers"
+      ],
+      "score": 86,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 68
+    },
+    {
+      "id": "1feca6a69b77b8",
+      "title": "Axelera’s Voyager Wingman Pitches 20-30% Better Results Than Claude Code for Edge AI Development",
+      "url": "https://www.storagereview.com/news/axeleras-voyager-wingman-pitches-20-30-better-results-than-claude-code-for-edge-ai-development",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-16T15:14:48.000Z",
+      "summary": "Axelera AI has launched Voyager Wingman, an AI-powered assistant designed to accelerate development with its Voyager Toolkit. The tool was first shown at CES in January and has since undergone extensive testing ahead of this broader release. Wingman lets deve...",
+      "tags": [
+        "servers",
+        "storage",
+        "networking"
+      ],
+      "score": 86,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "1ccaa1ee88efa7",
+      "title": "NetApp buys DataPelago to become full-stack AI data infrastructure provider",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/07/17/netapp-buys-datapelago-to-become-full-stack-ai-data-infrastructure-provider/5274250",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-07-17T14:16:03.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage",
+        "data"
       ],
       "score": 85,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "AI compute pressure",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     },
     {
@@ -546,6 +550,43 @@
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
+    },
+    {
+      "id": "dd57af9bd1fc2f",
+      "title": "Community Partnerships Are Becoming Data Centers’ Most Valuable Asset",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/community-partnerships-are-becoming-data-centers-most-valuable-asset",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-07-15T19:53:39.000Z",
+      "summary": "Community trust is now a core input to capacity. Here’s how developers can align projects with local priorities on culture, jobs, and long-term sustainability.",
+      "tags": [
+        "data-centers",
+        "capacity"
+      ],
+      "score": 82,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 68
+    },
+    {
+      "id": "f719b2adfadb0e",
+      "title": "Advances in fine-tuning reduce total volume of AI training",
+      "url": "https://journal.uptimeinstitute.com/advances-in-fine-tuning-reduce-total-volume-of-ai-training/",
+      "source": "Uptime Institute Journal",
+      "sourceHomepage": "https://journal.uptimeinstitute.com",
+      "category": "Resilience",
+      "publishedAt": "2026-07-15T22:00:00.000Z",
+      "summary": "In the early days of generative AI, much attention was focused on the process of training new models from zero. As the technology matures, organizations are increasingly looking for ways to adapt existing large language models (LLMs) to their specific require...",
+      "tags": [
+        "ai-infrastructure",
+        "cloud-risk",
+        "resilience"
+      ],
+      "score": 81,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 58
     },
     {
       "id": "5f79fe579d1b1b",
@@ -602,6 +643,58 @@
       "pressure": 66
     },
     {
+      "id": "d6060c19169190",
+      "title": "AI spam filters are getting suckered by old-school text salting",
+      "url": "https://www.theregister.com/security/2026/07/17/ai-spam-filters-are-getting-suckered-by-old-school-text-salting/5274434",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-17T16:15:22.000Z",
+      "summary": "Turns out decades-old email tricks still work against some LLM-powered email filters",
+      "tags": [
+        "security"
+      ],
+      "score": 79,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "36f9a0ed53a101",
+      "title": "Windows 10 refuses to die, and the security bill is coming due",
+      "url": "https://www.theregister.com/os-platforms/2026/07/16/windows-10-refuses-to-die-and-the-security-bill-is-coming-due/5271987",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "os platforms",
+      "publishedAt": "2026-07-16T11:25:20.000Z",
+      "summary": "One in six machines still run the old OS as migration stalls and patch deadlines creep closer",
+      "tags": [
+        "cloud-cost",
+        "security"
+      ],
+      "score": 78,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 68
+    },
+    {
+      "id": "12bee2916249f0",
+      "title": "AI power binge delivers best half since 2022 for climate tech venture funding",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/16/ai-power-binge-delivers-best-half-since-2022-for-climate-tech-venture-funding/5272401",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "ai and ml",
+      "publishedAt": "2026-07-16T12:05:25.000Z",
+      "summary": "Low-carbon projects reap accidental windfall as billions chase compute infrastructure",
+      "tags": [
+        "power-cooling"
+      ],
+      "score": 77,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
+    },
+    {
       "id": "82890dbfe396b1",
       "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
       "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield/",
@@ -614,45 +707,45 @@
         "ai-infrastructure",
         "storage"
       ],
-      "score": 79,
+      "score": 76,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
     },
     {
-      "id": "a6ba762c755282",
-      "title": "Level Up Your Column-level Security: Using IAM Data Governance Tags in BigQuery",
-      "url": "https://cloud.google.com/blog/products/data-analytics/level-up-your-column-level-security-using-iam-data-governance-tags-in-bigquery/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "bigquery",
-      "publishedAt": "2026-07-17T16:00:00.000Z",
-      "summary": "Many BigQuery customers rely on policy tags for protecting their sensitive information in BigQuery. Policy tags were the go-to solution for applying column-level access controls, allowing only users with the right permission to view sensitive columns like per...",
+      "id": "73b8b6547d1568",
+      "title": "Europe's chip ambitions won't break dependence on US cloud and software, says Forrester",
+      "url": "https://www.theregister.com/paas-and-iaas/2026/07/17/europes-chip-ambitions-wont-break-dependence-on-us-cloud-and-software-says-forrester/5274086",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "paas and iaas",
+      "publishedAt": "2026-07-17T10:45:00.000Z",
+      "summary": "Brussels may spend billions on semiconductor fabs, but tech sovereignty remains firmly in American and Chinese hands",
       "tags": [
-        "security"
+        "cloud-cost",
+        "chips"
       ],
       "score": 74,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
+      "pressure": 66
     },
     {
-      "id": "aaee0d06353c92",
-      "title": "Securing AI at Enterprise Scale: The Google Kubernetes Engine Blueprint",
-      "url": "https://cloud.google.com/blog/topics/developers-practitioners/securing-ai-at-enterprise-scale-the-google-kubernetes-engine-blueprint/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "developers & practitioners",
-      "publishedAt": "2026-07-16T11:28:00.000Z",
-      "summary": "Artificial intelligence is moving from prototype to production faster than traditional security paradigms can adapt. For CISOs and platform engineering teams, the challenge is clear: you need to protect proprietary model weights, defend against novel applicat...",
+      "id": "87c60598e06c51",
+      "title": "South Korea making its own security-centric AI model",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/17/south-korea-making-its-own-security-centric-ai-model/5274034",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "ai and ml",
+      "publishedAt": "2026-07-17T01:56:40.000Z",
+      "summary": "Adapting existing local LLM project for security and sovereignty purposes and hopes to one day match Mythos",
       "tags": [
-        "private-cloud",
         "security"
       ],
       "score": 73,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
+      "pressure": 60
     },
     {
       "id": "64913e5bb65dab",
@@ -674,20 +767,89 @@
       "pressure": 76
     },
     {
-      "id": "6ffcc6d45ef1a9",
-      "title": "Cloudflare WAF protects WordPress applications from two high-severity vulnerabilities",
-      "url": "https://blog.cloudflare.com/wordpress-vulnerabilities/",
-      "source": "Cloudflare Blog",
-      "sourceHomepage": "https://blog.cloudflare.com",
-      "category": "cve",
-      "publishedAt": "2026-07-17T21:30:43.000Z",
-      "summary": "Cloudflare has deployed two WAF rules in response to high-severity vulnerabilities disclosed to us by the WordPress security team. The new rules protect all Cloudflare customers using affected WordPress versions, but customers should still update immediately...",
+      "id": "a6ba762c755282",
+      "title": "Level Up Your Column-level Security: Using IAM Data Governance Tags in BigQuery",
+      "url": "https://cloud.google.com/blog/products/data-analytics/level-up-your-column-level-security-using-iam-data-governance-tags-in-bigquery/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "bigquery",
+      "publishedAt": "2026-07-17T16:00:00.000Z",
+      "summary": "Many BigQuery customers rely on policy tags for protecting their sensitive information in BigQuery. Policy tags were the go-to solution for applying column-level access controls, allowing only users with the right permission to view sensitive columns like per...",
+      "tags": [
+        "security"
+      ],
+      "score": 71,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "aaee0d06353c92",
+      "title": "Securing AI at Enterprise Scale: The Google Kubernetes Engine Blueprint",
+      "url": "https://cloud.google.com/blog/topics/developers-practitioners/securing-ai-at-enterprise-scale-the-google-kubernetes-engine-blueprint/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "developers & practitioners",
+      "publishedAt": "2026-07-16T11:28:00.000Z",
+      "summary": "Artificial intelligence is moving from prototype to production faster than traditional security paradigms can adapt. For CISOs and platform engineering teams, the challenge is clear: you need to protect proprietary model weights, defend against novel applicat...",
+      "tags": [
+        "private-cloud",
+        "security"
+      ],
+      "score": 70,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 68
+    },
+    {
+      "id": "37ed831b57a641",
+      "title": "Attackers target critical FortiSandbox flaws as CISA issues patch order",
+      "url": "https://www.theregister.com/security/2026/07/17/attackers-target-critical-fortisandbox-flaws-as-cisa-issues-patch-order/5274287",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-17T11:58:10.000Z",
+      "summary": "Command injection vulns land on exploited list after researchers spot abuse attempts",
       "tags": [
         "security"
       ],
       "score": 68,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "0246f801cd2e33",
+      "title": "Google fixing Android lock screen bug that lets Gemini send SMS without a PIN",
+      "url": "https://www.theregister.com/security/2026/07/17/google-fixing-android-lock-screen-bug-that-lets-gemini-send-sms-without-a-pin/5273027",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-17T09:15:00.000Z",
+      "summary": "A specific multi-touch gesture bypasses an authentication prompt, allowing anyone to send messages",
+      "tags": [
+        "security"
+      ],
+      "score": 67,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "99b1800e1e10a5",
+      "title": "AWS CloudFront outage serves errors instead of websites",
+      "url": "https://www.theregister.com/off-prem/2026/07/16/aws-cloudfront-outage-serves-errors-instead-of-websites/5272421",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "off-prem",
+      "publishedAt": "2026-07-16T10:54:42.000Z",
+      "summary": "Storm sends winds whipping beyond cloud giant, knocking out services including Hugging Face and the UK's National Lottery",
+      "tags": [
+        "cloud-risk"
+      ],
+      "score": 67,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
       "pressure": 60
     },
     {
@@ -702,165 +864,10 @@
       "tags": [
         "security"
       ],
-      "score": 68,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
-    },
-    {
-      "id": "fcf50fb51e80bf",
-      "title": "What Britain’s Next Prime Minister Could Mean for UK Data Centers",
-      "url": "https://www.datacenterknowledge.com/regulations/what-britain-s-next-prime-minister-could-mean-for-uk-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-07-16T07:30:00.000Z",
-      "summary": "Incoming UK Prime Minister Andy Burnham appears to favor homegrown AI, but planning disputes and data center moratoriums could cause early friction.",
-      "tags": [
-        "data-centers"
-      ],
-      "score": 66,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "a793913c12ead2",
-      "title": "Cloud CISO Perspectives: How AI leverages deep context as the defender’s advantage",
-      "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-ai-leverages-deep-context-defenders-advantage/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "cloud ciso",
-      "publishedAt": "2026-07-16T16:00:00.000Z",
-      "summary": "Welcome to the first Cloud CISO Perspectives for July 2026. Today, Francis deSouza, COO, Google Cloud and President, Security Products, explains the crucial role that deep context plays in creating an AI advantage for defenders. As with all Cloud CISO Perspec...",
-      "tags": [
-        "security"
-      ],
       "score": 65,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
-      "id": "abcb50b3885f90",
-      "title": "Google named a Leader in the 2026 IDC MarketScape for Worldwide Foundation Model Software",
-      "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-named-a-leader-in-idc-marketscape/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "ai & machine learning",
-      "publishedAt": "2026-07-14T18:00:00.000Z",
-      "summary": "For years, we’ve built with a clear priority: putting the practical needs of the enterprise first. Long before generative AI dominated the headlines, we were focused on building the global infrastructure, security frameworks, and data platforms that power the...",
-      "tags": [
-        "power-cooling",
-        "security"
-      ],
-      "score": 64,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 86
-    },
-    {
-      "id": "5e268150190781",
-      "title": "Integrating Context-Aware Video AI Agents Into Enterprise Workflows",
-      "url": "https://developer.nvidia.com/blog/integrating-context-aware-video-ai-agents-into-enterprise-workflows/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-07-16T16:03:35.000Z",
-      "summary": "A video analytics AI agent that can perceive, reason, and act based on massive amounts of video footage must be integrated with existing workflows and...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 63,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "94bdbe76f5a284",
-      "title": "Noctua NH-U14S DX4677 Quick Look With the Intel Xeon 600 Series",
-      "url": "https://www.servethehome.com/noctua-nh-u14s-dx4677-quick-look-with-the-intel-xeon-600-series/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-15T18:00:06.000Z",
-      "summary": "We take a quick look at the Noctua NH-U14S DX4677 with the new Intel Xeon 600 series for workstations to see how it works The post Noctua NH-U14S DX4677 Quick Look With the Intel Xeon 600 Series appeared first on ServeTheHome .",
-      "tags": [
-        "servers"
-      ],
-      "score": 59,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "85b5f1072f8cb1",
-      "title": "Q&A: How Capcom Brought Path Tracing to RE ENGINE Across PRAGMATA and Resident Evil Requiem",
-      "url": "https://developer.nvidia.com/blog/qa-how-capcom-brought-path-tracing-to-re-engine-across-pragmata-and-resident-evil-requiem/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "content creation / rendering",
-      "publishedAt": "2026-07-16T22:59:09.000Z",
-      "summary": "Capcom's RE ENGINE team set out to bring path tracing into two shipping titles at once, Resident Evil Requiem and PRAGMATA, each with a different visual...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 57,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "40e2a1c1bea346",
-      "title": "Lenovo ThinkStation P3 Ultra SFF G2 Review A Bit Bigger and a Bit Better",
-      "url": "https://www.servethehome.com/lenovo-thinkstation-p3-ultra-sff-g2-review-intel-nvidia-a-bit-bigger-and-a-bit-better/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-14T17:00:56.000Z",
-      "summary": "Today we are taking a look at Lenovo's more spacious mini-PC workstation, the ThinkStation P3 Ultra SFF Gen 2. With multiple PCIe slots, the P3 Ultra seeks to strike a fine balance between size and expandability The post Lenovo ThinkStation P3 Ultra SFF G2 Re...",
-      "tags": [
-        "servers",
-        "chips"
-      ],
-      "score": 57,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "0b234640dbde33",
-      "title": "Develop Lightweight USD Runtimes Faster with AI Agents",
-      "url": "https://developer.nvidia.com/blog/develop-lightweight-usd-runtimes-faster-with-ai-agents/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "developer tools & techniques",
-      "publishedAt": "2026-07-15T21:57:23.000Z",
-      "summary": "OpenUSD is an open, extensible framework that provides a common scene description language for physical AI. It enables teams to bring CAD data, simulation...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 55,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "bbf8a208a3ce53",
-      "title": "IDC: Why the right networking approach is foundational to agentic AI",
-      "url": "https://cloud.google.com/blog/products/networking/idc-on-the-right-networking-approach-for-agentic-ai/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "ai & machine learning",
-      "publishedAt": "2026-07-15T16:00:00.000Z",
-      "summary": "Editor’s note: Today we hear from IDC on the results of its 2026 AI in Networking Special Report Survey exploring the enterprises' concerns about networking infrastructure to support the rise of agentic AI in their organizations. The survey was sponsored by G...",
-      "tags": [
-        "networking"
-      ],
-      "score": 51,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
+      "pressure": 68
     }
   ]
 }
