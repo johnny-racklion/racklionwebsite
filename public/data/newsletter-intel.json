@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T17:10:56.302Z",
+  "generatedAt": "2026-07-21T09:37:00.776Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
@@ -7,22 +7,22 @@
   "sourceFailures": [
     {
       "source": "Blocks & Files",
-      "message": "No RSS items or Atom entries were found"
+      "message": "HTTP 403"
     }
   ],
   "recommendedSubject": "On-prem signal: servers, data centers, AI infrastructure",
   "topics": [
     {
       "name": "servers",
-      "count": 20
+      "count": 17
     },
     {
       "name": "data-centers",
-      "count": 15
+      "count": 16
     },
     {
       "name": "ai-infrastructure",
-      "count": 14
+      "count": 15
     },
     {
       "name": "storage",
@@ -30,19 +30,19 @@
     },
     {
       "name": "power-cooling",
-      "count": 8
+      "count": 11
     },
     {
       "name": "networking",
-      "count": 7
+      "count": 9
     },
     {
       "name": "cloud-risk",
       "count": 4
     },
     {
-      "name": "infrastructure",
-      "count": 2
+      "name": "security",
+      "count": 4
     },
     {
       "name": "private-cloud",
@@ -94,7 +94,7 @@
       "name": "NVIDIA Technical Blog",
       "homepage": "https://developer.nvidia.com/blog",
       "category": "AI Infrastructure",
-      "itemCount": 11
+      "itemCount": 10
     },
     {
       "id": "aws-news",
@@ -122,10 +122,31 @@
       "name": "Cloudflare Blog",
       "homepage": "https://blog.cloudflare.com",
       "category": "Network & Edge",
-      "itemCount": 1
+      "itemCount": 2
     }
   ],
   "items": [
+    {
+      "id": "f8915a4a5f29fd",
+      "title": "Microsoft Will Ramp AMD’s Helios Rack-Scale AI Platform at Scale on Azure",
+      "url": "https://www.storagereview.com/news/microsoft-will-ramp-amds-helios-rack-scale-ai-platform-at-scale-on-azure",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-20T17:22:38.000Z",
+      "summary": "AMD has expanded its strategic partnership with Microsoft to cover GPUs, CPUs, networking, and software across Azure infrastructure. The collaboration includes Microsoft’s planned deployment of AMD’s Helios Rackscale Solution for AI inference workloads suppor...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "networking"
+      ],
+      "score": 140,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 100
+    },
     {
       "id": "255a29abebe2aa",
       "title": "Finland’s Data Center Boom is Just Getting Started",
@@ -139,10 +160,48 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 140,
+      "score": 131,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 78
+    },
+    {
+      "id": "fe5e635c2d8e67",
+      "title": "PJM Issued First Backup-Generator Warnings During Heat Wave",
+      "url": "https://www.datacenterknowledge.com/energy-power-supply/pjm-issued-first-backup-generator-warnings-during-heat-wave",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-07-20T20:30:49.000Z",
+      "summary": "The new warnings process saw its first operational use as PJM neared record demand, but the grid operator says no large-load backup generators were called to run.",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "storage"
+      ],
+      "score": 128,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 76
+    },
+    {
+      "id": "1af57cb666fe09",
+      "title": "Google Cloud outage shows it’s still hard to understand hyperscalers’ real resilience regimes",
+      "url": "https://www.theregister.com/off-prem/2026/07/21/google-cloud-outage-shows-its-still-hard-to-understand-hyperscalers-real-resilience-regimes/5275405",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "off-prem",
+      "publishedAt": "2026-07-21T05:39:30.000Z",
+      "summary": "Single datacenter and just three services taken down by ‘upstream’ power problem, while the rest of a zone and region kept humming",
+      "tags": [
+        "data-centers",
+        "cloud-risk",
+        "power-cooling"
+      ],
+      "score": 125,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
+      "pressure": 94
     },
     {
       "id": "2ab914cba8e893",
@@ -186,23 +245,21 @@
       "pressure": 100
     },
     {
-      "id": "8a39c9f13275c6",
-      "title": "The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over",
-      "url": "https://www.servethehome.com/the-amd-instinct-mi350p-is-a-hbm-pcie-accelerator-that-has-been-all-over/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-17T17:00:59.000Z",
-      "summary": "We have been seeing the AMD Instinct MI350P 144GB HBM3E PCIe accelerator everywhere over the past few weeks as this appears to be a popular GPU The post The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over appeared first on ServeTheHome...",
+      "id": "d20c7b7213afc0",
+      "title": "Electromagnetic Interference: The Invisible Threat to Data Center Uptime",
+      "url": "https://www.datacenterknowledge.com/physical-security/electromagnetic-interference-the-invisible-threat-to-data-center-uptime",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-07-21T09:00:00.000Z",
+      "summary": "Denser digital infrastructure and pervasive wireless have raised background radio-frequency levels. Here’s how EMI threatens data centers and what operators can do to contain it.",
       "tags": [
-        "ai-infrastructure",
-        "servers",
-        "chips"
+        "data-centers"
       ],
-      "score": 110,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 92
+      "score": 111,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
     },
     {
       "id": "473efc57a64f89",
@@ -244,23 +301,23 @@
       "pressure": 100
     },
     {
-      "id": "729ac0a11715dc",
-      "title": "NVIDIA Omniverse Libraries Put AI Agents to Work Prepping 3D Content for Simulation",
-      "url": "https://www.storagereview.com/news/nvidia-omniverse-libraries-put-ai-agents-to-work-prepping-3d-content-for-simulation",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-20T15:37:09.000Z",
-      "summary": "NVIDIA has introduced Omniverse libraries, a set of software components designed to bring physical AI capabilities into existing 3D applications and prepare content for simulation. The libraries are intended to help developers, technical artists, and engineer...",
+      "id": "8a39c9f13275c6",
+      "title": "The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over",
+      "url": "https://www.servethehome.com/the-amd-instinct-mi350p-is-a-hbm-pcie-accelerator-that-has-been-all-over/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-07-17T17:00:59.000Z",
+      "summary": "We have been seeing the AMD Instinct MI350P 144GB HBM3E PCIe accelerator everywhere over the past few weeks as this appears to be a popular GPU The post The AMD Instinct MI350P is a HBM PCIe AI Accelerator That Has Been All Over appeared first on ServeTheHome...",
       "tags": [
         "ai-infrastructure",
         "servers",
-        "storage"
+        "chips"
       ],
-      "score": 107,
+      "score": 106,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
+      "onPremAngle": "AI compute pressure",
+      "pressure": 92
     },
     {
       "id": "24e13b68cb3000",
@@ -280,6 +337,25 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 76
+    },
+    {
+      "id": "729ac0a11715dc",
+      "title": "NVIDIA Omniverse Libraries Put AI Agents to Work Prepping 3D Content for Simulation",
+      "url": "https://www.storagereview.com/news/nvidia-omniverse-libraries-put-ai-agents-to-work-prepping-3d-content-for-simulation",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-20T15:37:09.000Z",
+      "summary": "NVIDIA has introduced Omniverse libraries, a set of software components designed to bring physical AI capabilities into existing 3D applications and prepare content for simulation. The libraries are intended to help developers, technical artists, and engineer...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage"
+      ],
+      "score": 100,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
     },
     {
       "id": "cd7e43546ae63f",
@@ -330,7 +406,7 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 96,
+      "score": 94,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
@@ -354,23 +430,6 @@
       "pressure": 76
     },
     {
-      "id": "688b9e846cb5ab",
-      "title": "NVIDIA NVLink: The Scale-Up Network for AI Factories",
-      "url": "https://developer.nvidia.com/blog/nvidia-nvlink-the-scale-up-network-for-ai-factories/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-07-20T15:46:28.000Z",
-      "summary": "The demand for AI continues to accelerate. Workloads are getting larger, models are becoming more complex, and there is mounting pressure to deploy AI compute...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 93,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
-    },
-    {
       "id": "9f6e2caba11a9f",
       "title": "Cloudera and VAST Data Take Aim at GPU Starvation With Joint AI Factory Stack",
       "url": "https://www.storagereview.com/news/cloudera-and-vast-data-take-aim-at-gpu-starvation-with-joint-ai-factory-stack",
@@ -388,42 +447,6 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 92
-    },
-    {
-      "id": "00c0cd6dc1c5ce",
-      "title": "Intel To Add Support for Gen 2 MRDIMMs and Faster DDR5 RDIMMs to Xeon 6 Platform",
-      "url": "https://www.servethehome.com/intel-to-add-support-for-gen-2-mrdimms-and-faster-ddr5-rdimms-to-xeon-6-platform/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-20T17:00:52.000Z",
-      "summary": "Intel this morning is announcing that parts of the Xeon 6 family are going to be getting mid-generation memory upgrades with support for DDR5-8000 RDIMMs as well as Gen 2 MRDIMMs The post Intel To Add Support for Gen 2 MRDIMMs and Faster DDR5 RDIMMs to Xeon 6...",
-      "tags": [
-        "servers"
-      ],
-      "score": 91,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "f826c68b2e7a6b",
-      "title": "A Guide to Network Redundancy in Data Centers",
-      "url": "https://www.datacenterknowledge.com/networking/a-guide-to-network-redundancy-in-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-07-14T09:00:00.000Z",
-      "summary": "Data center network redundancy ensures reliable connectivity by minimizing downtime risks with backup connections and equipment.",
-      "tags": [
-        "data-centers",
-        "cloud-risk",
-        "storage"
-      ],
-      "score": 90,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 76
     },
     {
       "id": "e1db4bc8ada3f9",
@@ -446,39 +469,38 @@
       "pressure": 92
     },
     {
-      "id": "5e96b792733d88",
-      "title": "High hardware costs see Red Hat offer a two-server edge rig, no mini-PC required",
-      "url": "https://www.theregister.com/systems/2026/07/20/high-hardware-costs-see-red-hat-offer-a-two-server-edge-rig-no-mini-pc-required/5274762",
+      "id": "d023a61d18591f",
+      "title": "Malicious cloud customers can bring down the power grid",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/20/malicious-cloud-customers-can-bring-down-the-power-grid/5275193",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "systems",
-      "publishedAt": "2026-07-20T07:24:00.000Z",
-      "summary": "Worries about ‘prohibitive cost of powering, maintaining, and deploying a third node’",
+      "category": "ai and ml",
+      "publishedAt": "2026-07-20T19:15:59.000Z",
+      "summary": "Datacenters tax utilities normally, so just imagine what they could do if workloads were designed to destroy",
       "tags": [
-        "servers",
-        "networking"
+        "power-cooling"
       ],
-      "score": 87,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
+      "score": 88,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
       "pressure": 68
     },
     {
-      "id": "18dbedd2c4a0dd",
-      "title": "MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-S6091-X2 Servers and Racks",
-      "url": "https://www.servethehome.com/msi-slyly-shows-off-an-upcoming-dlc-amd-epyc-venice-platform-with-cd182-s6091-x2-servers-and-racks/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-19T18:00:07.000Z",
-      "summary": "AMD's EPYC Venice is coming, and OEMs are eager to show off their upcoming wares. At Computex we caught MSI's CD182-S6091-X2 (DLC), a liquid cooled dual socket 1OU2N server node The post MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-...",
+      "id": "688b9e846cb5ab",
+      "title": "NVIDIA NVLink: The Scale-Up Network for AI Factories",
+      "url": "https://developer.nvidia.com/blog/nvidia-nvlink-the-scale-up-network-for-ai-factories/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-07-20T15:46:28.000Z",
+      "summary": "The demand for AI continues to accelerate. Workloads are getting larger, models are becoming more complex, and there is mounting pressure to deploy AI compute...",
       "tags": [
-        "servers"
+        "ai-infrastructure"
       ],
-      "score": 85,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "score": 86,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
+      "pressure": 68
     },
     {
       "id": "da4a9529bbadec",
@@ -501,24 +523,38 @@
       "pressure": 74
     },
     {
-      "id": "c26ea969a0ea7b",
-      "title": "Azure Becomes First Announced Hyperscaler to Deploy 3M’s Expanded Beam Optical Fiber",
-      "url": "https://www.storagereview.com/news/azure-becomes-first-announced-hyperscaler-to-deploy-3ms-expanded-beam-optical-fiber",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-17T16:06:57.000Z",
-      "summary": "Microsoft and 3M have announced a strategic partnership covering both data center optical connectivity and enterprise AI adoption. Under the July 15 agreement, Azure becomes the first announced hyperscale cloud provider to deploy 3M’s Expanded Beam Optical (E...",
+      "id": "1b085022160d30",
+      "title": "OVH reveals semi-secret plan to fix critical Januscape hypervisor bug with mass reboots – and an Australian crash-test dummy",
+      "url": "https://www.theregister.com/virtualization/2026/07/21/ovh-reveals-semi-secret-plan-to-fix-critical-januscape-hypervisor-bug-with-mass-reboots-and-an-australian-crash-test-dummy/5275359",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "virtualization",
+      "publishedAt": "2026-07-21T03:52:43.000Z",
+      "summary": "French cloud backported a patch into Debian and didn’t seek customer consent, despite chance of downtime",
       "tags": [
-        "data-centers",
-        "servers",
-        "storage",
-        "networking"
+        "cloud-risk"
       ],
       "score": 82,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
+      "pressure": 68
+    },
+    {
+      "id": "00c0cd6dc1c5ce",
+      "title": "Intel To Add Support for Gen 2 MRDIMMs and Faster DDR5 RDIMMs to Xeon 6 Platform",
+      "url": "https://www.servethehome.com/intel-to-add-support-for-gen-2-mrdimms-and-faster-ddr5-rdimms-to-xeon-6-platform/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-07-20T17:00:52.000Z",
+      "summary": "Intel this morning is announcing that parts of the Xeon 6 family are going to be getting mid-generation memory upgrades with support for DDR5-8000 RDIMMs as well as Gen 2 MRDIMMs The post Intel To Add Support for Gen 2 MRDIMMs and Faster DDR5 RDIMMs to Xeon 6...",
+      "tags": [
+        "servers"
+      ],
+      "score": 82,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 82
+      "pressure": 58
     },
     {
       "id": "5f79fe579d1b1b",
@@ -539,22 +575,76 @@
       "pressure": 66
     },
     {
-      "id": "1951bf83304329",
-      "title": "IBM Warns AI Infrastructure Shift Impacts Software Deals, Shares Plunge",
-      "url": "https://www.datacenterknowledge.com/business/ibm-warns-ai-infrastructure-spending-delays-software-deals-as-shares-plunge",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-07-14T15:16:48.000Z",
-      "summary": "IBM said customers shifted spending to secure supply-constrained infrastructure, delaying software deals and driving shares down 23%.",
+      "id": "5e96b792733d88",
+      "title": "High hardware costs see Red Hat offer a two-server edge rig, no mini-PC required",
+      "url": "https://www.theregister.com/systems/2026/07/20/high-hardware-costs-see-red-hat-offer-a-two-server-edge-rig-no-mini-pc-required/5274762",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "systems",
+      "publishedAt": "2026-07-20T07:24:00.000Z",
+      "summary": "Worries about ‘prohibitive cost of powering, maintaining, and deploying a third node’",
+      "tags": [
+        "servers",
+        "networking"
+      ],
+      "score": 80,
+      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 68
+    },
+    {
+      "id": "c26ea969a0ea7b",
+      "title": "Azure Becomes First Announced Hyperscaler to Deploy 3M’s Expanded Beam Optical Fiber",
+      "url": "https://www.storagereview.com/news/azure-becomes-first-announced-hyperscaler-to-deploy-3ms-expanded-beam-optical-fiber",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-07-17T16:06:57.000Z",
+      "summary": "Microsoft and 3M have announced a strategic partnership covering both data center optical connectivity and enterprise AI adoption. Under the July 15 agreement, Azure becomes the first announced hyperscale cloud provider to deploy 3M’s Expanded Beam Optical (E...",
       "tags": [
         "data-centers",
-        "ai-infrastructure"
+        "servers",
+        "storage",
+        "networking"
       ],
-      "score": 81,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "score": 79,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 82
+    },
+    {
+      "id": "18dbedd2c4a0dd",
+      "title": "MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-S6091-X2 Servers and Racks",
+      "url": "https://www.servethehome.com/msi-slyly-shows-off-an-upcoming-dlc-amd-epyc-venice-platform-with-cd182-s6091-x2-servers-and-racks/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-07-19T18:00:07.000Z",
+      "summary": "AMD's EPYC Venice is coming, and OEMs are eager to show off their upcoming wares. At Computex we caught MSI's CD182-S6091-X2 (DLC), a liquid cooled dual socket 1OU2N server node The post MSI Slyly Shows off an Upcoming DLC AMD EPYC Venice Platform With CD182-...",
+      "tags": [
+        "servers"
+      ],
+      "score": 76,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
+    },
+    {
+      "id": "5e76a503798544",
+      "title": "Attackers pummel critical WordPress vuln to create all sorts of mischief",
+      "url": "https://www.theregister.com/security/2026/07/20/attackers-pummel-critical-wordpress-vuln-to-create-all-sorts-of-mischief/5275265",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-20T21:57:51.000Z",
+      "summary": "Plus dozens of PoCs in the public domain",
+      "tags": [
+        "security"
+      ],
+      "score": 75,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
     },
     {
       "id": "dd57af9bd1fc2f",
@@ -573,6 +663,23 @@
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Capacity pressure",
       "pressure": 68
+    },
+    {
+      "id": "7248033f10ac0e",
+      "title": "Scammers impersonate FBI on social media, prey on crime victims",
+      "url": "https://www.theregister.com/security/2026/07/20/scammers-impersonate-fbi-on-social-media-prey-on-crime-victims/5275224",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-07-20T20:10:00.000Z",
+      "summary": "IC3 says any account claiming to represent it is fake",
+      "tags": [
+        "security"
+      ],
+      "score": 74,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
     },
     {
       "id": "f719b2adfadb0e",
@@ -594,23 +701,6 @@
       "pressure": 58
     },
     {
-      "id": "039be1fc665854",
-      "title": "Chinese President Xi Jinping wants emergency response systems to keep AI in check",
-      "url": "https://www.theregister.com/ai-and-ml/2026/07/20/chinese-president-xi-jinping-wants-emergency-response-systems-to-keep-ai-in-check/5274687",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "ai and ml",
-      "publishedAt": "2026-07-20T00:38:54.000Z",
-      "summary": "PLUS: Korean e-tailer Coupang's warehouse burns and burns; Australian Uni expels VMware; India's first private rocket flies first time; And more!",
-      "tags": [
-        "private-cloud"
-      ],
-      "score": 73,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
       "id": "1feca6a69b77b8",
       "title": "Axelera’s Voyager Wingman Pitches 20-30% Better Results Than Claude Code for Edge AI Development",
       "url": "https://www.storagereview.com/news/axeleras-voyager-wingman-pitches-20-30-better-results-than-claude-code-for-edge-ai-development",
@@ -628,57 +718,6 @@
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
-    },
-    {
-      "id": "2c1510d09484ca",
-      "title": "Making highly available, multi-region Cloud Run services just got easier",
-      "url": "https://cloud.google.com/blog/products/serverless/cloud-run-multi-region-services-enhanced-for-high-availability/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "cloud run",
-      "publishedAt": "2026-07-20T16:00:00.000Z",
-      "summary": "Application downtime for mission-critical services can directly impact your reputation and bottom line. To avoid that, you need to be able to deploy regionally resilient workloads that detect and automatically recover from failures. But setting up multi-regio...",
-      "tags": [
-        "cloud-risk"
-      ],
-      "score": 71,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 60
-    },
-    {
-      "id": "616575524cb288",
-      "title": "Integrate NVIDIA Omniverse RTX Sensor Simulation Into Existing Apps",
-      "url": "https://developer.nvidia.com/blog/integrate-nvidia-omniverse-rtx-sensor-simulation-into-existing-apps/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "simulation / modeling / design",
-      "publishedAt": "2026-07-20T15:00:00.000Z",
-      "summary": "Developers building 3D, design, simulation, robotics, and industrial digital twin applications need ways to bring physical AI capabilities into the tools and...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 69,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "6b8e325a16f176",
-      "title": "Windows Server Update Services buckle under Microsoft's metadata mountain",
-      "url": "https://www.theregister.com/systems/2026/07/20/windows-server-update-services-buckle-under-microsofts-metadata-mountain/5274843",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "systems",
-      "publishedAt": "2026-07-20T14:14:00.000Z",
-      "summary": "Redmond has stabilized new installations, but existing deployments remain stuck in sync purgatory",
-      "tags": [
-        "servers"
-      ],
-      "score": 69,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
     },
     {
       "id": "28604286215174",
@@ -699,126 +738,56 @@
       "pressure": 68
     },
     {
-      "id": "9c1369761f19b8",
-      "title": "Watching the world burn as all the money flows into a multitrillion-dollar Magic 8 Ball",
-      "url": "https://www.theregister.com/ai-and-ml/2026/07/20/watching-the-world-burn-as-all-the-money-flows-into-a-multitrillion-dollar-magic-8-ball/5274553",
+      "id": "e375b36ae085bb",
+      "title": "Cloudflare Internal DNS is now generally available",
+      "url": "https://blog.cloudflare.com/internal-dns/",
+      "source": "Cloudflare Blog",
+      "sourceHomepage": "https://blog.cloudflare.com",
+      "category": "cloudflare gateway",
+      "publishedAt": "2026-07-20T20:59:31.000Z",
+      "summary": "Cloudflare Internal DNS brings authoritative and recursive DNS for private networks to the same global network and control plane that runs Cloudflare's Zero Trust, networking, and public DNS.",
+      "tags": [
+        "networking",
+        "security"
+      ],
+      "score": 68,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "039be1fc665854",
+      "title": "Chinese President Xi Jinping wants emergency response systems to keep AI in check",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/20/chinese-president-xi-jinping-wants-emergency-response-systems-to-keep-ai-in-check/5274687",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
       "category": "ai and ml",
-      "publishedAt": "2026-07-20T12:44:00.000Z",
-      "summary": "On this week's episode of The Kettle, we welcome a special guest to discuss how the AI datacenter buildout is setting the world on fire – literally",
+      "publishedAt": "2026-07-20T00:38:54.000Z",
+      "summary": "PLUS: Korean e-tailer Coupang's warehouse burns and burns; Australian Uni expels VMware; India's first private rocket flies first time; And more!",
       "tags": [
-        "data-centers"
-      ],
-      "score": 68,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "79f995e58b9a36",
-      "title": "Infosec expert: Paidwork users' data pwned after 23M-record database dumped online",
-      "url": "https://www.theregister.com/cyber-crime/2026/07/20/infosec-expert-paidwork-users-data-pwned-after-23m-record-database-dumped-online/5274869",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "cyber-crime",
-      "publishedAt": "2026-07-20T12:00:00.000Z",
-      "summary": "HIBP claims leaked info includes bank account numbers, payout histories, and personal details",
-      "tags": [
-        "infrastructure"
-      ],
-      "score": 68,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "1903ca8b60bb0b",
-      "title": "Major glitch in Matrix as UK government projects watchdog rates shared services cluster red",
-      "url": "https://www.theregister.com/public-sector/2026/07/20/major-glitch-in-matrix-as-uk-government-projects-watchdog-rates-shared-services-cluster-red/5274368",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "public sector",
-      "publishedAt": "2026-07-20T10:00:00.000Z",
-      "summary": "Nine-department ERP overhaul judged unachievable without urgent action",
-      "tags": [
-        "infrastructure"
-      ],
-      "score": 67,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "a7efb0d941ebf4",
-      "title": "NTP server that traveled back in time caused massive Aussie mobile outage",
-      "url": "https://www.theregister.com/networks/2026/07/17/ntp-server-that-traveled-back-in-time-caused-massive-aussie-mobile-outage/5274059",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "networks",
-      "publishedAt": "2026-07-17T04:48:45.000Z",
-      "summary": "Telstra skipped a patch, didn’t record changes, had no idea it was an accident waiting to happen",
-      "tags": [
-        "cloud-risk",
-        "servers"
-      ],
-      "score": 67,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 68
-    },
-    {
-      "id": "52ddff7161f82c",
-      "title": "Next Gen Server Memory On Display: DDR5-8000 RDIMMs and MRDIMM Gen2 Hits DDR5-12800",
-      "url": "https://www.servethehome.com/next-gen-server-memory-on-display-ddr5-8000-rdimms-and-mrdimm-gen2-hits-ddr5-12800/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-07-18T17:00:51.000Z",
-      "summary": "The next generation of server memory is slated to get even faster. At Computex 2026 Micron was showing off DDR5-8000 RDIMMs, while Samsung had uber-fast 12,800 MT/s second-gen MRDIMMs The post Next Gen Server Memory On Display: DDR5-8000 RDIMMs and MRDIMM Gen...",
-      "tags": [
-        "servers"
+        "private-cloud"
       ],
       "score": 66,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
+      "pressure": 50
     },
     {
-      "id": "09ad60784f0538",
-      "title": "Broadcom Goes CNCF Platinum After Handing Velero to the Sandbox",
-      "url": "https://www.storagereview.com/news/broadcom-goes-cncf-platinum-after-handing-velero-to-the-sandbox",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-18T17:23:32.000Z",
-      "summary": "The Cloud Native Computing Foundation (CNCF) announced on July 16 that Broadcom has elevated its membership to Platinum. The move expands Broadcom’s participation in the CNCF ecosystem as enterprises operationalize AI, analytics, and other data-intensive work...",
+      "id": "2c1510d09484ca",
+      "title": "Making highly available, multi-region Cloud Run services just got easier",
+      "url": "https://cloud.google.com/blog/products/serverless/cloud-run-multi-region-services-enhanced-for-high-availability/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "cloud run",
+      "publishedAt": "2026-07-20T16:00:00.000Z",
+      "summary": "Application downtime for mission-critical services can directly impact your reputation and bottom line. To avoid that, you need to be able to deploy regionally resilient workloads that detect and automatically recover from failures. But setting up multi-regio...",
       "tags": [
-        "servers",
-        "storage"
+        "cloud-risk"
       ],
-      "score": 64,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "59e73bbd4a42a9",
-      "title": "Dell Outsells the Rest of IDC’s Top Five Combined in Q1 External Storage",
-      "url": "https://www.storagereview.com/news/dell-outsells-the-rest-of-idcs-top-five-combined-in-q1-external-storage",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-07-18T15:36:04.000Z",
-      "summary": "Dell Technologies closed the first quarter of 2026 as the top external enterprise storage vendor worldwide, according to IDC’s Worldwide Quarterly Enterprise Storage Systems Tracker released in June, posting 31.2% market share on 40.8% year-over-year growth,...",
-      "tags": [
-        "servers",
-        "storage"
-      ],
-      "score": 64,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
+      "score": 65,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
+      "pressure": 60
     },
     {
       "id": "abcb50b3885f90",
@@ -839,21 +808,56 @@
       "pressure": 86
     },
     {
-      "id": "434dc06856f8f9",
-      "title": "Accelerating automotive innovation with C4A-metal and Panasonic Automotive vSkipGen",
-      "url": "https://cloud.google.com/blog/topics/partners/panasonic-automotive-vskipgen-runs-on-axion-based-c4a-metal/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "compute",
-      "publishedAt": "2026-07-20T16:00:00.000Z",
-      "summary": "As the automotive landscape accelerates toward software-defined vehicles, Cockpit Domain Controllers (CDCs) are becoming the core of next-generation in-cabin experiences. The ability to rapidly develop, test, and validate CDC software in a flexible, hardware-...",
+      "id": "616575524cb288",
+      "title": "Integrate NVIDIA Omniverse RTX Sensor Simulation Into Existing Apps",
+      "url": "https://developer.nvidia.com/blog/integrate-nvidia-omniverse-rtx-sensor-simulation-into-existing-apps/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "simulation / modeling / design",
+      "publishedAt": "2026-07-20T15:00:00.000Z",
+      "summary": "Developers building 3D, design, simulation, robotics, and industrial digital twin applications need ways to bring physical AI capabilities into the tools and...",
       "tags": [
-        "cloud"
+        "ai-infrastructure"
+      ],
+      "score": 62,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "6b8e325a16f176",
+      "title": "Windows Server Update Services buckle under Microsoft's metadata mountain",
+      "url": "https://www.theregister.com/systems/2026/07/20/windows-server-update-services-buckle-under-microsofts-metadata-mountain/5274843",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "systems",
+      "publishedAt": "2026-07-20T14:14:00.000Z",
+      "summary": "Redmond has stabilized new installations, but existing deployments remain stuck in sync purgatory",
+      "tags": [
+        "servers"
       ],
       "score": 62,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
+    },
+    {
+      "id": "82890dbfe396b1",
+      "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
+      "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-07-16T16:00:00.000Z",
+      "summary": "Agentic AI changes the infrastructure pattern for AI factories. One request can trigger many model calls, tool calls, memory lookups, policy checks, storage...",
+      "tags": [
+        "ai-infrastructure",
+        "storage"
+      ],
+      "score": 62,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
     }
   ]
 }
