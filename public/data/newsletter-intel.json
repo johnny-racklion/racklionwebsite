@@ -1,46 +1,55 @@
 {
-  "generatedAt": "2026-08-14T02:44:40.475Z",
+  "generatedAt": "2026-08-14T13:40:49.971Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
-  "sourcesSucceeded": 11,
-  "sourceFailures": [],
-  "recommendedSubject": "On-prem signal: servers, storage, data centers",
+  "sourcesSucceeded": 9,
+  "sourceFailures": [
+    {
+      "source": "The Register",
+      "message": "No RSS items or Atom entries were found"
+    },
+    {
+      "source": "Blocks & Files",
+      "message": "No RSS items or Atom entries were found"
+    }
+  ],
+  "recommendedSubject": "On-prem signal: servers, AI infrastructure, data centers",
   "topics": [
     {
       "name": "servers",
-      "count": 17
-    },
-    {
-      "name": "storage",
-      "count": 16
-    },
-    {
-      "name": "data-centers",
-      "count": 15
+      "count": 19
     },
     {
       "name": "ai-infrastructure",
+      "count": 18
+    },
+    {
+      "name": "data-centers",
+      "count": 16
+    },
+    {
+      "name": "storage",
       "count": 14
     },
     {
-      "name": "security",
-      "count": 9
-    },
-    {
-      "name": "chips",
+      "name": "power-cooling",
       "count": 8
     },
     {
-      "name": "power-cooling",
+      "name": "chips",
       "count": 7
     },
     {
       "name": "networking",
-      "count": 6
+      "count": 5
     },
     {
       "name": "cloud-risk",
+      "count": 3
+    },
+    {
+      "name": "security",
       "count": 3
     },
     {
@@ -54,13 +63,6 @@
       "name": "Data Center Knowledge",
       "homepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
-      "itemCount": 12
-    },
-    {
-      "id": "the-register-infrastructure",
-      "name": "The Register",
-      "homepage": "https://www.theregister.com/on-prem/",
-      "category": "Infrastructure",
       "itemCount": 12
     },
     {
@@ -82,13 +84,6 @@
       "name": "StorageReview",
       "homepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
-      "itemCount": 12
-    },
-    {
-      "id": "blocks-and-files",
-      "name": "Blocks & Files",
-      "homepage": "https://blocksandfiles.com",
-      "category": "Storage",
       "itemCount": 12
     },
     {
@@ -124,7 +119,7 @@
       "name": "Cloudflare Blog",
       "homepage": "https://blog.cloudflare.com",
       "category": "Network & Edge",
-      "itemCount": 1
+      "itemCount": 2
     }
   ],
   "items": [
@@ -143,7 +138,7 @@
         "networking",
         "capacity"
       ],
-      "score": 177,
+      "score": 170,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
@@ -162,69 +157,10 @@
         "ai-infrastructure",
         "power-cooling"
       ],
-      "score": 163,
+      "score": 157,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
-    },
-    {
-      "id": "8d6ee163f82e4f",
-      "title": "Liqid Pools 30 AMD MI350P GPUs in One Server: 4.3TB of HBM3E and 69 PFLOPS for AI Inference",
-      "url": "https://www.storagereview.com/news/liqid-pools-30-amd-mi350p-gpus-in-one-server-4-3tb-of-hbm3e-and-69-pflops-for-ai-inference",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-12T18:40:29.000Z",
-      "summary": "In late July, Liqid unveiled a scale-up AI platform built around AMD Instinct MI350P PCIe GPUs. The UltraStack 30 pairs Liqid’s composable GPU pooling technology with AMD accelerators to address enterprise and cloud AI inference deployments that need to scale...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 126,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 100
-    },
-    {
-      "id": "511232af87d7fe",
-      "title": "Silicon Motion MonTitan RDK Targets Agentic AI Storage With Next-Gen PerformaShape and PCIe 6.0 Support",
-      "url": "https://www.storagereview.com/news/silicon-motion-montitan-rdk-targets-agentic-ai-storage-with-next-gen-performashape-and-pcie-6-0-support",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-13T15:53:44.000Z",
-      "summary": "At FMS 2026, Silicon Motion introduced the MonTitan SSD Reference Design Kit (RDK), a platform built around the company’s next-generation PerformaShape technology. The design targets Agentic AI infrastructure, where enterprise SSDs can provide a persistent me...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 125,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 90
-    },
-    {
-      "id": "3cb1ca2a98ccab",
-      "title": "SpaceX Plans to Power $16.8B Terafab Without the Grid",
-      "url": "https://www.datacenterknowledge.com/infrastructure/spacex-plans-to-power-16-8b-terafab-without-the-grid",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-11T12:18:22.000Z",
-      "summary": "SpaceX plans to power its massive Texas chip campus with onsite generation and batteries rather than the grid, according to a signed county agreement.",
-      "tags": [
-        "data-centers",
-        "power-cooling",
-        "chips"
-      ],
-      "score": 125,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 92
     },
     {
       "id": "a1d85b362b0395",
@@ -248,6 +184,65 @@
       "pressure": 100
     },
     {
+      "id": "8d6ee163f82e4f",
+      "title": "Liqid Pools 30 AMD MI350P GPUs in One Server: 4.3TB of HBM3E and 69 PFLOPS for AI Inference",
+      "url": "https://www.storagereview.com/news/liqid-pools-30-amd-mi350p-gpus-in-one-server-4-3tb-of-hbm3e-and-69-pflops-for-ai-inference",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-12T18:40:29.000Z",
+      "summary": "In late July, Liqid unveiled a scale-up AI platform built around AMD Instinct MI350P PCIe GPUs. The UltraStack 30 pairs Liqid’s composable GPU pooling technology with AMD accelerators to address enterprise and cloud AI inference deployments that need to scale...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "chips"
+      ],
+      "score": 121,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 100
+    },
+    {
+      "id": "511232af87d7fe",
+      "title": "Silicon Motion MonTitan RDK Targets Agentic AI Storage With Next-Gen PerformaShape and PCIe 6.0 Support",
+      "url": "https://www.storagereview.com/news/silicon-motion-montitan-rdk-targets-agentic-ai-storage-with-next-gen-performashape-and-pcie-6-0-support",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-13T15:53:44.000Z",
+      "summary": "At FMS 2026, Silicon Motion introduced the MonTitan SSD Reference Design Kit (RDK), a platform built around the company’s next-generation PerformaShape technology. The design targets Agentic AI infrastructure, where enterprise SSDs can provide a persistent me...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "chips"
+      ],
+      "score": 120,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 90
+    },
+    {
+      "id": "3cb1ca2a98ccab",
+      "title": "SpaceX Plans to Power $16.8B Terafab Without the Grid",
+      "url": "https://www.datacenterknowledge.com/infrastructure/spacex-plans-to-power-16-8b-terafab-without-the-grid",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-11T12:18:22.000Z",
+      "summary": "SpaceX plans to power its massive Texas chip campus with onsite generation and batteries rather than the grid, according to a signed county agreement.",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "chips"
+      ],
+      "score": 119,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 92
+    },
+    {
       "id": "4f9137a8f4f728",
       "title": "Volta Comes Out of Stealth With a $10B AI Lab Partnership and a 133MW Vera Rubin Factory in Norway",
       "url": "https://www.storagereview.com/news/volta-comes-out-of-stealth-with-a-10b-ai-lab-partnership-and-a-133mw-vera-rubin-factory-in-norway",
@@ -262,7 +257,7 @@
         "servers",
         "storage"
       ],
-      "score": 118,
+      "score": 113,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 100
@@ -281,29 +276,10 @@
         "networking",
         "security"
       ],
-      "score": 117,
+      "score": 111,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 84
-    },
-    {
-      "id": "3db161d030d636",
-      "title": "RT-One Becomes First AMPHIX Customer, Certifying One AI Stack to Deploy Across the Americas",
-      "url": "https://www.storagereview.com/news/rt-one-becomes-first-amphix-customer-certifying-one-ai-stack-to-deploy-across-the-americas",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-13T16:13:19.000Z",
-      "summary": "RAVEL and Strata Expanse have named RT-One as the first commercial customer of the AMPHIX AI Infrastructure Platform, a deployment model designed to validate enterprise AI infrastructure before permanent production sites are completed. AMPHIX combines site-re...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 113,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 82
     },
     {
       "id": "bc983982e5181b",
@@ -320,47 +296,29 @@
         "storage",
         "networking"
       ],
-      "score": 113,
+      "score": 109,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 98
     },
     {
-      "id": "e95751a9afb5cb",
-      "title": "Praetorian’s Virginia Megasite Could Accommodate Data Center Development",
-      "url": "https://www.datacenterknowledge.com/data-center-site-selection/praetorian-s-virginia-megasite-could-accommodate-data-center-development",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-12T09:05:00.000Z",
-      "summary": "Chesapeake officials say existing rules allow data centers, while power discussions with Dominion have focused on prospective industrial users.",
+      "id": "3db161d030d636",
+      "title": "RT-One Becomes First AMPHIX Customer, Certifying One AI Stack to Deploy Across the Americas",
+      "url": "https://www.storagereview.com/news/rt-one-becomes-first-amphix-customer-certifying-one-ai-stack-to-deploy-across-the-americas",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-13T16:13:19.000Z",
+      "summary": "RAVEL and Strata Expanse have named RT-One as the first commercial customer of the AMPHIX AI Infrastructure Platform, a deployment model designed to validate enterprise AI infrastructure before permanent production sites are completed. AMPHIX combines site-re...",
       "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 109,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 68
-    },
-    {
-      "id": "ac36c1ca360ea3",
-      "title": "Microchip Switchtec 160-Lane PCIe Gen6 Switch Shown at FMS 2026 with XpressConnect PCIe 6 Retimer",
-      "url": "https://www.servethehome.com/microchip-switchtec-160-lane-pcie-gen6-switch-shown-at-fms-2026-with-xpressconnect-pcie-6-retimer/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-13T18:00:18.000Z",
-      "summary": "At FMS 2026, we saw a 160-lane Microchip Switchtec PCIe Gen6 switch, XpressConnect retimer demo, and even an Everpure cameo The post Microchip Switchtec 160-Lane PCIe Gen6 Switch Shown at FMS 2026 with XpressConnect PCIe 6 Retimer appeared first on ServeTheHo...",
-      "tags": [
+        "ai-infrastructure",
         "servers",
-        "networking",
-        "chips"
+        "storage"
       ],
       "score": 108,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
+      "pressure": 82
     },
     {
       "id": "dabe7a11046c80",
@@ -383,6 +341,43 @@
       "pressure": 84
     },
     {
+      "id": "ac36c1ca360ea3",
+      "title": "Microchip Switchtec 160-Lane PCIe Gen6 Switch Shown at FMS 2026 with XpressConnect PCIe 6 Retimer",
+      "url": "https://www.servethehome.com/microchip-switchtec-160-lane-pcie-gen6-switch-shown-at-fms-2026-with-xpressconnect-pcie-6-retimer/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-13T18:00:18.000Z",
+      "summary": "At FMS 2026, we saw a 160-lane Microchip Switchtec PCIe Gen6 switch, XpressConnect retimer demo, and even an Everpure cameo The post Microchip Switchtec 160-Lane PCIe Gen6 Switch Shown at FMS 2026 with XpressConnect PCIe 6 Retimer appeared first on ServeTheHo...",
+      "tags": [
+        "servers",
+        "networking",
+        "chips"
+      ],
+      "score": 103,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "e95751a9afb5cb",
+      "title": "Praetorian’s Virginia Megasite Could Accommodate Data Center Development",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/praetorian-s-virginia-megasite-could-accommodate-data-center-development",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-12T09:05:00.000Z",
+      "summary": "Chesapeake officials say existing rules allow data centers, while power discussions with Dominion have focused on prospective industrial users.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 103,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 68
+    },
+    {
       "id": "98a58c59c958ea",
       "title": "DapuStor Shows a 512TB QLC SSD at FMS 2026: 1PB of Flash in Two Drives",
       "url": "https://www.storagereview.com/news/dapustor-shows-a-512tb-qlc-ssd-at-fms-2026-1pb-of-flash-in-two-drives",
@@ -396,28 +391,10 @@
         "storage",
         "chips"
       ],
-      "score": 101,
+      "score": 96,
       "whyUseful": "Capacity pressure for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
-    },
-    {
-      "id": "424265e7e559e2",
-      "title": "3.8 GW Load Drop Prompts Potential PJM Data Center Rules",
-      "url": "https://www.datacenterknowledge.com/regulations/3-8-gw-load-drop-prompts-potential-pjm-rules",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-12T13:58:04.000Z",
-      "summary": "PJM is weighing ride-through rules for data centers after nearly 3,800 MW of Northern Virginia load transferred to onsite generation during the grid event.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 99,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     },
     {
       "id": "836b7440e8edf8",
@@ -433,27 +410,28 @@
         "servers",
         "storage"
       ],
-      "score": 98,
+      "score": 93,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 84
     },
     {
-      "id": "3106b3fd21f903",
-      "title": "The Critical Minerals Crisis: AI Data Centers Face Supply Chain Strain",
-      "url": "https://www.datacenterknowledge.com/supply-chain/the-critical-minerals-crisis-ai-data-centers-face-supply-chain-strain",
+      "id": "424265e7e559e2",
+      "title": "3.8 GW Load Drop Prompts Potential PJM Data Center Rules",
+      "url": "https://www.datacenterknowledge.com/regulations/3-8-gw-load-drop-prompts-potential-pjm-rules",
       "source": "Data Center Knowledge",
       "sourceHomepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
-      "publishedAt": "2026-08-13T09:00:00.000Z",
-      "summary": "The AI data center boom relies on copper, lithium, and rare earths, but ongoing supply chain pressures are testing whether producers can keep up.",
+      "publishedAt": "2026-08-12T13:58:04.000Z",
+      "summary": "PJM is weighing ride-through rules for data centers after nearly 3,800 MW of Northern Virginia load transferred to onsite generation during the grid event.",
       "tags": [
-        "data-centers"
+        "data-centers",
+        "power-cooling"
       ],
-      "score": 95,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "score": 93,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
+      "pressure": 58
     },
     {
       "id": "ea024cd8e04bbf",
@@ -469,10 +447,27 @@
         "servers",
         "chips"
       ],
-      "score": 95,
+      "score": 90,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 66
+    },
+    {
+      "id": "3106b3fd21f903",
+      "title": "The Critical Minerals Crisis: AI Data Centers Face Supply Chain Strain",
+      "url": "https://www.datacenterknowledge.com/supply-chain/the-critical-minerals-crisis-ai-data-centers-face-supply-chain-strain",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-13T09:00:00.000Z",
+      "summary": "The AI data center boom relies on copper, lithium, and rare earths, but ongoing supply chain pressures are testing whether producers can keep up.",
+      "tags": [
+        "data-centers"
+      ],
+      "score": 89,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "34eebee8dc8c63",
@@ -487,28 +482,10 @@
         "servers",
         "storage"
       ],
-      "score": 92,
+      "score": 87,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
-    },
-    {
-      "id": "b6b12a77f3fb78",
-      "title": "The backup Microsoft never promised you",
-      "url": "https://www.theregister.com/security/2026/08/13/sponsored-the-backup-microsoft-never-promised-you/5284957",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-13T15:00:00.000Z",
-      "summary": "SPONSORED FEATURE: Your M365 and Azure data might not be as safe as you think from ransomware; time for a reality check",
-      "tags": [
-        "storage",
-        "security"
-      ],
-      "score": 91,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 76
     },
     {
       "id": "d848d418769d8e",
@@ -524,46 +501,28 @@
         "servers",
         "storage"
       ],
-      "score": 90,
+      "score": 85,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 82
     },
     {
-      "id": "7fac0b730a1f51",
-      "title": "'Near-autonomous' AI agents attack Taiwan's nuclear safety agency",
-      "url": "https://www.theregister.com/security/2026/08/12/near-autonomous-ai-agents-attack-taiwans-nuclear-safety-agency/5287055",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-12T21:45:16.000Z",
-      "summary": "Some say the world will end in fire, some say an agentic swarm",
+      "id": "3f5a59dce78fa2",
+      "title": "How Cloudflare detects MCP traffic and helps secure it",
+      "url": "https://blog.cloudflare.com/mcp-security-updates/",
+      "source": "Cloudflare Blog",
+      "sourceHomepage": "https://blog.cloudflare.com",
+      "category": "ai",
+      "publishedAt": "2026-08-14T13:12:12.000Z",
+      "summary": "Cloudflare Gateway identifies MCP requests using protocol-level heuristics. Security teams can use that signal to find shadow MCP traffic, enforce Portal-only access for approved servers, and block direct connections on managed network paths.",
       "tags": [
-        "power-cooling",
+        "servers",
         "security"
       ],
-      "score": 88,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "score": 81,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
-    },
-    {
-      "id": "d843aa06e1f9d2",
-      "title": "Twitch feeds your streams to Amazon's AI unless you tell it to stop",
-      "url": "https://www.theregister.com/offbeat/2026/08/13/twitch-feeds-your-streams-to-amazons-ai-unless-you-tell-it-to-stop/5287258",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "offbeat",
-      "publishedAt": "2026-08-13T10:32:00.000Z",
-      "summary": "Bot training switch is on by default, because apparently asking first wasn't going to work",
-      "tags": [
-        "ai-infrastructure",
-        "networking"
-      ],
-      "score": 84,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 58
     },
     {
       "id": "6406043c017b35",
@@ -578,134 +537,10 @@
         "servers",
         "storage"
       ],
-      "score": 83,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "f46db5d7a3a86c",
-      "title": "Laptop Battery Life Leaderboard 2026: Top 20 Lab-Tested Laptops, Ranked",
-      "url": "https://www.storagereview.com/best/laptop-battery-life",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-13T18:42:27.000Z",
-      "summary": "Updated August 13, 2026: Dell Pro Precision 5 14s AMD enters at #13 with 14 hr 26 min; the Dell Pro Max 16 Premium rotates off at the 20-system cap. Originally published earlier today with the top 20 runtimes from two years of lab testing. New results are add...",
-      "tags": [
-        "servers",
-        "storage"
-      ],
-      "score": 82,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "c93eba5527f592",
-      "title": "StorageReview Best: Lab-Tested Buyer’s Guides",
-      "url": "https://www.storagereview.com/best",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-13T16:46:50.000Z",
-      "summary": "Updated August 13, 2026: The Laptop Battery Life Leaderboard is live with 27 lab-tested systems, joining Best Desktops for Local AI and the Storage Leaderboard. Workstation and business laptop leaderboards are in testing now. StorageReview Best is our family...",
-      "tags": [
-        "servers",
-        "storage"
-      ],
-      "score": 82,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "5e1ca027f7a5c7",
-      "title": "Minisforum N5 Max Review with AMD Ryzen AI Max+ 395",
-      "url": "https://www.servethehome.com/minisforum-n5-max-review-with-amd-ryzen-ai-max-395/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-11T17:00:08.000Z",
-      "summary": "We review the Minisforum N5 Max, a 64GB AMD Strix Halo system that combines 10GbE, a 5-bay NAS, and more into a single box The post Minisforum N5 Max Review with AMD Ryzen AI Max+ 395 appeared first on ServeTheHome .",
-      "tags": [
-        "servers",
-        "storage"
-      ],
-      "score": 81,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "4406228d5da6f3",
-      "title": "AWS Data Center Withdrawal Signals Growing Political, Community Challenges",
-      "url": "https://www.datacenterknowledge.com/data-center-site-selection/aws-data-center-withdrawal-signals-growing-political-community-challenges",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-11T18:34:58.000Z",
-      "summary": "AWS cites infrastructure priorities for its Maryland data center rollback, but the decision also highlights the growing influence of community and political resistance.",
-      "tags": [
-        "data-centers"
-      ],
-      "score": 80,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "647dcfcd87c0c0",
-      "title": "Dell 200PB Rack storage building block",
-      "url": "https://www.blocksandfiles.com/flash/2026/08/13/dell-200pb-rack-storage-building-block/5287288",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-08-13T10:29:14.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "data-centers",
-        "storage"
-      ],
-      "score": 79,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "b92611b0d96a9b",
-      "title": "AWS key exposed in JavaScript may have lit way to Beacon's charity data",
-      "url": "https://www.theregister.com/security/2026/08/13/aws-key-exposed-in-javascript-may-have-lit-way-to-beacons-charity-data/5287303",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-13T11:34:00.000Z",
-      "summary": "CRM provider confirms customer database was copied and probably downloaded in readable form",
-      "tags": [
-        "security"
-      ],
       "score": 78,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
-    },
-    {
-      "id": "ceb9b702829813",
-      "title": "Spectre rears its ugly head again as researchers show some RISC-V chips are susceptible",
-      "url": "https://www.theregister.com/security/2026/08/12/spectre-rears-its-ugly-head-again-as-researchers-show-some-risc-v-chips-are-susceptible/5286978",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-12T19:42:57.000Z",
-      "summary": "Eight years on, we're still paying to hide the future glimpsed during speculative execution",
-      "tags": [
-        "chips",
-        "security"
-      ],
-      "score": 78,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
+      "pressure": 58
     },
     {
       "id": "42ffcfeb75cf65",
@@ -727,38 +562,58 @@
       "pressure": 66
     },
     {
-      "id": "fc25b46fa1bb9a",
-      "title": "Rent-a-GPU outfit Nebius promises rapid 1 GW powerup plan isn't nebulous",
-      "url": "https://www.theregister.com/off-prem/2026/08/12/rent-a-gpu-outfit-nebius-promises-rapid-1-gw-powerup-plan-isnt-nebulous/5287086",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "off-prem",
-      "publishedAt": "2026-08-12T22:56:39.000Z",
-      "summary": "And it'll jump through every financial hoop it can to get there",
+      "id": "f46db5d7a3a86c",
+      "title": "Laptop Battery Life Leaderboard 2026: Top 20 Lab-Tested Laptops, Ranked",
+      "url": "https://www.storagereview.com/best/laptop-battery-life",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-13T18:42:27.000Z",
+      "summary": "Updated August 13, 2026: Dell Pro Precision 5 14s AMD enters at #13 with 14 hr 26 min; the Dell Pro Max 16 Premium rotates off at the 20-system cap. Originally published earlier today with the top 20 runtimes from two years of lab testing. New results are add...",
       "tags": [
-        "ai-infrastructure"
+        "servers",
+        "storage"
       ],
       "score": 77,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 60
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
     },
     {
-      "id": "a8542c190dc31c",
-      "title": "Trump wants to grant private cyber firms a license to hack back",
-      "url": "https://www.theregister.com/security/2026/08/13/trump-wants-to-grant-private-cyber-firms-a-license-to-hack-back/5287420",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-13T15:04:09.000Z",
-      "summary": "Contractors could surveil and disrupt foreign criminal networks, provided they follow strict rules and put up $1M",
+      "id": "c93eba5527f592",
+      "title": "StorageReview Best: Lab-Tested Buyer’s Guides",
+      "url": "https://www.storagereview.com/best",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-13T16:46:50.000Z",
+      "summary": "Updated August 13, 2026: The Laptop Battery Life Leaderboard is live with 27 lab-tested systems, joining Best Desktops for Local AI and the Storage Leaderboard. Workstation and business laptop leaderboards are in testing now. StorageReview Best is our family...",
       "tags": [
-        "security"
+        "servers",
+        "storage"
+      ],
+      "score": 77,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "5e1ca027f7a5c7",
+      "title": "Minisforum N5 Max Review with AMD Ryzen AI Max+ 395",
+      "url": "https://www.servethehome.com/minisforum-n5-max-review-with-amd-ryzen-ai-max-395/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-11T17:00:08.000Z",
+      "summary": "We review the Minisforum N5 Max, a 64GB AMD Strix Halo system that combines 10GbE, a 5-bay NAS, and more into a single box The post Minisforum N5 Max Review with AMD Ryzen AI Max+ 395 appeared first on ServeTheHome .",
+      "tags": [
+        "servers",
+        "storage"
       ],
       "score": 75,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
+      "pressure": 58
     },
     {
       "id": "c4c40050d83d70",
@@ -774,6 +629,23 @@
         "networking"
       ],
       "score": 75,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "4406228d5da6f3",
+      "title": "AWS Data Center Withdrawal Signals Growing Political, Community Challenges",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/aws-data-center-withdrawal-signals-growing-political-community-challenges",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-11T18:34:58.000Z",
+      "summary": "AWS cites infrastructure priorities for its Maryland data center rollback, but the decision also highlights the growing influence of community and political resistance.",
+      "tags": [
+        "data-centers"
+      ],
+      "score": 74,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
@@ -798,23 +670,6 @@
       "pressure": 58
     },
     {
-      "id": "8e9b2a8f4b71b8",
-      "title": "Passwords stored in public Google Doc then showed up in search results",
-      "url": "https://www.theregister.com/security/2026/08/13/passwords-stored-in-public-google-doc-then-showed-up-in-search-results/5287028",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-13T07:00:00.000Z",
-      "summary": "Developer spotted hostname and credential string lurking in autocomplete",
-      "tags": [
-        "security"
-      ],
-      "score": 71,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
       "id": "a0b1589a452bd2",
       "title": "ClusterNetworkPolicy in GKE: Balancing control and autonomy for your microservices",
       "url": "https://cloud.google.com/blog/products/networking/new-clusternetworkpolicy-in-gke/",
@@ -834,38 +689,177 @@
       "pressure": 86
     },
     {
-      "id": "1b37fa72b44111",
-      "title": "Storage News Ticker - 13 April",
-      "url": "https://www.blocksandfiles.com/flash/2026/08/13/storage-news-ticker-13-april/5287445",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-08-13T15:57:46.000Z",
-      "summary": "No summary was provided by the source feed.",
+      "id": "51f6eabec5d838",
+      "title": "Ofgem Fee Aims to Clear Grid Queue – Who Benefits?",
+      "url": "https://www.datacenterknowledge.com/regulations/ofgem-fee-aims-to-clear-grid-queue-who-benefits-",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-10T09:00:00.000Z",
+      "summary": "The policy shifts grid access from chronological priority to proof of viability, potentially forcing smaller developers to pursue alternative strategies.",
       "tags": [
-        "storage"
+        "data-centers",
+        "power-cooling"
       ],
-      "score": 69,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "score": 63,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "7b7ce30fdf4110",
+      "title": "Why Data Center Development Is Facing a Legal Reckoning",
+      "url": "https://www.datacenterknowledge.com/regulations/why-data-center-development-is-facing-a-legal-reckoning",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-10T22:13:31.000Z",
+      "summary": "As anti-data center opposition grows, developers must prepare for litigation to combat misinformation and protect projects, writes Heath Cheek.",
+      "tags": [
+        "data-centers"
+      ],
+      "score": 60,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
     },
     {
-      "id": "01e9131bf18a4c",
-      "title": "Chinese Loongson processors have leaky caches, researchers find",
-      "url": "https://www.theregister.com/security/2026/08/13/chinese-loongson-processors-have-leaky-caches-researchers-find/5287137",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-13T02:14:11.000Z",
-      "summary": "Attackers could extract data, even working from inside a guest VM",
+      "id": "8275415b93ffca",
+      "title": "Route AI Agent Workloads Across Models with NVIDIA NeMo Switchyard",
+      "url": "https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-08-11T13:00:00.000Z",
+      "summary": "Building an AI agent does not end with choosing a single model. Each model has its own strengths, weaknesses, and cost profile, which can shift from one...",
       "tags": [
-        "security"
+        "ai-infrastructure"
       ],
-      "score": 69,
+      "score": 58,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 60
+    },
+    {
+      "id": "b62119608d24d4",
+      "title": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/",
+      "source": "AWS News Blog",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "category": "Cloud",
+      "publishedAt": "2026-08-06T22:58:00.000Z",
+      "summary": "Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent collaboration, GPU support, and sessions lasting up to 14 days.",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 58,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 76
+    },
+    {
+      "id": "c8a77a43057983",
+      "title": "Dell Pro Precision 5 16s Intel Review: 24 Hours of Battery in a 16-Inch Workstation",
+      "url": "https://www.storagereview.com/review/dell-pro-precision-5-16s-intel-review-24-hours-of-battery-in-a-16-inch-workstation",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-11T16:39:59.000Z",
+      "summary": "The Dell Pro Precision 5 16s Intel is a 16-inch mobile workstation built for users who want more screen space while keeping the system reasonably portable. Our review unit pairs the Core Ultra X9 388H with Intel Arc Pro B390 graphics, 64GB of LPCAMM2-8533 mem...",
+      "tags": [
+        "servers",
+        "storage"
+      ],
+      "score": 55,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "565bd3f999956a",
+      "title": "AT&T and Microsoft scale trillion-token workloads with Microsoft Foundry and AMD",
+      "url": "https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/",
+      "source": "Microsoft Azure Blog",
+      "sourceHomepage": "https://azure.microsoft.com/en-us/blog/",
+      "category": "Cloud",
+      "publishedAt": "2026-07-23T18:30:00.000Z",
+      "summary": "AT&T processed approximately one trillion tokens while developing OTel2.0 using Microsoft Foundry Managed Compute, open AI models, and AMD and NVIDIA GPU infrastructure. Discover how flexible model choice and scalable infrastructure are enabling production-sc...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 54,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
+    },
+    {
+      "id": "3abbfa78041d6a",
+      "title": "Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72",
+      "url": "https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-08-12T18:23:13.000Z",
+      "summary": "Alibaba released the open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), its largest open-weight model, bringing near-frontier capabilities to the open...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 52,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "8eb1590319a66f",
+      "title": "NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-08-11T13:01:07.000Z",
+      "summary": "Long-running AI agents spend most of their time on high-volume execution: tool calls, result validation, and subagent delegation. Using a frontier reasoning...",
+      "tags": [
+        "ai-infrastructure",
+        "cloud-cost"
+      ],
+      "score": 51,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "7a7c15866097a1",
+      "title": "What customers value most in Microsoft Databases—from reliability to AI readiness",
+      "url": "https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/",
+      "source": "Microsoft Azure Blog",
+      "sourceHomepage": "https://azure.microsoft.com/en-us/blog/",
+      "category": "Cloud",
+      "publishedAt": "2026-07-27T15:00:00.000Z",
+      "summary": "Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences. The post What customers value most in Microsoft Databases—from reliability to AI readiness appeared first on Microsoft Az...",
+      "tags": [
+        "power-cooling"
+      ],
+      "score": 49,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
       "pressure": 60
+    },
+    {
+      "id": "ccf57865570ad3",
+      "title": "Run Local Agentic AI Workflows with Meta’s Muse Glimmer on NVIDIA",
+      "url": "https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-08-10T13:27:19.000Z",
+      "summary": "Meta returns to the open source ecosystem with the release of Muse Glimmer, a 30B open-weight dense model with a 120K+ context window built for local AI...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 46,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     }
   ]
 }
