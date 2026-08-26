@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T01:57:09.071Z",
+  "generatedAt": "2026-08-26T13:15:32.510Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
@@ -13,39 +13,39 @@
     },
     {
       "name": "data-centers",
-      "count": 19
+      "count": 20
     },
     {
       "name": "servers",
-      "count": 16
+      "count": 17
     },
     {
       "name": "chips",
-      "count": 13
+      "count": 14
     },
     {
       "name": "power-cooling",
-      "count": 11
+      "count": 13
     },
     {
       "name": "storage",
-      "count": 11
+      "count": 12
+    },
+    {
+      "name": "networking",
+      "count": 5
     },
     {
       "name": "cloud-risk",
       "count": 4
     },
     {
-      "name": "networking",
-      "count": 4
+      "name": "capacity",
+      "count": 1
     },
     {
-      "name": "private-cloud",
-      "count": 2
-    },
-    {
-      "name": "security",
-      "count": 2
+      "name": "infrastructure",
+      "count": 1
     }
   ],
   "sources": [
@@ -142,10 +142,29 @@
         "power-cooling",
         "chips"
       ],
-      "score": 156,
+      "score": 150,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
+    },
+    {
+      "id": "b04080e460f817",
+      "title": "OpenAI Moves Energy Planning Inside Data Center Organization",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/openai-moves-energy-planning-inside-data-center-organization",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-26T12:13:02.000Z",
+      "summary": "OpenAI is adding an energy-technology role as it expands flexible-load, generation and storage strategies across its growing AI data center portfolio.",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "storage"
+      ],
+      "score": 147,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
     },
     {
       "id": "bd4bacc4dd6e89",
@@ -162,7 +181,7 @@
         "servers",
         "chips"
       ],
-      "score": 153,
+      "score": 147,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Resilience pressure",
       "pressure": 92
@@ -175,12 +194,12 @@
       "sourceHomepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
       "publishedAt": "2026-08-25T19:54:43.000Z",
-      "summary": "The 760 MW Eddystone coal plant will remain online longer as PJM faces rising data center load, generator retirements, and delayed power resources.",
+      "summary": "The 760 MW Eddystone power plant will remain online longer as PJM faces rising data center load, generator retirements, and delayed power resources.",
       "tags": [
         "data-centers",
         "power-cooling"
       ],
-      "score": 142,
+      "score": 135,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 78
@@ -199,7 +218,7 @@
         "servers",
         "chips"
       ],
-      "score": 134,
+      "score": 128,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 82
@@ -218,7 +237,7 @@
         "servers",
         "chips"
       ],
-      "score": 129,
+      "score": 123,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 74
@@ -236,7 +255,7 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 129,
+      "score": 123,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 78
@@ -255,7 +274,7 @@
         "ai-infrastructure",
         "power-cooling"
       ],
-      "score": 127,
+      "score": 121,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
@@ -275,7 +294,7 @@
         "servers",
         "storage"
       ],
-      "score": 125,
+      "score": 119,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 90
@@ -294,7 +313,7 @@
         "servers",
         "chips"
       ],
-      "score": 123,
+      "score": 117,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 66
@@ -313,7 +332,7 @@
         "storage",
         "chips"
       ],
-      "score": 119,
+      "score": 115,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
@@ -334,47 +353,10 @@
         "storage",
         "chips"
       ],
-      "score": 119,
+      "score": 114,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 98
-    },
-    {
-      "id": "50dbe0fd5a852f",
-      "title": "Prometheus’ 1.5 GW Texas Data Center Plan Tests Private Power",
-      "url": "https://www.datacenterknowledge.com/data-center-construction/prometheus-1-5-gw-pecos-plan-tests-private-power",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-24T15:19:07.000Z",
-      "summary": "The developer plans an islanded campus with onsite generation, but reaching its 2027 target will require a customer, modular construction, and a new power plant.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 119,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
-    },
-    {
-      "id": "1e35a4be0691d2",
-      "title": "Google’s TPUv8s for Training and Inference at Hot Chips 2026",
-      "url": "https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-26T00:15:29.000Z",
-      "summary": "Hot Chips 2026 sees Google discussing its new eighth-generation TPU family for the technical crowd. One of the only hyperscalers to develop its own training hardware, the company has developed the TPU 8t for training, as well as the TPU 8i for inference The p...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "chips"
-      ],
-      "score": 118,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 74
     },
     {
       "id": "0a19dedbb38bc3",
@@ -392,29 +374,28 @@
         "storage",
         "networking"
       ],
-      "score": 118,
+      "score": 113,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 98
     },
     {
-      "id": "8200abfc55aa74",
-      "title": "Cerebras Talks Going Rack-Scale with Their WSEs at Hot Chips 2026",
-      "url": "https://www.servethehome.com/cerebras-talks-going-rack-scale-with-their-wses-at-hot-chips-2026/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-25T22:15:18.000Z",
-      "summary": "At Hot Chips 2026, wafer scale engine developer Cerebras is talking about the next generation of their giant accelerators, as well as how the company is going rack-scale thanks to their Nexus platform architecture The post Cerebras Talks Going Rack-Scale with...",
+      "id": "50dbe0fd5a852f",
+      "title": "Prometheus’ 1.5 GW Texas Data Center Plan Tests Private Power",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/prometheus-1-5-gw-pecos-plan-tests-private-power",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-24T15:19:07.000Z",
+      "summary": "The developer plans an islanded campus with onsite generation, but reaching its 2027 target will require a customer, modular construction, and a new power plant.",
       "tags": [
         "data-centers",
-        "servers",
-        "chips"
+        "power-cooling"
       ],
-      "score": 117,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
+      "score": 113,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
     },
     {
       "id": "aa6dbf6d8b209b",
@@ -433,6 +414,44 @@
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Cloud bill pressure",
       "pressure": 94
+    },
+    {
+      "id": "1e35a4be0691d2",
+      "title": "Google’s TPUv8s for Training and Inference at Hot Chips 2026",
+      "url": "https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-26T00:15:29.000Z",
+      "summary": "Hot Chips 2026 sees Google discussing its new eighth-generation TPU family for the technical crowd. One of the only hyperscalers to develop its own training hardware, the company has developed the TPU 8t for training, as well as the TPU 8i for inference The p...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "chips"
+      ],
+      "score": 112,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 74
+    },
+    {
+      "id": "8200abfc55aa74",
+      "title": "Cerebras Talks Going Rack-Scale with Their WSEs at Hot Chips 2026",
+      "url": "https://www.servethehome.com/cerebras-talks-going-rack-scale-with-their-wses-at-hot-chips-2026/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-25T22:15:18.000Z",
+      "summary": "At Hot Chips 2026, wafer scale engine developer Cerebras is talking about the next generation of their giant accelerators, as well as how the company is going rack-scale thanks to their Nexus platform architecture The post Cerebras Talks Going Rack-Scale with...",
+      "tags": [
+        "data-centers",
+        "servers",
+        "chips"
+      ],
+      "score": 111,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
     },
     {
       "id": "24f527872ffeac",
@@ -507,7 +526,7 @@
         "storage",
         "chips"
       ],
-      "score": 102,
+      "score": 97,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 82
@@ -526,7 +545,7 @@
         "ai-infrastructure",
         "power-cooling"
       ],
-      "score": 97,
+      "score": 92,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
@@ -545,7 +564,7 @@
         "power-cooling",
         "servers"
       ],
-      "score": 97,
+      "score": 92,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
@@ -564,7 +583,7 @@
         "ai-infrastructure",
         "networking"
       ],
-      "score": 92,
+      "score": 88,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 74
@@ -582,7 +601,7 @@
         "data-centers",
         "servers"
       ],
-      "score": 90,
+      "score": 85,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
@@ -601,7 +620,7 @@
         "servers",
         "storage"
       ],
-      "score": 89,
+      "score": 84,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
@@ -620,7 +639,7 @@
         "storage",
         "chips"
       ],
-      "score": 89,
+      "score": 84,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
@@ -638,64 +657,10 @@
         "ai-infrastructure",
         "chips"
       ],
-      "score": 86,
+      "score": 81,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 74
-    },
-    {
-      "id": "a1312c3436f811",
-      "title": "House Bill Would Put Federal Electricity Tax on Data Centers",
-      "url": "https://www.datacenterknowledge.com/regulations/house-bill-would-put-federal-electricity-tax-on-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-19T14:03:01.000Z",
-      "summary": "H.R. 10102 would tax data center electricity at 1 cent per kWh, raising an estimated $1.76 billion annually for housing, conservation, and infrastructure.",
-      "tags": [
-        "data-centers",
-        "cloud-cost",
-        "power-cooling"
-      ],
-      "score": 84,
-      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
-    },
-    {
-      "id": "370bec51bdf979",
-      "title": "Apple defies memory shortage with new Mac minis",
-      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/apple-defies-memory-shortage-with-new-mac-minis/5292406",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "ai and ml",
-      "publishedAt": "2026-08-25T20:18:19.000Z",
-      "summary": "The cost of memory makes this an expensive ML meal",
-      "tags": [
-        "infrastructure"
-      ],
-      "score": 82,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 62
-    },
-    {
-      "id": "1295ecccbb3eb0",
-      "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
-      "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-08-24T15:00:00.000Z",
-      "summary": "Traditional cloud infrastructure was designed for predictable, general-purpose workloads and standard interfaces. Agentic AI factories connect diverse users,...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure"
-      ],
-      "score": 81,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
     },
     {
       "id": "4ab5714deeced5",
@@ -754,72 +719,38 @@
       "pressure": 74
     },
     {
-      "id": "ee4d3340d50431",
-      "title": "Arcitecta offers Microsoft 365 Education storage cost reduction tool",
-      "url": "https://www.blocksandfiles.com/data-management/2026/08/25/arcitecta-offers-microsoft-365-education-storage-cost-reduction-tool/5292300",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-08-25T16:39:31.000Z",
-      "summary": "No summary was provided by the source feed.",
+      "id": "dd645f1fec59be",
+      "title": "SpaceX plans to plant $100B Starbase on Louisiana coast",
+      "url": "https://www.theregister.com/offbeat/2026/08/26/spacex-plans-to-plant-100b-starbase-on-louisiana-coast/5292520",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "offbeat",
+      "publishedAt": "2026-08-26T11:29:00.000Z",
+      "summary": "Plans to break ground in 2027, produce own propellent, power in 'self-sustaining' spaceport. All before Starship ships v1.0 orbit",
       "tags": [
-        "storage"
+        "power-cooling"
       ],
-      "score": 80,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
+      "score": 79,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
       "pressure": 60
     },
     {
-      "id": "0b100fd5d27c37",
-      "title": "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access",
-      "url": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data science",
-      "publishedAt": "2026-08-25T15:00:00.000Z",
-      "summary": "For years, a Python developer who needed a GPU had two realistic choices: Learn NVIDIA CUDA C++ well enough to write an extension, set up a build toolchain, and...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 80,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 68
-    },
-    {
-      "id": "6eb37653082b78",
-      "title": "Now Perplexity is trying to get into the local AI action",
-      "url": "https://www.theregister.com/ai-and-ml/2026/08/26/now-perplexity-is-trying-to-get-into-the-local-ai-action/5292449",
+      "id": "370bec51bdf979",
+      "title": "Apple defies memory shortage with new Mac minis",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/apple-defies-memory-shortage-with-new-mac-minis/5292406",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
       "category": "ai and ml",
-      "publishedAt": "2026-08-25T23:39:23.000Z",
-      "summary": "Amid talk of an Nvidia deal, the AI search biz is looking beyond the cloud",
+      "publishedAt": "2026-08-25T20:18:19.000Z",
+      "summary": "The cost of memory makes this an expensive ML meal",
       "tags": [
-        "ai-infrastructure"
+        "infrastructure"
       ],
-      "score": 79,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "9f5ab94314b585",
-      "title": "SK Hynix chipping away at AI memory wall from several angles",
-      "url": "https://www.blocksandfiles.com/flash/2026/08/25/sk-hynix-chipping-away-at-ai-memory-wall-from-several-angles/5292113",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-08-25T11:33:00.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 78,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
+      "score": 77,
+      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 62
     },
     {
       "id": "e639a9598d4948",
@@ -841,38 +772,111 @@
       "pressure": 90
     },
     {
-      "id": "f183f9b4b96003",
-      "title": "EPA to drop requirement for public notice of polluting datacenters",
-      "url": "https://www.theregister.com/on-prem/2026/08/25/epa-to-drop-requirement-for-public-notice-of-polluting-datacenters/5292341",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "on-prem",
-      "publishedAt": "2026-08-25T16:40:00.000Z",
-      "summary": "State and local regulators would decide whether the public gets a say on minor-source permits",
+      "id": "1295ecccbb3eb0",
+      "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
+      "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-08-24T15:00:00.000Z",
+      "summary": "Traditional cloud infrastructure was designed for predictable, general-purpose workloads and standard interfaces. Agentic AI factories connect diverse users,...",
       "tags": [
-        "private-cloud"
+        "data-centers",
+        "ai-infrastructure"
       ],
       "score": 76,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Private infrastructure signal",
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "ee4d3340d50431",
+      "title": "Arcitecta offers Microsoft 365 Education storage cost reduction tool",
+      "url": "https://www.blocksandfiles.com/data-management/2026/08/25/arcitecta-offers-microsoft-365-education-storage-cost-reduction-tool/5292300",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-08-25T16:39:31.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage"
+      ],
+      "score": 75,
+      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Cloud bill pressure",
       "pressure": 60
     },
     {
-      "id": "80249aa06fe9dc",
-      "title": "You could've applied all 1,449 Oracle patches and still been hit by this attack",
-      "url": "https://www.theregister.com/security/2026/08/25/you-couldve-applied-all-1449-oracle-patches-and-still-been-hit-by-this-attack/5292335",
+      "id": "0b100fd5d27c37",
+      "title": "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access",
+      "url": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data science",
+      "publishedAt": "2026-08-25T15:00:00.000Z",
+      "summary": "For years, a Python developer who needed a GPU had two realistic choices: Learn NVIDIA CUDA C++ well enough to write an extension, set up a build toolchain, and...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 75,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 68
+    },
+    {
+      "id": "8e8bdf55bdad1a",
+      "title": "PJM Strategy Targets Data Center Growth, but Policy Gaps Remain",
+      "url": "https://www.datacenterknowledge.com/energy-power-supply/pjm-5-year-strategy-wrestles-with-data-center-boom",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-21T11:13:14.000Z",
+      "summary": "The grid operator calls for faster development of generation and transmission and greater visibility into large loads, but major questions remain.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 75,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "6eb37653082b78",
+      "title": "Now Perplexity is trying to get into the local AI action",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/26/now-perplexity-is-trying-to-get-into-the-local-ai-action/5292449",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-08-25T16:09:00.000Z",
-      "summary": "Attackers now ready to exploit how things work, rather than just break them, says Oracle support expert",
+      "category": "ai and ml",
+      "publishedAt": "2026-08-25T23:39:23.000Z",
+      "summary": "Amid talk of an Nvidia deal, the AI search biz is looking beyond the cloud",
       "tags": [
-        "security"
+        "ai-infrastructure"
       ],
-      "score": 76,
+      "score": 74,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "76946eaa012048",
+      "title": "SK hynix Takes Its Co-Packaged Optics Roadmap to Nature Electronics: 100Tb/s Nodes, Sub-1pJ/bit, Under 10ns",
+      "url": "https://www.storagereview.com/news/sk-hynix-takes-its-co-packaged-optics-roadmap-to-nature-electronics-100tb-s-nodes-sub-1pj-bit-under-10ns",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-21T17:11:44.000Z",
+      "summary": "Across several hardware generations, memory and networking vendors have identified different choke points in high-performance computing clusters. Memory manufacturers focused on in-package memory bandwidth, while network fabric providers addressed inter-chass...",
+      "tags": [
+        "servers",
+        "storage",
+        "networking",
+        "chips"
+      ],
+      "score": 74,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
+      "pressure": 74
     }
   ]
 }
