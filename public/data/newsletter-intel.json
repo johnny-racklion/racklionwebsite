@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T13:15:32.510Z",
+  "generatedAt": "2026-08-27T09:45:16.616Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
@@ -13,39 +13,39 @@
     },
     {
       "name": "data-centers",
-      "count": 20
+      "count": 19
     },
     {
       "name": "servers",
       "count": 17
     },
     {
-      "name": "chips",
-      "count": 14
-    },
-    {
       "name": "power-cooling",
-      "count": 13
+      "count": 12
     },
     {
       "name": "storage",
       "count": 12
     },
     {
-      "name": "networking",
-      "count": 5
+      "name": "chips",
+      "count": 10
     },
     {
-      "name": "cloud-risk",
+      "name": "networking",
       "count": 4
     },
     {
-      "name": "capacity",
-      "count": 1
+      "name": "security",
+      "count": 4
     },
     {
-      "name": "infrastructure",
-      "count": 1
+      "name": "cloud-risk",
+      "count": 3
+    },
+    {
+      "name": "capacity",
+      "count": 2
     }
   ],
   "sources": [
@@ -89,7 +89,7 @@
       "name": "Blocks & Files",
       "homepage": "https://blocksandfiles.com",
       "category": "Storage",
-      "itemCount": 11
+      "itemCount": 12
     },
     {
       "id": "nvidia-technical-blog",
@@ -117,17 +117,36 @@
       "name": "Google Cloud Blog",
       "homepage": "https://cloud.google.com/blog",
       "category": "Cloud",
-      "itemCount": 8
+      "itemCount": 10
     },
     {
       "id": "cloudflare",
       "name": "Cloudflare Blog",
       "homepage": "https://blog.cloudflare.com",
       "category": "Network & Edge",
-      "itemCount": 2
+      "itemCount": 1
     }
   ],
   "items": [
+    {
+      "id": "1367cc07ee0800",
+      "title": "PJM’s Power Shortfall Puts Data Center Growth in Focus",
+      "url": "https://www.datacenterknowledge.com/energy-power-supply/pjm-s-power-shortfall-puts-data-center-growth-in-focus",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-26T17:43:34.000Z",
+      "summary": "PJM’s first large load process produced 12 proposals and no consensus. Now an accelerated procurement is addressing a 6.8 GW capacity shortfall.",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "capacity"
+      ],
+      "score": 151,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 86
+    },
     {
       "id": "52f3be44a40ff7",
       "title": "Liquid Cooling Options: RDHx, Direct-to-Chip, Immersion",
@@ -142,7 +161,7 @@
         "power-cooling",
         "chips"
       ],
-      "score": 150,
+      "score": 138,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
@@ -155,36 +174,16 @@
       "sourceHomepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
       "publishedAt": "2026-08-26T12:13:02.000Z",
-      "summary": "OpenAI is adding an energy-technology role as it expands flexible-load, generation and storage strategies across its growing AI data center portfolio.",
+      "summary": "OpenAI is adding an energy-technology role as it expands flexible load, generation, and storage strategies across its growing AI data center portfolio.",
       "tags": [
         "data-centers",
         "power-cooling",
         "storage"
       ],
-      "score": 147,
+      "score": 135,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
-    },
-    {
-      "id": "bd4bacc4dd6e89",
-      "title": "NVIDIA’s Groq 3 LPU Accelerators for Heterogeneous AI Compute at Hot Chips 2026",
-      "url": "https://www.servethehome.com/nvidias-groq-3-lpu-accelerators-for-heterogeneous-ai-compute-at-hot-chips-2026/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-25T21:45:31.000Z",
-      "summary": "The newest member of NVIDIA's AI hardware family, at Hot Chips 2026 NVIDIA is diving into the use of LPUs as part of Vera Rubin clusters. The specialized chips from acquihire Groq are being tapped to offer significantly lower latency in the decode phase of in...",
-      "tags": [
-        "ai-infrastructure",
-        "cloud-risk",
-        "servers",
-        "chips"
-      ],
-      "score": 147,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 92
     },
     {
       "id": "505d73cea5f75e",
@@ -199,10 +198,29 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 135,
+      "score": 124,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 78
+    },
+    {
+      "id": "569cebc7be8aa3",
+      "title": "Cerebras CS-4: Three WSE-3 Turbo Wafers, 750 PFLOPS, and a Claimed 30x Over GPU Racks",
+      "url": "https://www.storagereview.com/news/cerebras-cs-4-three-wse-3-turbo-wafers-750-pflops-and-a-claimed-30x-over-gpu-racks",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-26T17:24:15.000Z",
+      "summary": "Cerebras Systems has officially introduced the CS-4, the fourth generation of its wafer-scale AI supercomputing platform, designed for frontier training and high-concurrency inference workloads. The system is engineered around three newly developed Wafer Scal...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage"
+      ],
+      "score": 121,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 92
     },
     {
       "id": "431793d64464d9",
@@ -218,10 +236,50 @@
         "servers",
         "chips"
       ],
-      "score": 128,
+      "score": 118,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 82
+    },
+    {
+      "id": "c29514bf538fc7",
+      "title": "Nutanix Ships Enterprise AI 2.8 With a GA MCP Gateway as NKP 2.19 Rounds Out the Dual-Native Pitch",
+      "url": "https://www.storagereview.com/news/nutanix-ships-enterprise-ai-2-8-with-a-ga-mcp-gateway-as-nkp-2-19-rounds-out-the-dual-native-pitch",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-26T17:40:38.000Z",
+      "summary": "Nutanix has announced the general availability of Nutanix Enterprise AI (NAI) 2.8 alongside the upcoming release of Nutanix Kubernetes Platform (NKP) 2.19. The updates focus on bridging the gap between legacy virtualized environments and modern containerized...",
+      "tags": [
+        "cloud-risk",
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 113,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
+    },
+    {
+      "id": "8dc1c81d842185",
+      "title": "Proxmox VE 9.2 Adds Official arm64 Support, Fully Backing NVIDIA Grace Hopper and Vera",
+      "url": "https://www.storagereview.com/news/proxmox-ve-9-2-adds-official-arm64-support-fully-backing-nvidia-grace-hopper-and-vera",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-26T17:07:02.000Z",
+      "summary": "Proxmox rolled out version 9.2 of its virtualization platform at the start of this month, which adds official support for 64-bit ARM (arm64/aarch64). Previously, Proxmox VE was available only for x86-64 (amd64). With this release, arm64 builds share the same...",
+      "tags": [
+        "ai-infrastructure",
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 113,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 90
     },
     {
       "id": "c0b65bec1c09f5",
@@ -237,165 +295,10 @@
         "servers",
         "chips"
       ],
-      "score": 123,
+      "score": 113,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 74
-    },
-    {
-      "id": "d6e3bfcea19930",
-      "title": "Data Center Construction at Midyear: Demand, Friction, and Building Discipline",
-      "url": "https://www.datacenterknowledge.com/data-center-construction/data-center-construction-at-midyear-demand-friction-and-building-discipline",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-24T21:16:52.000Z",
-      "summary": "Data center buildouts are booming in 2026, but challenges like power, labor, and community concerns demand innovation and collaboration.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 123,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 78
-    },
-    {
-      "id": "4f29a3b110bd8b",
-      "title": "Lancium, Nvidia Partner on Gigawatt-Scale AI Data Centers",
-      "url": "https://www.datacenterknowledge.com/data-center-construction/lancium-nvidia-partner-on-gigawatt-scale-ai-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-25T12:33:39.000Z",
-      "summary": "The developer says it has 4 GW under lease and 15+ GW of powered land as Nvidia partnership advances its grid-responsive AI data center model.",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "power-cooling"
-      ],
-      "score": 121,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "7523ac506ec406",
-      "title": "Lancium Adds NVIDIA as Investor and Partner, Targeting Gigawatt AI Factories Across a 15GW Pipeline",
-      "url": "https://www.storagereview.com/news/lancium-adds-nvidia-as-investor-and-partner-targeting-gigawatt-ai-factories-across-a-15gw-pipeline",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-25T13:53:29.000Z",
-      "summary": "Lancium has announced a strategic collaboration and investment from NVIDIA to accelerate the deployment of large-scale accelerated computing infrastructure across Lancium’s data center portfolio. Lancium, a Blackstone portfolio company supported by Blackstone...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 119,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 90
-    },
-    {
-      "id": "303875a474077a",
-      "title": "SambaNova’s SN50 RDU for AI at Hot Chips 2026",
-      "url": "https://www.servethehome.com/sambanovas-sn50-rdu-for-ai-at-hot-chips-2026/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-25T23:45:32.000Z",
-      "summary": "This year's Hot Chips conference includes a presentation from AI accelerator developer SambaNova, who is at the show to discuss their latest-generation RDU, the SN50 The post SambaNova’s SN50 RDU for AI at Hot Chips 2026 appeared first on ServeTheHome .",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "chips"
-      ],
-      "score": 117,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 66
-    },
-    {
-      "id": "1295a88ecac619",
-      "title": "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo",
-      "url": "https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-08-25T20:57:54.000Z",
-      "summary": "When an LLM engine process fails, the standard recovery path involves a cold restart. This requires loading weights into HBM from storage, compiling kernels,...",
-      "tags": [
-        "ai-infrastructure",
-        "storage",
-        "chips"
-      ],
-      "score": 115,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 92
-    },
-    {
-      "id": "93a626df12c025",
-      "title": "NVIDIA Groq 3 LPX Enters Full Production: 3,400 Tokens per Second at 100K Context, 256 LP30s per Rack",
-      "url": "https://www.storagereview.com/news/nvidia-groq-3-lpx-enters-full-production-3400-tokens-per-second-at-100k-context-256-lp30s-per-rack",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-24T20:26:28.000Z",
-      "summary": "NVIDIA announced the production release of the NVIDIA Groq 3 LPX, a dedicated interactive inference accelerator built to complement the Vera Rubin NVL72 platform. As enterprise AI workloads shift from raw model pre-training toward real-time reasoning and auto...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 114,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 98
-    },
-    {
-      "id": "0a19dedbb38bc3",
-      "title": "Intel Hot Chips 2026: 256-Core Diamond Rapids, Crescent Island With 480GB for Inference, and Wildcat Lake at the Edge",
-      "url": "https://www.storagereview.com/news/intel-hot-chips-2026-256-core-diamond-rapids-crescent-island-with-480gb-for-inference-and-wildcat-lake-at-the-edge",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-24T19:55:39.000Z",
-      "summary": "At Hot Chips 2026, Intel presented architectural details for three upcoming silicon platforms targeted at enterprise agentic AI workloads spanning data center, inference, and edge tiers. The lineup consists of the next-generation Xeon processor, codenamed Dia...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "networking"
-      ],
-      "score": 113,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 98
-    },
-    {
-      "id": "50dbe0fd5a852f",
-      "title": "Prometheus’ 1.5 GW Texas Data Center Plan Tests Private Power",
-      "url": "https://www.datacenterknowledge.com/data-center-construction/prometheus-1-5-gw-pecos-plan-tests-private-power",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-24T15:19:07.000Z",
-      "summary": "The developer plans an islanded campus with onsite generation, but reaching its 2027 target will require a customer, modular construction, and a new power plant.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 113,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
     },
     {
       "id": "aa6dbf6d8b209b",
@@ -416,81 +319,158 @@
       "pressure": 94
     },
     {
-      "id": "1e35a4be0691d2",
-      "title": "Google’s TPUv8s for Training and Inference at Hot Chips 2026",
-      "url": "https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/",
+      "id": "d6e3bfcea19930",
+      "title": "Data Center Construction at Midyear: Demand, Friction, and Building Discipline",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/data-center-construction-at-midyear-demand-friction-and-building-discipline",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-24T21:16:52.000Z",
+      "summary": "Data center buildouts are booming in 2026, but challenges like power, labor, and community concerns demand innovation and collaboration.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 111,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 78
+    },
+    {
+      "id": "7523ac506ec406",
+      "title": "Lancium Adds NVIDIA as Investor and Partner, Targeting Gigawatt AI Factories Across a 15GW Pipeline",
+      "url": "https://www.storagereview.com/news/lancium-adds-nvidia-as-investor-and-partner-targeting-gigawatt-ai-factories-across-a-15gw-pipeline",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-25T13:53:29.000Z",
+      "summary": "Lancium has announced a strategic collaboration and investment from NVIDIA to accelerate the deployment of large-scale accelerated computing infrastructure across Lancium’s data center portfolio. Lancium, a Blackstone portfolio company supported by Blackstone...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "servers",
+        "storage"
+      ],
+      "score": 110,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 90
+    },
+    {
+      "id": "4f29a3b110bd8b",
+      "title": "Lancium, Nvidia Partner on Gigawatt-Scale AI Data Centers",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/lancium-nvidia-partner-on-gigawatt-scale-ai-data-centers",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-25T12:33:39.000Z",
+      "summary": "The developer says it has 4 GW under lease and 15+ GW of powered land as Nvidia partnership advances its grid-responsive AI data center model.",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "power-cooling"
+      ],
+      "score": 110,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "303875a474077a",
+      "title": "SambaNova’s SN50 RDU for AI at Hot Chips 2026",
+      "url": "https://www.servethehome.com/sambanovas-sn50-rdu-for-ai-at-hot-chips-2026/",
       "source": "ServeTheHome",
       "sourceHomepage": "https://www.servethehome.com",
       "category": "Servers & Hardware",
-      "publishedAt": "2026-08-26T00:15:29.000Z",
-      "summary": "Hot Chips 2026 sees Google discussing its new eighth-generation TPU family for the technical crowd. One of the only hyperscalers to develop its own training hardware, the company has developed the TPU 8t for training, as well as the TPU 8i for inference The p...",
+      "publishedAt": "2026-08-25T23:45:32.000Z",
+      "summary": "This year's Hot Chips conference includes a presentation from AI accelerator developer SambaNova, who is at the show to discuss their latest-generation RDU, the SN50 The post SambaNova’s SN50 RDU for AI at Hot Chips 2026 appeared first on ServeTheHome .",
       "tags": [
         "ai-infrastructure",
         "servers",
         "chips"
       ],
-      "score": 112,
+      "score": 107,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
-      "pressure": 74
+      "pressure": 66
     },
     {
-      "id": "8200abfc55aa74",
-      "title": "Cerebras Talks Going Rack-Scale with Their WSEs at Hot Chips 2026",
-      "url": "https://www.servethehome.com/cerebras-talks-going-rack-scale-with-their-wses-at-hot-chips-2026/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-08-25T22:15:18.000Z",
-      "summary": "At Hot Chips 2026, wafer scale engine developer Cerebras is talking about the next generation of their giant accelerators, as well as how the company is going rack-scale thanks to their Nexus platform architecture The post Cerebras Talks Going Rack-Scale with...",
+      "id": "1295a88ecac619",
+      "title": "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo",
+      "url": "https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-08-25T20:57:54.000Z",
+      "summary": "When an LLM engine process fails, the standard recovery path involves a cold restart. This requires loading weights into HBM from storage, compiling kernels,...",
       "tags": [
-        "data-centers",
-        "servers",
+        "ai-infrastructure",
+        "storage",
         "chips"
       ],
-      "score": 111,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
+      "score": 106,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 92
     },
     {
-      "id": "24f527872ffeac",
-      "title": "Cloudera Anywhere Cloud Launches: One Control Plane for AI and Data Across Public, Sovereign, and On-Prem Environments",
-      "url": "https://www.storagereview.com/news/cloudera-anywhere-cloud-launches-one-control-plane-for-ai-and-data-across-public-sovereign-and-on-prem-environments",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-20T13:11:06.000Z",
-      "summary": "Cloudera has introduced Cloudera Anywhere Cloud, a hybrid data and AI platform engineered to build, deploy, and scale production-grade workloads across public clouds, sovereign environments, and private on-premises infrastructure. The platform can function as...",
-      "tags": [
-        "cloud-risk",
-        "private-cloud",
-        "servers",
-        "storage"
-      ],
-      "score": 109,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Private infrastructure signal",
-      "pressure": 100
-    },
-    {
-      "id": "7fa909359f8303",
-      "title": "AI Data Center Networking: Scaling Up, Out, and Across with 102.4T Ethernet",
-      "url": "https://www.datacenterknowledge.com/networking/ai-data-center-networking-scaling-up-out-and-across-with-102-4t-ethernet",
+      "id": "887a50dfb42c27",
+      "title": "How Data Centers Are Using AI to Run Cooler and Smarter",
+      "url": "https://www.datacenterknowledge.com/data-center-software/how-data-centers-are-using-ai-to-run-cooler-and-smarter",
       "source": "Data Center Knowledge",
       "sourceHomepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
-      "publishedAt": "2026-08-20T09:00:00.000Z",
-      "summary": "As AI clusters scale and network silicon becomes the bottleneck, next-generation switching architecture targets latency and multi-site connectivity.",
+      "publishedAt": "2026-08-27T09:00:00.000Z",
+      "summary": "Analysts weigh in on where the industry is headed, as Digital Realty, AWS, DPR Construction, and Schneider Electric demonstrate how they’re leveraging AI.",
+      "tags": [
+        "data-centers"
+      ],
+      "score": 105,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "93a626df12c025",
+      "title": "NVIDIA Groq 3 LPX Enters Full Production: 3,400 Tokens per Second at 100K Context, 256 LP30s per Rack",
+      "url": "https://www.storagereview.com/news/nvidia-groq-3-lpx-enters-full-production-3400-tokens-per-second-at-100k-context-256-lp30s-per-rack",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-24T20:26:28.000Z",
+      "summary": "NVIDIA announced the production release of the NVIDIA Groq 3 LPX, a dedicated interactive inference accelerator built to complement the Vera Rubin NVL72 platform. As enterprise AI workloads shift from raw model pre-training toward real-time reasoning and auto...",
       "tags": [
         "data-centers",
-        "cloud-risk",
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "chips"
+      ],
+      "score": 104,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 98
+    },
+    {
+      "id": "0a19dedbb38bc3",
+      "title": "Intel Hot Chips 2026: 256-Core Diamond Rapids, Crescent Island With 480GB for Inference, and Wildcat Lake at the Edge",
+      "url": "https://www.storagereview.com/news/intel-hot-chips-2026-256-core-diamond-rapids-crescent-island-with-480gb-for-inference-and-wildcat-lake-at-the-edge",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-24T19:55:39.000Z",
+      "summary": "At Hot Chips 2026, Intel presented architectural details for three upcoming silicon platforms targeted at enterprise agentic AI workloads spanning data center, inference, and edge tiers. The lineup consists of the next-generation Xeon processor, codenamed Dia...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "servers",
+        "storage",
         "networking"
       ],
-      "score": 109,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 84
+      "score": 104,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 98
     },
     {
       "id": "49182fb4dabb8b",
@@ -512,6 +492,135 @@
       "pressure": 76
     },
     {
+      "id": "121b4d4d5a81eb",
+      "title": "AMD Versal RF Gets Native UCIe 1.1: Six Chiplet Links per Package, Production Parts in Q4 2027",
+      "url": "https://www.storagereview.com/news/amd-versal-rf-gets-native-ucie-1-1-six-chiplet-links-per-package-production-parts-in-q4-2027",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-08-26T18:12:16.000Z",
+      "summary": "AMD announced that its upcoming Versal adaptive SoCs will natively support Universal Chiplet Interconnect Express (UCIe) 1.1 interfaces. The open industry standard, which Intel is also building into Diamond Rapids and Wildcat Lake, establishes low-power, high...",
+      "tags": [
+        "power-cooling",
+        "servers",
+        "storage"
+      ],
+      "score": 101,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
+    },
+    {
+      "id": "1e35a4be0691d2",
+      "title": "Google’s TPUv8s for Training and Inference at Hot Chips 2026",
+      "url": "https://www.servethehome.com/googles-tpuv8s-for-training-and-inference-at-hot-chips-2026/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-26T00:15:29.000Z",
+      "summary": "Hot Chips 2026 sees Google discussing its new eighth-generation TPU family for the technical crowd. One of the only hyperscalers to develop its own training hardware, the company has developed the TPU 8t for training, as well as the TPU 8i for inference The p...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "chips"
+      ],
+      "score": 101,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 74
+    },
+    {
+      "id": "50dbe0fd5a852f",
+      "title": "Prometheus’ 1.5 GW Texas Data Center Plan Tests Private Power",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/prometheus-1-5-gw-pecos-plan-tests-private-power",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-08-24T15:19:07.000Z",
+      "summary": "The developer plans an islanded campus with onsite generation, but reaching its 2027 target will require a customer, modular construction, and a new power plant.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 101,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
+    },
+    {
+      "id": "dab890aaeb61bd",
+      "title": "NVIDIA NVLink Fusion Brings NVHBM to Next-Generation AI Infrastructure",
+      "url": "https://developer.nvidia.com/blog/nvidia-nvlink-fusion-brings-nvhbm-to-next-generation-ai-infrastructure/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-08-26T21:06:58.000Z",
+      "summary": "AI factories must support increasingly large models and more complex reasoning workloads. To keep up with the insatiable compute demands of AI workloads,...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure"
+      ],
+      "score": 100,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 82
+    },
+    {
+      "id": "8200abfc55aa74",
+      "title": "Cerebras Talks Going Rack-Scale with Their WSEs at Hot Chips 2026",
+      "url": "https://www.servethehome.com/cerebras-talks-going-rack-scale-with-their-wses-at-hot-chips-2026/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-25T22:15:18.000Z",
+      "summary": "At Hot Chips 2026, wafer scale engine developer Cerebras is talking about the next generation of their giant accelerators, as well as how the company is going rack-scale thanks to their Nexus platform architecture The post Cerebras Talks Going Rack-Scale with...",
+      "tags": [
+        "data-centers",
+        "servers",
+        "chips"
+      ],
+      "score": 100,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
+    },
+    {
+      "id": "333b2196c2daae",
+      "title": "Nutanix built $20m AI cluster to reduce use of Copilot and Claude, expects ROI in a year",
+      "url": "https://www.theregister.com/virtualization/2026/08/27/nutanix-built-20m-ai-cluster-to-reduce-use-of-copilot-and-claude-expects-roi-in-a-year/5292823",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "virtualization",
+      "publishedAt": "2026-08-27T05:21:19.000Z",
+      "summary": "Also thinks Arm can give it a hand on the edge during RAMpocalypse",
+      "tags": [
+        "servers",
+        "networking"
+      ],
+      "score": 99,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
+    },
+    {
+      "id": "83f40a59177980",
+      "title": "Meta's new MTIA 400 chip has a split personality: Training AI and serving ads",
+      "url": "https://www.theregister.com/systems/2026/08/26/metas-new-mtia-400-chip-has-a-split-personality-training-ai-and-serving-ads/5292727",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "systems",
+      "publishedAt": "2026-08-26T21:18:04.000Z",
+      "summary": "Faster than Blackwell, but still no replacement for AMD or Nvidia ... yet",
+      "tags": [
+        "ai-infrastructure",
+        "chips"
+      ],
+      "score": 91,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 66
+    },
+    {
       "id": "0488a9901f169a",
       "title": "SpaceXAI Adopts NVIDIA Vera CPUs for Grok, With a Vera Rubin NVL72 Bound for Orbit in Starmind",
       "url": "https://www.storagereview.com/news/spacexai-adopts-nvidia-vera-cpus-for-grok-with-a-vera-rubin-nvl72-bound-for-orbit-in-starmind",
@@ -526,10 +635,44 @@
         "storage",
         "chips"
       ],
-      "score": 97,
+      "score": 87,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 82
+    },
+    {
+      "id": "0f67b449ead992",
+      "title": "OpenAI explains how its naughty AI agents attacked Hugging Face",
+      "url": "https://www.theregister.com/security/2026/08/27/openai-explains-how-its-naughty-ai-agents-attacked-hugging-face/5292780",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-08-26T23:45:58.000Z",
+      "summary": "Biz describes its act of automated irresponsibility as 'a warning shot'",
+      "tags": [
+        "security"
+      ],
+      "score": 85,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "dbf227a9e3f566",
+      "title": "Dynamic capacity management for AI infrastructure",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/best-practices-for-dynamic-capacity-management/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "compute",
+      "publishedAt": "2026-08-26T13:30:00.000Z",
+      "summary": "The internet connected billions of people and mobile devices, putting computers in every hand. Now, we’re in the middle of the next big technology shift, deploying millions of autonomous AI agents to work alongside employees and end users. Today, we announced...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 85,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 84
     },
     {
       "id": "0155e7dbb8422d",
@@ -545,7 +688,7 @@
         "ai-infrastructure",
         "power-cooling"
       ],
-      "score": 92,
+      "score": 84,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
@@ -564,121 +707,10 @@
         "power-cooling",
         "servers"
       ],
-      "score": 92,
+      "score": 84,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
-    },
-    {
-      "id": "4d751b4b3e951b",
-      "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
-      "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-08-24T15:08:39.000Z",
-      "summary": "The massive growth of generative AI has fundamentally altered data center design. As distributed model training scales to span hundreds of thousands of GPUs,...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "networking"
-      ],
-      "score": 88,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 74
-    },
-    {
-      "id": "48dcb65865a0bd",
-      "title": "SiFive pushes development server to take RISC-V into the datacenter",
-      "url": "https://www.theregister.com/systems/2026/08/25/sifive-pushes-development-server-to-take-risc-v-into-the-datacenter/5292136",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "systems",
-      "publishedAt": "2026-08-25T12:13:00.000Z",
-      "summary": "Rack-mount system intended for software porting, workload optimization, to bring open standard to the bitbarn",
-      "tags": [
-        "data-centers",
-        "servers"
-      ],
-      "score": 85,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "88f56aa6efe321",
-      "title": "MSI XpertStation WS300 Review: 748GB of Coherent Memory and 20 PetaFLOPS on a Desk",
-      "url": "https://www.storagereview.com/review/msi-xpertstation-ws300-review-748gb-of-coherent-memory-and-20-petaflops-on-a-desk",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-24T19:16:11.000Z",
-      "summary": "The MSI XpertStation WS300 is built on NVIDIA’s newest DGX Station architecture, the most capable generation yet, placing a full GB300 Grace Blackwell Ultra node beside your desk. The headline number is 20 petaFLOPS of FP4 compute, delivered by a single Black...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 84,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
-    },
-    {
-      "id": "f9eb25f2f0303d",
-      "title": "IBM’s 2nm Dual-Architecture Mainframe Processor Runs Arm and IBM Z Instructions in the Same Cores",
-      "url": "https://www.storagereview.com/news/ibms-2nm-dual-architecture-mainframe-processor-runs-arm-and-ibm-z-instructions-in-the-same-cores",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-24T18:21:58.000Z",
-      "summary": "At the Hot Chips conference, IBM revealed the industry’s first dual-architecture mainframe processor, engineered for future generations of IBM Z and LinuxONE enterprise systems. Developed through the joint collaboration between IBM and Arm in April 2026, the...",
-      "tags": [
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 84,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
-    },
-    {
-      "id": "9763af85478cd1",
-      "title": "OpenAI's upcoming Jalapeño chip looks like it'll be an inference beast",
-      "url": "https://www.theregister.com/systems/2026/08/25/openais-upcoming-jalapeno-chip-looks-like-itll-be-an-inference-beast/5292052",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "systems",
-      "publishedAt": "2026-08-25T14:00:00.000Z",
-      "summary": "128 chips, 1.7 exaFLOPS, and 27 TB of HBM give Altman and crew a leg up over Blackwell, and maybe even Rubin",
-      "tags": [
-        "ai-infrastructure",
-        "chips"
-      ],
-      "score": 81,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 74
-    },
-    {
-      "id": "4ab5714deeced5",
-      "title": "Where Security Fits in an AI Agent Stack",
-      "url": "https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-08-21T13:00:00.000Z",
-      "summary": "As AI agents become more capable and operate over longer horizons, building security and trust into the applications they power becomes increasingly important....",
-      "tags": [
-        "power-cooling",
-        "security"
-      ],
-      "score": 81,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 86
     },
     {
       "id": "2c7e990fcb2762",
@@ -719,162 +751,126 @@
       "pressure": 74
     },
     {
-      "id": "dd645f1fec59be",
-      "title": "SpaceX plans to plant $100B Starbase on Louisiana coast",
-      "url": "https://www.theregister.com/offbeat/2026/08/26/spacex-plans-to-plant-100b-starbase-on-louisiana-coast/5292520",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "offbeat",
-      "publishedAt": "2026-08-26T11:29:00.000Z",
-      "summary": "Plans to break ground in 2027, produce own propellent, power in 'self-sustaining' spaceport. All before Starship ships v1.0 orbit",
+      "id": "868842f59f75ac",
+      "title": "Simplify your resilience testing strategy with Fault Injection Testing",
+      "url": "https://cloud.google.com/blog/products/networking/introducing-google-cloud-fault-injection-testing-in-preview/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "security & identity",
+      "publishedAt": "2026-08-26T16:00:00.000Z",
+      "summary": "When databases fail and network paths falter, you still need your mission-critical cloud services to stay online. Yet guaranteeing high availability has become increasingly difficult because of the complexity of modern distributed systems. To help you maintai...",
       "tags": [
-        "power-cooling"
+        "cloud-risk",
+        "security"
       ],
       "score": 79,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 60
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 76
     },
     {
-      "id": "370bec51bdf979",
-      "title": "Apple defies memory shortage with new Mac minis",
-      "url": "https://www.theregister.com/ai-and-ml/2026/08/25/apple-defies-memory-shortage-with-new-mac-minis/5292406",
+      "id": "4d751b4b3e951b",
+      "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
+      "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-08-24T15:08:39.000Z",
+      "summary": "The massive growth of generative AI has fundamentally altered data center design. As distributed model training scales to span hundreds of thousands of GPUs,...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "networking"
+      ],
+      "score": 79,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 74
+    },
+    {
+      "id": "a4d93eff61740f",
+      "title": "Carhartt data breach affects 12.9M, half of what ShinyHunters claimed",
+      "url": "https://www.theregister.com/security/2026/08/26/carhartt-data-breach-affects-129m-half-of-what-shinyhunters-claimed/5292626",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "ai and ml",
-      "publishedAt": "2026-08-25T20:18:19.000Z",
-      "summary": "The cost of memory makes this an expensive ML meal",
+      "category": "security",
+      "publishedAt": "2026-08-26T15:13:00.000Z",
+      "summary": "One AI and two trained eyes delved into the heavily padded leaks",
       "tags": [
-        "infrastructure"
-      ],
-      "score": 77,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 62
-    },
-    {
-      "id": "e639a9598d4948",
-      "title": "Sandisk NAS 800 Brings PCIe 5.0 and 14,900MB/s to NAS, With the SATA NAS 600 Covering Legacy Bays",
-      "url": "https://www.storagereview.com/news/sandisk-nas-800-brings-pcie-5-0-and-14900mb-s-to-nas-with-the-sata-nas-600-covering-legacy-bays",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-08-20T18:53:29.000Z",
-      "summary": "Sandisk has introduced two SSD families designed specifically for network-attached storage, covering both SATA-based systems and higher-performance NVMe NAS deployments. The Sandisk NAS 600 SATA SSD offers capacities up to 4TB and endurance up to 2,500 TBW, w...",
-      "tags": [
-        "servers",
-        "storage",
-        "chips"
+        "security"
       ],
       "score": 77,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 90
+      "pressure": 68
     },
     {
-      "id": "1295ecccbb3eb0",
-      "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
-      "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-08-24T15:00:00.000Z",
-      "summary": "Traditional cloud infrastructure was designed for predictable, general-purpose workloads and standard interfaces. Agentic AI factories connect diverse users,...",
+      "id": "34fdf1788d654f",
+      "title": "FBI seizes hacking tools it says China used to attack NASA, DOE, US Senate and other critical networks",
+      "url": "https://www.theregister.com/security/2026/08/27/fbi-seizes-hacking-tools-it-says-china-used-to-attack-nasa-doe-us-senate-and-other-critical-networks/5292742",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-08-27T00:06:03.000Z",
+      "summary": "Beijing's botnets busted.",
       "tags": [
-        "data-centers",
-        "ai-infrastructure"
+        "security"
       ],
       "score": 76,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
+      "pressure": 60
     },
     {
-      "id": "ee4d3340d50431",
-      "title": "Arcitecta offers Microsoft 365 Education storage cost reduction tool",
-      "url": "https://www.blocksandfiles.com/data-management/2026/08/25/arcitecta-offers-microsoft-365-education-storage-cost-reduction-tool/5292300",
+      "id": "4f95838f6dcc1a",
+      "title": "Apple Mac Studio M5 Ultra and Mac Mini M6 Launched",
+      "url": "https://www.servethehome.com/apple-mac-studio-m5-ultra-and-mac-mini-m6-launched/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-08-26T15:00:05.000Z",
+      "summary": "Apple launched the Apple Mac Mini M6 and Mac Studio M5 Ultra for those looking to do local AI with Apple's unified memory The post Apple Mac Studio M5 Ultra and Mac Mini M6 Launched appeared first on ServeTheHome .",
+      "tags": [
+        "servers"
+      ],
+      "score": 75,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "6692448ee60761",
+      "title": "Nutanix adds more rooms to its agentic AI building",
+      "url": "https://www.blocksandfiles.com/hci/2026/08/26/nutanix-adds-more-rooms-to-its-agentic-ai-building/5292580",
       "source": "Blocks & Files",
       "sourceHomepage": "https://blocksandfiles.com",
       "category": "Storage",
-      "publishedAt": "2026-08-25T16:39:31.000Z",
+      "publishedAt": "2026-08-26T13:21:28.000Z",
       "summary": "No summary was provided by the source feed.",
       "tags": [
         "storage"
       ],
       "score": 75,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 60
-    },
-    {
-      "id": "0b100fd5d27c37",
-      "title": "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access",
-      "url": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data science",
-      "publishedAt": "2026-08-25T15:00:00.000Z",
-      "summary": "For years, a Python developer who needed a GPU had two realistic choices: Learn NVIDIA CUDA C++ well enough to write an extension, set up a build toolchain, and...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 75,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 68
-    },
-    {
-      "id": "8e8bdf55bdad1a",
-      "title": "PJM Strategy Targets Data Center Growth, but Policy Gaps Remain",
-      "url": "https://www.datacenterknowledge.com/energy-power-supply/pjm-5-year-strategy-wrestles-with-data-center-boom",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-08-21T11:13:14.000Z",
-      "summary": "The grid operator calls for faster development of generation and transmission and greater visibility into large loads, but major questions remain.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 75,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "6eb37653082b78",
-      "title": "Now Perplexity is trying to get into the local AI action",
-      "url": "https://www.theregister.com/ai-and-ml/2026/08/26/now-perplexity-is-trying-to-get-into-the-local-ai-action/5292449",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "ai and ml",
-      "publishedAt": "2026-08-25T23:39:23.000Z",
-      "summary": "Amid talk of an Nvidia deal, the AI search biz is looking beyond the cloud",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 74,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
     },
     {
-      "id": "76946eaa012048",
-      "title": "SK hynix Takes Its Co-Packaged Optics Roadmap to Nature Electronics: 100Tb/s Nodes, Sub-1pJ/bit, Under 10ns",
-      "url": "https://www.storagereview.com/news/sk-hynix-takes-its-co-packaged-optics-roadmap-to-nature-electronics-100tb-s-nodes-sub-1pj-bit-under-10ns",
+      "id": "88f56aa6efe321",
+      "title": "MSI XpertStation WS300 Review: 748GB of Coherent Memory and 20 PetaFLOPS on a Desk",
+      "url": "https://www.storagereview.com/review/msi-xpertstation-ws300-review-748gb-of-coherent-memory-and-20-petaflops-on-a-desk",
       "source": "StorageReview",
       "sourceHomepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
-      "publishedAt": "2026-08-21T17:11:44.000Z",
-      "summary": "Across several hardware generations, memory and networking vendors have identified different choke points in high-performance computing clusters. Memory manufacturers focused on in-package memory bandwidth, while network fabric providers addressed inter-chass...",
+      "publishedAt": "2026-08-24T19:16:11.000Z",
+      "summary": "The MSI XpertStation WS300 is built on NVIDIA’s newest DGX Station architecture, the most capable generation yet, placing a full GB300 Grace Blackwell Ultra node beside your desk. The headline number is 20 petaFLOPS of FP4 compute, delivered by a single Black...",
       "tags": [
+        "ai-infrastructure",
         "servers",
-        "storage",
-        "networking",
-        "chips"
+        "storage"
       ],
-      "score": 74,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "score": 75,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
     }
