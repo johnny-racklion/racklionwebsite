@@ -1,55 +1,50 @@
 {
-  "generatedAt": "2026-09-22T16:55:43.652Z",
+  "generatedAt": "2026-09-23T04:43:00.391Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
-  "sourcesSucceeded": 10,
-  "sourceFailures": [
-    {
-      "source": "Blocks & Files",
-      "message": "No RSS items or Atom entries were found"
-    }
-  ],
-  "recommendedSubject": "On-prem signal: data centers, servers, AI infrastructure",
+  "sourcesSucceeded": 11,
+  "sourceFailures": [],
+  "recommendedSubject": "On-prem signal: data centers, AI infrastructure, servers",
   "topics": [
     {
       "name": "data-centers",
-      "count": 14
-    },
-    {
-      "name": "servers",
-      "count": 14
+      "count": 16
     },
     {
       "name": "ai-infrastructure",
       "count": 13
     },
     {
+      "name": "servers",
+      "count": 12
+    },
+    {
       "name": "storage",
-      "count": 9
+      "count": 12
     },
     {
       "name": "power-cooling",
-      "count": 8
+      "count": 9
     },
     {
       "name": "security",
-      "count": 6
+      "count": 8
     },
     {
       "name": "cloud-risk",
-      "count": 5
+      "count": 4
     },
     {
       "name": "networking",
       "count": 4
     },
     {
-      "name": "private-cloud",
-      "count": 4
+      "name": "data",
+      "count": 3
     },
     {
-      "name": "capacity",
+      "name": "private-cloud",
       "count": 3
     }
   ],
@@ -87,6 +82,13 @@
       "name": "StorageReview",
       "homepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
+      "itemCount": 11
+    },
+    {
+      "id": "blocks-and-files",
+      "name": "Blocks & Files",
+      "homepage": "https://blocksandfiles.com",
+      "category": "Storage",
       "itemCount": 12
     },
     {
@@ -94,7 +96,7 @@
       "name": "NVIDIA Technical Blog",
       "homepage": "https://developer.nvidia.com/blog",
       "category": "AI Infrastructure",
-      "itemCount": 9
+      "itemCount": 10
     },
     {
       "id": "aws-news",
@@ -115,7 +117,7 @@
       "name": "Google Cloud Blog",
       "homepage": "https://cloud.google.com/blog",
       "category": "Cloud",
-      "itemCount": 8
+      "itemCount": 7
     },
     {
       "id": "cloudflare",
@@ -141,7 +143,7 @@
         "power-cooling",
         "servers"
       ],
-      "score": 166,
+      "score": 160,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
@@ -161,7 +163,7 @@
         "capacity",
         "colocation"
       ],
-      "score": 162,
+      "score": 155,
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -180,7 +182,7 @@
         "power-cooling",
         "capacity"
       ],
-      "score": 136,
+      "score": 129,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -200,7 +202,7 @@
         "power-cooling",
         "networking"
       ],
-      "score": 131,
+      "score": 126,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -220,29 +222,10 @@
         "servers",
         "storage"
       ],
-      "score": 124,
+      "score": 119,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
-    },
-    {
-      "id": "d7b18c87c4b831",
-      "title": "Global AI routing with <1% overhead on multi-cluster GKE Inference Gateway",
-      "url": "https://cloud.google.com/blog/products/containers-kubernetes/gpu-and-tpu-utilization-with-multi-cluster-gke-inference-gateway/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "gke",
-      "publishedAt": "2026-09-21T16:00:00.000Z",
-      "summary": "Demand for AI infrastructure is at an all-time high. Global accelerator shortages mean engineering teams can rarely get all the compute they need from just one data center — capacity comes a cluster here, a cluster there, often an ocean apart. At the same tim...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "chips"
-      ],
-      "score": 121,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 100
     },
     {
       "id": "fe012dc2e89273",
@@ -259,6 +242,25 @@
       ],
       "score": 119,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 100
+    },
+    {
+      "id": "d7b18c87c4b831",
+      "title": "Global AI routing with <1% overhead on multi-cluster GKE Inference Gateway",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/gpu-and-tpu-utilization-with-multi-cluster-gke-inference-gateway/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "gke",
+      "publishedAt": "2026-09-21T16:00:00.000Z",
+      "summary": "Demand for AI infrastructure is at an all-time high. Global accelerator shortages mean engineering teams can rarely get all the compute they need from just one data center — capacity comes a cluster here, a cluster there, often an ocean apart. At the same tim...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "chips"
+      ],
+      "score": 116,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
     },
@@ -284,6 +286,43 @@
       "pressure": 100
     },
     {
+      "id": "1d488e555d52b7",
+      "title": "Same Roof, 10 Different Gases: What a Data Center Is Quietly Holding",
+      "url": "https://www.datacenterknowledge.com/outages/same-roof-10-different-gases-what-a-data-center-is-quietly-holding",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-09-22T20:08:07.000Z",
+      "summary": "Data centers’ reliability equipment – UPS batteries, refrigerants, and generators – creates hidden gas hazards that cause both safety incidents and costly outages.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 115,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "8335f355f38147",
+      "title": "Topology-Aware Workload Scheduling with NVIDIA Topograph",
+      "url": "https://developer.nvidia.com/blog/topology-aware-workload-scheduling-with-nvidia-topograph/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-09-22T17:16:28.000Z",
+      "summary": "AI factories are power-limited systems that deliver maximum value when fully optimized. GPU workload placement is a key optimization. Poor workload placement...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "power-cooling"
+      ],
+      "score": 112,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 94
+    },
+    {
       "id": "4a6bda36f97259",
       "title": "CoreWeave Deploys Multi-Rack Vera Rubin NVL72 Cluster: Hundreds of Rubin GPUs, 1.6 Tb/s Per GPU, and a No-Fee Archive Tier",
       "url": "https://www.storagereview.com/news/coreweave-brings-up-a-multi-rack-vera-rubin-nvl72-cluster-hundreds-of-rubin-gpus-1-6-tb-s-per-gpu-and-a-no-fee-archive-tier",
@@ -302,24 +341,6 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 100
-    },
-    {
-      "id": "ba2e053f1934f9",
-      "title": "Designing Layered Drone Defenses for Data Centers",
-      "url": "https://www.datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-09-22T09:00:00.000Z",
-      "summary": "Drone threats to data centers are rising and real. Operators should adopt layered defenses – physical hardening, detection systems, redundancy, and regulatory coordination – to build resilience.",
-      "tags": [
-        "data-centers",
-        "cloud-risk"
-      ],
-      "score": 103,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     },
     {
       "id": "18bb547bf201ae",
@@ -359,6 +380,24 @@
       "pressure": 78
     },
     {
+      "id": "ba2e053f1934f9",
+      "title": "Designing Layered Drone Defenses for Data Centers",
+      "url": "https://www.datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-09-22T09:00:00.000Z",
+      "summary": "Drone threats to data centers are rising and real. Operators should adopt layered defenses – physical hardening, detection systems, redundancy, and regulatory coordination – to build resilience.",
+      "tags": [
+        "data-centers",
+        "cloud-risk"
+      ],
+      "score": 96,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
       "id": "4c1ab98c8174ff",
       "title": "EU datacenter green scorecard finally escapes Brussels",
       "url": "https://www.theregister.com/on-prem/2026/09/22/eu-datacenter-green-scorecard-finally-escapes-brussels/5298167",
@@ -371,7 +410,7 @@
         "data-centers",
         "private-cloud"
       ],
-      "score": 99,
+      "score": 94,
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Private infrastructure signal",
       "pressure": 68
@@ -389,7 +428,7 @@
         "servers",
         "storage"
       ],
-      "score": 99,
+      "score": 94,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 76
@@ -406,28 +445,10 @@
       "tags": [
         "ai-infrastructure"
       ],
-      "score": 97,
+      "score": 92,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 76
-    },
-    {
-      "id": "fee9eb35d1cdc9",
-      "title": "Alibaba Cloud plans six-year stroll to 20GW of datacenters, reveals chip to power them",
-      "url": "https://www.theregister.com/off-prem/2026/09/22/alibaba-cloud-plans-six-year-stroll-to-20gw-of-datacenters-reveals-chip-to-power-them/5298062",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "off-prem",
-      "publishedAt": "2026-09-22T05:42:32.000Z",
-      "summary": "USA alone has 37GW under construction, but Alibaba doesn't think the AI boom will run out of steam",
-      "tags": [
-        "power-cooling",
-        "chips"
-      ],
-      "score": 96,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 68
     },
     {
       "id": "c1266fb4a6ee38",
@@ -443,28 +464,44 @@
         "storage",
         "security"
       ],
-      "score": 96,
+      "score": 91,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 76
     },
     {
-      "id": "69319c5cf68e88",
-      "title": "The Ripple Effect of Data Center Project Cancellations and Delays",
-      "url": "https://www.datacenterknowledge.com/energy-power-supply/the-ripple-effect-of-data-center-project-cancellations-and-delays",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-09-15T17:01:09.000Z",
-      "summary": "Canceled data center projects leave utilities with stranded infrastructure costs that are often passed on to ratepayers, while capacity reassignment can take months or years to resolve.",
+      "id": "94eab9a327d7f8",
+      "title": "Windows CLOSEDQUORUM malware uses AI models to autonomously select post-compromise actions",
+      "url": "https://www.theregister.com/security/2026/09/22/windows-closedquorum-malware-uses-ai-models-to-autonomously-select-post-compromise-actions/5298435",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-09-22T21:33:29.000Z",
+      "summary": "'first' publicly documented Windows implant to use LLMs for C2",
       "tags": [
-        "data-centers",
-        "capacity"
+        "security"
       ],
-      "score": 94,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
+      "score": 86,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "9f1112d5f28b92",
+      "title": "Security firm finds naming AI agents after Seinfeld characters helps bots join the team",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/22/security-firm-finds-naming-ai-agents-after-seinfeld-characters-helps-bots-join-the-team/5298424",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "ai and ml",
+      "publishedAt": "2026-09-22T20:43:17.000Z",
+      "summary": "Not that there's anything wrong with it",
+      "tags": [
+        "security"
+      ],
+      "score": 86,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
     },
     {
       "id": "4b567d5bf1f341",
@@ -478,7 +515,7 @@
       "tags": [
         "ai-infrastructure"
       ],
-      "score": 91,
+      "score": 86,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 92
@@ -495,10 +532,28 @@
       "tags": [
         "security"
       ],
-      "score": 89,
+      "score": 84,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
+    },
+    {
+      "id": "eda9352ecc498f",
+      "title": "VAST's DataEnclave protects private enterprise data and AI model builders' weights",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/09/22/vasts-dataenclave-protects-private-enterprise-data-and-ai-model-builders-weights/5298161",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-09-22T13:50:00.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage",
+        "data"
+      ],
+      "score": 84,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "1f3ae0654790ff",
@@ -512,7 +567,7 @@
       "tags": [
         "security"
       ],
-      "score": 88,
+      "score": 83,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
@@ -530,27 +585,44 @@
         "servers",
         "networking"
       ],
-      "score": 87,
+      "score": 81,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     },
     {
-      "id": "af51236af39896",
-      "title": "GOV.UK founder warns AI gold rush could leave Britain locked in",
-      "url": "https://www.theregister.com/public-sector/2026/09/22/govuk-founder-warns-ai-gold-rush-could-leave-britain-locked-in/5297828",
+      "id": "63c49e3511d43a",
+      "title": "Enabling Private High-Performance Production AI Inference with NVIDIA Confidential Computing",
+      "url": "https://developer.nvidia.com/blog/enabling-private-high-performance-production-ai-inference-with-nvidia-confidential-computing/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-09-22T17:27:41.000Z",
+      "summary": "As large language model (LLM) inference increasingly processes sensitive information and proprietary model context across personal, enterprise, and regulated...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 80,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 58
+    },
+    {
+      "id": "96cbc4b9277114",
+      "title": "ABBYY gives old-school OCR a job in the AI pipeline",
+      "url": "https://www.theregister.com/applications/2026/09/22/abbyy-gives-old-school-ocr-a-job-in-the-ai-pipeline/5298361",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "public sector",
-      "publishedAt": "2026-09-22T08:30:00.000Z",
-      "summary": "Mike Bracken says the dash to adopt sovereign AI risks giving more control to a handful of tech suppliers",
+      "category": "applications",
+      "publishedAt": "2026-09-22T17:15:00.000Z",
+      "summary": "FineParser runs in a CPU-powered container, preserving tables and layout before handing documents to an LLM",
       "tags": [
-        "cloud-risk"
+        "servers"
       ],
-      "score": 86,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "score": 80,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
+      "pressure": 58
     },
     {
       "id": "3b727690375588",
@@ -564,29 +636,44 @@
       "tags": [
         "cloud-risk"
       ],
-      "score": 83,
+      "score": 79,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
     },
     {
-      "id": "418920d641e608",
-      "title": "HP ZBook Ultra G3a 16 Preview: 192GB of Unified Memory Aims for the Top of the Local AI Laptop Leaderboard",
-      "url": "https://www.storagereview.com/review/hp-zbook-ultra-g3a-16-preview-192gb-of-unified-memory-aims-for-the-top-of-the-local-ai-laptop-leaderboard",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-09-15T23:15:57.000Z",
-      "summary": "HP’s ZBook Ultra G1a 14 holds the Best for Large Models spot on our Best Laptops for Local AI leaderboard because its 128GB of unified memory, 96GB of it assignable to the GPU, loaded models no discrete-GPU laptop could touch. The new HP ZBook Ultra G3a 16 ra...",
+      "id": "80a684778ffcea",
+      "title": "Nutanix buys Ryax in Agentic AI-focused tuck-in acquisition",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/09/22/nutanix-buys-ryax-in-agentic-ai-focused-tuck-in-acquisition/5298096",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-09-22T13:09:00.000Z",
+      "summary": "No summary was provided by the source feed.",
       "tags": [
-        "ai-infrastructure",
-        "servers",
         "storage"
       ],
-      "score": 82,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 76
+      "score": 77,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "9481b2bdf9c4e4",
+      "title": "ShinyHunters claims FBI hack: 'This is NOT financially motivated'",
+      "url": "https://www.theregister.com/security/2026/09/22/shinyhunters-claims-fbi-hack-this-is-not-financially-motivated/5298385",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-09-22T17:24:13.000Z",
+      "summary": "This time it's personal",
+      "tags": [
+        "security"
+      ],
+      "score": 75,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
     },
     {
       "id": "9bebdded64ae89",
@@ -600,10 +687,28 @@
       "tags": [
         "security"
       ],
-      "score": 80,
+      "score": 75,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
+    },
+    {
+      "id": "e244c69fbb86cd",
+      "title": "SereneDB launches superfast S3 data search engine.",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/09/22/serenedb-launches-superfast-s3-data-search-engine/5298324",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-09-22T15:16:50.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage",
+        "data"
+      ],
+      "score": 75,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "b8b7ff00a15db6",
@@ -618,7 +723,7 @@
         "ai-infrastructure",
         "power-cooling"
       ],
-      "score": 80,
+      "score": 75,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Capacity pressure",
       "pressure": 68
@@ -635,45 +740,10 @@
       "tags": [
         "security"
       ],
-      "score": 79,
+      "score": 74,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
-    },
-    {
-      "id": "9b01e33f2f1998",
-      "title": "Gartner predicts 55% of enterprise VMware users will be investigating an exit by 2029",
-      "url": "https://www.theregister.com/virtualization/2026/09/22/gartner-predicts-55-of-enterprise-vmware-users-will-be-investigating-an-exit-by-2029/5298043",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "virtualization",
-      "publishedAt": "2026-09-22T02:39:35.000Z",
-      "summary": "Chasing pack has its problems too, with maturity, cost, and complex licenses",
-      "tags": [
-        "private-cloud"
-      ],
-      "score": 78,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 68
-    },
-    {
-      "id": "cb7dcc9712bf7e",
-      "title": "NVIDIA MMS1X00-N5400 QSFP112 1310NM 400Gbps Optic Quick Look",
-      "url": "https://www.servethehome.com/nvidia-mms1x00-n5400-qsfp112-1310nm-400gbps-optic-quick-look/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-09-20T20:01:12.000Z",
-      "summary": "We take a look at the NVIDIA MMS1X00-N5400 which are 500m QSFP112 modules desgined to link devices at up to 500m distances The post NVIDIA MMS1X00-N5400 QSFP112 1310NM 400Gbps Optic Quick Look appeared first on ServeTheHome .",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 76,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     },
     {
       "id": "274ea6a2882e53",
@@ -715,21 +785,22 @@
       "pressure": 58
     },
     {
-      "id": "4989d25ca8f07d",
-      "title": "How to Evaluate AI Agents From Tool Calls to Task Completion",
-      "url": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-09-21T21:05:28.000Z",
-      "summary": "When you ship an AI agent, the key question is whether it can execute a chain of work across dozens of sequential tool calls against a live environment, and...",
+      "id": "cb7dcc9712bf7e",
+      "title": "NVIDIA MMS1X00-N5400 QSFP112 1310NM 400Gbps Optic Quick Look",
+      "url": "https://www.servethehome.com/nvidia-mms1x00-n5400-qsfp112-1310nm-400gbps-optic-quick-look/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-09-20T20:01:12.000Z",
+      "summary": "We take a look at the NVIDIA MMS1X00-N5400 which are 500m QSFP112 modules desgined to link devices at up to 500m distances The post NVIDIA MMS1X00-N5400 QSFP112 1310NM 400Gbps Optic Quick Look appeared first on ServeTheHome .",
       "tags": [
-        "ai-infrastructure"
+        "ai-infrastructure",
+        "servers"
       ],
-      "score": 71,
+      "score": 70,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
+      "pressure": 58
     },
     {
       "id": "fdfe0da68d2e4d",
@@ -750,55 +821,23 @@
       "pressure": 84
     },
     {
-      "id": "5f2f0a1f0453ba",
-      "title": "Register reader hit with surprise bill after Microsoft portals disagreed",
-      "url": "https://www.theregister.com/saas/2026/09/22/register-reader-hit-with-surprise-bill-after-microsoft-portals-disagreed/5297799",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "saas",
-      "publishedAt": "2026-09-22T13:00:00.000Z",
-      "summary": "Did Copilot write the synchronization code?",
+      "id": "f49a51c0b5eb0d",
+      "title": "Huawei’s OceanStor KV cache storage for hyper-scale AI data centers",
+      "url": "https://www.blocksandfiles.com/flash/2026/09/18/huaweis-oceanstor-kv-cache-storage-for-hyper-scale-ai-data-centers/5297405",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "Storage",
+      "publishedAt": "2026-09-18T13:16:40.000Z",
+      "summary": "No summary was provided by the source feed.",
       "tags": [
-        "cloud-cost"
-      ],
-      "score": 69,
-      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "d32c32c80ca859",
-      "title": "NHS Trust IT blunder overwrites 11 years of maternity records",
-      "url": "https://www.theregister.com/databases/2026/09/22/nhs-trust-it-blunder-overwrites-11-years-of-maternity-records/5298130",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "databases",
-      "publishedAt": "2026-09-22T10:45:00.000Z",
-      "summary": "Human error sent reused instructions at the wrong database, taking historical access logs with it",
-      "tags": [
-        "infrastructure"
-      ],
-      "score": 68,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "10a00b0147e944",
-      "title": "Commodore's forgotten Amiga Unix gets a modern revival",
-      "url": "https://www.theregister.com/software/2026/09/22/commodores-forgotten-amiga-unix-gets-a-modern-revival/5297805",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "software",
-      "publishedAt": "2026-09-22T09:15:00.000Z",
-      "summary": "Amix gains newer CPU support and a package manager as Open Look joins the retro comeback",
-      "tags": [
-        "servers"
+        "data-centers",
+        "storage",
+        "data"
       ],
       "score": 67,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
+      "pressure": 58
     },
     {
       "id": "1ecb0b2e93d646",
@@ -816,40 +855,6 @@
       ],
       "score": 67,
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
-    },
-    {
-      "id": "ec7b2f7ff49663",
-      "title": "Strengthen your CI/CD pipeline with new Secure Source Manager capabilities",
-      "url": "https://cloud.google.com/blog/products/identity-security/strengthen-your-cicd-pipeline-with-new-secure-source-manager-capabilities/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "security & identity",
-      "publishedAt": "2026-09-21T16:00:00.000Z",
-      "summary": "A resilient software supply chain is the foundation of modern delivery, and securing your continuous integration and continuous delivery (CI/CD) pipeline is what keeps innovation moving safely. Notable supply chain attacks more than doubled in the first half...",
-      "tags": [
-        "security"
-      ],
-      "score": 62,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
-      "id": "2904d441e8e7de",
-      "title": "Inside the lab where the Arm AGI CPU is brought to life",
-      "url": "https://www.servethehome.com/inside-the-lab-where-the-arm-agi-cpu-is-brought-to-life/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-09-17T17:00:32.000Z",
-      "summary": "We travel to the Arm ATE lab to see what goes into bringing up a new Arm server processor, the Arm AGI CPU. It is lab tour time! The post Inside the lab where the Arm AGI CPU is brought to life appeared first on ServeTheHome .",
-      "tags": [
-        "servers"
-      ],
-      "score": 61,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
     }
