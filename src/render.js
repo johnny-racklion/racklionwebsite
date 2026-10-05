@@ -4,6 +4,8 @@
 // `<i data-lucide="...">` placeholder strings only; the browser swaps them
 // to SVGs after mount. Browser-only state is passed in via a `state` object.
 import { FAQ_ENTRIES } from './seo.js';
+import { renderGpuPreview, renderGpuPricingPage } from './gpu-pricing-render.js';
+import { gpuQuoteMessage } from './gpu-pricing.js';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -138,66 +140,66 @@ function topTopic(state) {
 }
 
 function renderSiteHeader(view) {
+  const links = [['home', 'The signal'], ['gpu-pricing', 'GPU pricing'], ['source', 'Source capacity'], ['consulting', 'Consulting'], ['about', 'About']];
   return `
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="/" aria-label="Racklion home">
-        <span class="brand-mark"><img src="/assets/racklion-logo-mark.png" alt="" /></span>
-        <span>Racklion</span>
+        <img src="/assets/racklion-logo-mark.png" alt="" width="42" height="42" />
+        <span>racklion<span class="brand-period">.</span></span>
       </a>
       <nav aria-label="Primary navigation">
-        <a class="${view === 'signals' ? 'is-active' : ''}" href="/signals">Signals</a>
-        <a class="${view === 'source' ? 'is-active' : ''}" href="/source">Source</a>
-        <a class="${view === 'consulting' ? 'is-active' : ''}" href="/consulting">Consulting</a>
-        <a class="${view === 'about' ? 'is-active' : ''}" href="/about">About</a>
-        <a class="${view === 'faq' ? 'is-active' : ''}" href="/faq">FAQ</a>
-        <a class="${view === 'subscribe' ? 'is-active' : ''}" href="/subscribe">Subscribe</a>
+        ${links.map(([page, label]) => `<a href="${page === 'home' ? '/' : `/${page}`}" ${(view === 'signals' ? 'home' : view) === page ? 'aria-current="page" class="is-active"' : ''}>${label}</a>`).join('')}
+        <a class="nav-subscribe ${view === 'subscribe' ? 'is-active' : ''}" href="/subscribe" ${view === 'subscribe' ? 'aria-current="page"' : ''}>Get the brief <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   `;
 }
 
-function renderHeroStat(icon, label, value) {
-  return `
-    <div class="hero-stat">
-      <i data-lucide="${icon}"></i>
-      <span>${escapeHtml(label)}</span>
-      <strong>${escapeHtml(value)}</strong>
-    </div>
-  `;
+function renderRackDrawing() {
+  return `<figure class="rack-figure">
+    <div class="figure-heading"><span>BEHIND EVERY WORKLOAD</span><span>FIG. 01</span></div>
+    <svg class="rack-drawing" viewBox="0 0 500 380" role="img" aria-labelledby="rack-title">
+      <title id="rack-title">An architectural drawing of three server racks: compute, power, and space.</title>
+      <defs><pattern id="vents" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 0v6" stroke="currentColor" stroke-width="1" opacity=".25"/></pattern></defs>
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M26 322H476M46 345H457M46 340v10M457 340v10" opacity=".35"/>
+        ${[0, 1, 2].map((rack) => `<g transform="translate(${49 + rack * 137} 54)">
+          <path d="M0 20L24 0H138V247L114 267H0Z" fill="var(--paper)"/>
+          <path d="M114 20L138 0M0 20H114V267M114 267L138 247"/>
+          <path d="M7 28H107V253H7Z" fill="url(#vents)"/>
+          ${Array.from({length: 8}, (_, row) => `<g transform="translate(13 ${35 + row * 26})"><rect width="88" height="20" fill="${rack === 1 && row < 4 ? 'var(--accent)' : 'var(--paper)'}"/><path d="M8 6H58M8 10H58M8 14H58" opacity=".5"/><circle cx="77" cy="10" r="2" fill="currentColor"/></g>`).join('')}
+          <path d="M5 267v7h12v-7M97 267v7h12v-7"/>
+        </g>`).join('')}
+      </g>
+      <g fill="currentColor" font-family="monospace" font-size="10" letter-spacing="2"><text x="53" y="370">01 / COMPUTE</text><text x="194" y="370">02 / POWER</text><text x="332" y="370">03 / SPACE</text></g>
+    </svg>
+    <figcaption>The hardware. The power. The place to put it.</figcaption>
+  </figure>`;
 }
 
-function renderHero(state) {
-  const items = state.data?.items || [];
-  const sources = state.data?.sourcesSucceeded ?? state.data?.sources?.length ?? 0;
-
+function renderHero() {
   return `
-    <section class="hero" aria-label="On-Prem Signal">
-      <div class="hero-overlay"></div>
+    <section class="hero" aria-label="Infrastructure advisory and sourcing">
       <div class="hero-content">
-        <span class="eyebrow">Data center, AI compute, and cloud pressure</span>
-        <h1>On-Prem Signal</h1>
-        <p>
-          Daily infrastructure news for people watching cloud bills, GPU scarcity, outages, latency,
-          power limits, and sovereignty rules and thinking: it may be time for some on-prem.
-        </p>
+        <span class="eyebrow"><span class="accent-square" aria-hidden="true"></span> Infrastructure, in the real world</span>
+        <h1>The cloud has a<br>physical <em>address.</em></h1>
+        <p>GPUs. Power. Space. Someone owns the infrastructure behind your cloud bill. We help you decide when it should be you.</p>
         <div class="hero-actions">
-          <a class="primary-action" href="/consulting">
-            <i data-lucide="clipboard-check"></i>
-            <span>Discuss infrastructure strategy</span>
-          </a>
-          <a class="secondary-action" href="/signals">
-            <i data-lucide="trending-up"></i>
-            <span>Read today</span>
-          </a>
-        </div>
-        <div class="hero-stats" aria-label="Latest digest stats">
-          ${renderHeroStat('flame', 'On-prem signals', items.length)}
-          ${renderHeroStat('activity', 'Top pressure', topTopic(state))}
-          ${renderHeroStat('rss', 'Sources tracked', sources)}
+          <a class="primary-action" href="/consulting">Let’s talk infrastructure <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="/source">Explore sourcing <span aria-hidden="true">→</span></a>
         </div>
       </div>
-    </section>
-  `;
+      ${renderRackDrawing()}
+    </section>`;
+}
+
+function renderFooter() {
+  return `<footer class="site-footer">
+    <div><a class="footer-brand" href="/">racklion.</a><p>Infrastructure decisions. Grounded in reality.</p></div>
+    <nav aria-label="Footer navigation"><a href="/gpu-pricing">GPU pricing</a><a href="/">The signal</a><a href="/consulting">Talk to us</a><a href="/faq">FAQ</a><a href="/subscribe">Subscribe ↗</a></nav>
+    <div class="footer-note"><span>Racklion / Infrastructure advisory & sourcing</span><span>Compute. Power. Space.</span></div>
+  </footer>`;
 }
 
 function renderConsultingSection() {
@@ -281,11 +283,11 @@ function renderConsultationForm(state) {
     <section class="consultation-panel primary-lead-panel" id="consultation">
       <div class="section-heading">
         <div>
-          <span class="eyebrow">Request Consultation</span>
-          <h2>Tell us what you are trying to decide.</h2>
+          <span class="eyebrow">Contact us</span>
+          <h2>How can we help?</h2>
         </div>
       </div>
-      <p>Use this for workload fit, cost pressure, colocation strategy, private cloud planning, or AI infrastructure review.</p>
+      <p>Send us a message and we’ll get back to you by email.</p>
       <form id="lead-form">
         <div class="form-grid">
           <label>
@@ -293,39 +295,22 @@ function renderConsultationForm(state) {
             <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
           </label>
           <label>
-            <span>Work email</span>
-            <input name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
-          </label>
-        </div>
-        <div class="form-grid">
-          <label>
-            <span>Company</span>
-            <input name="company" type="text" placeholder="Company" autocomplete="organization" />
-          </label>
-          <label>
-            <span>Primary pressure</span>
-            <select name="pressure" required>
-              <option value="">Select one</option>
-              <option value="cloud-cost">Cloud cost or egress</option>
-              <option value="ai-compute">AI compute or GPU capacity</option>
-              <option value="resilience">Outage, latency, or resilience</option>
-              <option value="sovereignty">Compliance or data sovereignty</option>
-              <option value="private-cloud">Private cloud or colocation planning</option>
-            </select>
+            <span>Email</span>
+            <input name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
           </label>
         </div>
         <label>
-          <span>What are you trying to decide?</span>
-          <textarea name="message" rows="5" placeholder="Tell us about the workload, cloud concern, timeline, or infrastructure decision." required></textarea>
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Tell us what you have in mind." required>${state.gpuQuote ? escapeHtml(gpuQuoteMessage(state.gpuRequest)) : ''}</textarea>
         </label>
         ${renderBotFields(state)}
         <button class="form-action" type="submit">
           <i data-lucide="send"></i>
-          <span>Request consultation</span>
+          <span>Send message</span>
         </button>
       </form>
-      <p class="form-status ${savedLead ? 'is-visible' : ''}">
-        ${escapeHtml(savedLead ? 'Latest preview inquiry is saved in this browser.' : '')}
+      <p role="status" class="form-status ${state.leadStatus || savedLead ? 'is-visible' : ''}">
+        ${escapeHtml(state.leadStatus || (savedLead ? 'Latest preview inquiry is saved in this browser.' : ''))}
       </p>
     </section>
   `;
@@ -352,13 +337,13 @@ function renderToolbar(state, items) {
       <div class="tool-row">
         <label class="search-box">
           <i data-lucide="search"></i>
-          <input id="search" value="${escapeHtml(state.query)}" placeholder="Search cost, GPUs, outages, power..." />
+          <input aria-label="Search signals" id="search" value="${escapeHtml(state.query)}" placeholder="Search cost, GPUs, outages, power..." />
         </label>
         <div class="segmented" role="group" aria-label="Sort signals">
           ${[
             ['newest', 'Newest'],
             ['pressure', 'Constraints'],
-            ['source', "News' Source"]
+            ['source', 'Source']
           ]
             .map(
               ([value, label]) => `
@@ -404,7 +389,7 @@ function renderArticle(item) {
         </div>
       </div>
       <div class="angle">
-        <i data-lucide="sparkles"></i>
+
         <span>${escapeHtml(item.onPremAngle || 'Build-versus-rent signal')}</span>
       </div>
       <h2>${escapeHtml(item.title)}</h2>
@@ -501,7 +486,7 @@ function renderSubscribeForm(state, demoSubscriber) {
           <span>Subscribe</span>
         </button>
       </form>
-      <p class="form-status ${state.subscriberStatus ? 'is-visible' : ''}">
+      <p role="status" class="form-status ${state.subscriberStatus ? 'is-visible' : ''}">
         ${escapeHtml(state.subscriberStatus || (demoSubscriber ? 'Latest preview signup is saved in this browser.' : ''))}
       </p>
     </section>
@@ -568,8 +553,8 @@ function renderDigestIntro(items) {
   return `
     <section class="digest-intro" id="signals">
       <div>
-        <span class="eyebrow">Today</span>
-        <h2>Signals that make cloud feel less inevitable</h2>
+        <span class="eyebrow">On-Prem Signal</span>
+        <h1>What’s moving infrastructure.</h1>
         <p>
           Filter the brief by the pressure you care about: AI capacity, data centers, public-cloud risk,
           power constraints, private cloud, servers, storage, or networking.
@@ -583,62 +568,41 @@ function renderDigestIntro(items) {
   `;
 }
 
-function renderHomeSignal(item) {
+function renderHomeSignal(item, index) {
   if (!item) return '';
-
-  return `
-    <a class="mini-signal" href="${safeUrl(item.url)}" target="_blank" rel="noreferrer">
-      <span>${escapeHtml(item.onPremAngle || item.source)}</span>
-      <h3>${escapeHtml(item.title)}</h3>
-      <p>${escapeHtml(item.source)} · ${escapeHtml(relativeTime(item.publishedAt))}</p>
-    </a>
-  `;
+  return `<a class="mini-signal" href="${safeUrl(item.url)}" target="_blank" rel="noreferrer">
+    <div class="story-kicker"><span>${escapeHtml(item.category || 'Infrastructure')}</span><span>0${index + 1} ↗</span></div>
+    <h3>${escapeHtml(item.title)}</h3>
+    ${index === 0 ? `<p class="story-summary">${escapeHtml(item.summary)}</p>` : ''}
+    <p class="story-source">${escapeHtml(item.source)} <span> / ${escapeHtml(formatDate(item.publishedAt))}</span></p>
+  </a>`;
 }
 
 function renderHome(state, items) {
-  return `
-    ${renderHero(state)}
-    <main class="page-main">
-      <section class="home-brief">
-        <div>
-          <span class="eyebrow">Signal To Strategy</span>
-          <h2>Use the daily brief to spot when cloud convenience starts costing control.</h2>
-          <p>
-            Racklion pairs infrastructure news with consulting for teams deciding whether workloads should stay in public cloud,
-            move to colocation, or become part of a private stack.
-          </p>
-        </div>
-        <div class="home-actions">
-          <a class="primary-action" href="/consulting">
-            <i data-lucide="clipboard-check"></i>
-            <span>Discuss your workload</span>
-          </a>
-          <a class="secondary-inline" href="/subscribe">
-            <i data-lucide="mail"></i>
-            <span>Subscribe to the brief</span>
-          </a>
-        </div>
-      </section>
-      <section class="home-preview" aria-label="Latest infrastructure signals">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Latest Signals</span>
-            <h2>Three reasons to ask harder infrastructure questions</h2>
-          </div>
-          <a class="text-link" href="/signals">View all signals</a>
-        </div>
-        <div class="mini-signal-grid">
-          ${items.slice(0, 3).map(renderHomeSignal).join('')}
-        </div>
-      </section>
-      ${renderPressureDrivers()}
-    </main>
-  `;
+  return `<main id="main-content" class="home-main">
+    ${renderHero()}
+    <section class="practice-strip" aria-label="How Racklion helps">
+      <a href="/"><span class="practice-number">01</span><div><h2>Read the landscape</h2><p>The news behind infrastructure decisions.</p></div><span aria-hidden="true">↗</span></a>
+      <a href="/consulting"><span class="practice-number">02</span><div><h2>Do the math</h2><p>Cloud, colo, or your own stack.</p></div><span aria-hidden="true">↗</span></a>
+      <a href="/source"><span class="practice-number">03</span><div><h2>Put it on the floor</h2><p>Source the hardware, power, and space.</p></div><span aria-hidden="true">↗</span></a>
+    </section>
+    ${renderGpuPreview()}
+    <section class="home-preview" aria-label="Latest infrastructure signals">
+      <div class="section-heading journal-heading"><div><span class="eyebrow">The infrastructure journal</span><h2>On-Prem Signal<span class="brand-period">.</span></h2></div><a class="text-link" href="/">All signals <span aria-hidden="true">↗</span></a></div>
+      <div class="issue-line"><span>Cloud economics / AI compute / Physical infrastructure</span><span>Latest brief · ${escapeHtml(formatDate(state.data?.generatedAt))}</span></div>
+      <div class="mini-signal-grid">${items.slice(0, 3).map(renderHomeSignal).join('') || '<p>The next brief is on its way.</p>'}</div>
+    </section>
+    <section class="home-brief">
+      <div><span class="eyebrow">A question worth asking</span><h2>Does this workload<br>still belong in the cloud?</h2></div>
+      <div><p>The answer depends on utilization, cost, control, and the team running it. We work through those tradeoffs with you, then help source what comes next.</p><a class="text-link" href="/consulting">Bring us your workload <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="newsletter-band"><div><span class="eyebrow">Stay close to the ground</span><h2>The infrastructure brief.<br>In your inbox.</h2></div><div><p>A daily read on cloud costs, compute, and capacity.</p><a class="primary-action" href="/subscribe">Get On-Prem Signal <span aria-hidden="true">↗</span></a></div></section>
+  </main>`;
 }
 
 function renderSignalsPage(state, items) {
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       ${renderDigestIntro(items)}
       ${renderToolbar(state, items)}
       <div class="content-grid">
@@ -656,10 +620,10 @@ function renderSignalsPage(state, items) {
 
 function renderAboutPage() {
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       <section class="about-hero">
         <span class="eyebrow">About Racklion</span>
-        <h1>Infrastructure decisions should be made with evidence, not cloud default settings.</h1>
+        <h1>The workload comes first.</h1>
         <p>
           Racklion tracks the pressure building beneath modern workloads: data center capacity,
           AI compute demand, power constraints, cloud cost, resilience, and control.
@@ -695,11 +659,11 @@ function renderAboutPage() {
 
 function renderConsultingPage(state) {
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       <section class="consulting-lead-hero">
         <div>
           <span class="eyebrow">Racklion Consulting</span>
-          <h1>Need a second set of eyes on the cloud-versus-on-prem decision?</h1>
+          <h1>Before you move a workload, do the math.</h1>
           <p>Start with the workload. We will help pressure-test the economics, risk, and path forward.</p>
         </div>
       </section>
@@ -707,7 +671,7 @@ function renderConsultingPage(state) {
         ${renderConsultationForm(state)}
         <section class="consulting-aside">
           <span class="eyebrow">Good Fit</span>
-          <h2>Useful when the decision has real blast radius.</h2>
+          <h2>Start with the decision in front of you.</h2>
           <ul>
             <li>Cloud spend is growing faster than workload value.</li>
             <li>AI, storage, or data gravity is stressing public-cloud assumptions.</li>
@@ -723,10 +687,10 @@ function renderConsultingPage(state) {
 
 function renderSubscribePage(state) {
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       <section class="page-heading">
         <span class="eyebrow">Subscribe</span>
-        <h1>Get the daily on-prem signal without the dashboard noise.</h1>
+        <h1>A closer read on infrastructure.</h1>
         <p>One concise infrastructure brief for cloud buyers, operators, and technical leaders.</p>
       </section>
       <div class="subscribe-layout">
@@ -739,25 +703,26 @@ function renderSubscribePage(state) {
 
 function renderSourcePage(state) {
   const offerings = [
-    ['cpu', 'GPU capacity', 'Source allocation for H100, H200, and GB200 class accelerators through OEMs, integrators, and colocation partners — with terms and lead times, not a waitlist.'],
+    ['cpu', 'GPU capacity', 'Source allocation for B300, B200, H200, H100, and other accelerators through OEMs, integrators, and colocation partners — with terms and lead times, not a waitlist.'],
     ['hard-drive', 'Colocation & space', 'Secure rack space and cages in vetted facilities so you own the servers and GPUs without building or leasing a data center.'],
     ['zap', 'Power & cooling', 'Match dense AI racks (40–130 kW) to facilities with the power envelope and liquid-cooling readiness they actually require.'],
     ['server', 'Servers & storage', 'Spec and source the compute, storage, and networking around the accelerators so the stack ships as one coherent build.']
   ];
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       <section class="page-heading">
         <span class="eyebrow">Source Capacity</span>
-        <h1>Stop renting. Source and own the stack behind your AI workloads.</h1>
-        <p>Most teams rent everything and own nothing. When utilization is steady, that is the most expensive way to run AI. Racklion sources the GPUs, power, colocation, and space so you get ownership economics without building a data center.</p>
+        <h1>The right hardware.
+The right place to run it.</h1>
+        <p>When owning infrastructure makes sense, we help you source it: GPU capacity, servers, colocation, power, and cooling, planned around your workload and timeline.</p>
         <div class="home-actions">
           <a class="primary-action" href="/consulting">
             <i data-lucide="clipboard-check"></i>
             <span>Start a sourcing conversation</span>
           </a>
-          <a class="secondary-inline" href="/faq">
+          <a class="secondary-inline" href="/gpu-pricing">
             <i data-lucide="newspaper"></i>
-            <span>Read the sourcing FAQ</span>
+            <span>Compare GPU pricing</span>
           </a>
         </div>
       </section>
@@ -787,7 +752,7 @@ function renderSourcePage(state) {
 
 function renderFaqPage() {
   return `
-    <main class="page-main page-view">
+    <main id="main-content" class="page-main page-view">
       <section class="page-heading">
         <span class="eyebrow">FAQ</span>
         <h1>Renting versus owning GPUs, power, and space.</h1>
@@ -818,7 +783,8 @@ function renderFaqPage() {
 export function renderPage(view, state) {
   const items = filteredItems(state);
   const views = {
-    home: renderHome(state, items),
+    home: renderSignalsPage(state, items),
+    'gpu-pricing': renderGpuPricingPage(state),
     signals: renderSignalsPage(state, items),
     source: renderSourcePage(state),
     consulting: renderConsultingPage(state),
@@ -826,7 +792,7 @@ export function renderPage(view, state) {
     faq: renderFaqPage(),
     subscribe: renderSubscribePage(state)
   };
-  return `${renderSiteHeader(view)}${views[view] || views.home}`;
+  return `${renderSiteHeader(view)}${views[view] || views.home}${renderFooter()}`;
 }
 
 export { escapeHtml, getTopics, topicLabel };

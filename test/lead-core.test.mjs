@@ -68,3 +68,11 @@ test('formatLeadEmail includes name, email, message', () => {
   assert.match(m.text, /jo@co\.com/);
   assert.match(m.text, /need racks/);
 });
+
+test('contact recipients support two inboxes and reject invalid configuration', async () => {
+  const { contactRecipients } = await import('../supabase/functions/_shared/core.mjs');
+  assert.deepEqual(contactRecipients('first@example.com, second@example.com'), ['first@example.com', 'second@example.com']);
+  assert.deepEqual(contactRecipients('First@example.com; first@example.com\nsecond@example.com'), ['first@example.com', 'second@example.com']);
+  assert.throws(() => contactRecipients('first@example.com, invalid'));
+  assert.throws(() => contactRecipients(''));
+});

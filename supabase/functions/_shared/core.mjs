@@ -76,7 +76,7 @@ export function buildConfirmUrl(baseUrl, token) {
 
 export function formatLeadEmail(lead) {
   const text = [
-    `New consultation request from ${lead.name}${lead.company ? ` (${lead.company})` : ''}`,
+    `New contact message from ${lead.name}${lead.company ? ` (${lead.company})` : ''}`,
     '',
     `Email:    ${lead.email}`,
     `Pressure: ${lead.pressure || '—'}`,
@@ -84,7 +84,16 @@ export function formatLeadEmail(lead) {
     lead.message
   ].join('\n');
   return {
-    subject: `Racklion consult: ${lead.name}${lead.company ? ` · ${lead.company}` : ''}`,
+    subject: `Racklion contact: ${lead.name}${lead.company ? ` · ${lead.company}` : ''}`,
     text
   };
+}
+
+// Recipients are server configuration, never accepted from a visitor payload.
+export function contactRecipients(value) {
+  const recipients = [...new Set(String(value ?? '').split(/[,;\n]+/).map(email => email.trim().toLowerCase()).filter(Boolean))];
+  if (!recipients.length || recipients.some(email => !EMAIL_RE.test(email))) {
+    throw new Error('Configure valid contact notification recipients');
+  }
+  return recipients;
 }

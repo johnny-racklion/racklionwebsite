@@ -31,6 +31,8 @@ import { createIcons } from 'lucide';
 import { renderPage, escapeHtml, getTopics } from './render.js';
 import { metaForView, canonicalForView } from './seo.js';
 import { viewFromPath } from './routes.js';
+import { gpuRequestFromSearch, normalizeGpuRequest } from './gpu-pricing.js';
+import { renderGpuResults } from './gpu-pricing-render.js';
 
 const app = document.querySelector('#app');
 const consultEndpoint = import.meta.env.VITE_CONSULT_ENDPOINT;
@@ -54,7 +56,9 @@ const state = {
   view: viewFromPath(window.location.pathname),
   selectedTopics: new Set(readSavedTopics()),
   subscriberStatus: '',
-  leadStatus: ''
+  leadStatus: '',
+  gpuRequest: gpuRequestFromSearch(window.location.search),
+  gpuQuote: new URLSearchParams(window.location.search).get('intent') === 'gpu-reservation'
 };
 
 const icons = {
@@ -165,7 +169,9 @@ function renderApp() {
     leadStatus: state.leadStatus,
     savedLead: localStorage.getItem(savedLeadKey),
     demoSubscriber: localStorage.getItem(savedSubscriberKey),
-    turnstileSiteKey
+    turnstileSiteKey,
+    gpuRequest: state.gpuRequest,
+    gpuQuote: state.gpuQuote
   };
 
   app.innerHTML = renderPage(state.view, ctx);
@@ -257,7 +263,7 @@ async function submitLead(form) {
     company: String(formData.get('company') || '').trim(),
     pressure: String(formData.get('pressure') || '').trim(),
     message: String(formData.get('message') || '').trim(),
-    source: 'racklion-consulting-inquiry',
+    source: state.gpuQuote ? 'racklion-gpu-reservation' : 'racklion-contact',
     company_url: String(formData.get('company_url') || ''),
     rendered_at: Number(formData.get('rendered_at') || 0),
     turnstile_token: String(formData.get('cf-turnstile-response') || '')
@@ -272,6 +278,10 @@ async function submitLead(form) {
     return;
   }
 
+  const button = form.querySelector('button[type="submit"]');
+  if (button.disabled) return;
+  button.disabled = true;
+  button.textContent = 'Sending…';
   try {
     const response = await fetch(consultEndpoint, {
       method: 'POST',
@@ -279,16 +289,50 @@ async function submitLead(form) {
       body: JSON.stringify(payload)
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.leadStatus = 'Consultation request sent.';
+    state.leadStatus = 'Thanks — your message has been sent. We’ll reply by email.';
+    state.gpuQuote = false;
     form.reset();
+    renderApp();
   } catch (error) {
-    state.leadStatus = 'Consultation request failed. Please try again.';
+    state.leadStatus = 'Your message could not be emailed. Please try again.';
+    // Preserve the visitor’s message and contact details on a failed send.
+    form.closest('.consultation-panel').querySelector('[role="status"]').textContent = state.leadStatus;
+    button.disabled = false;
+    button.textContent = 'Send message';
   }
+}
 
-  renderApp();
+function syncGpuLocation() {
+  state.gpuRequest = gpuRequestFromSearch(window.location.search);
+  state.gpuQuote = new URLSearchParams(window.location.search).get('intent') === 'gpu-reservation';
+}
+
+function updateGpuCalculator() {
+  const countInput = document.querySelector('#gpu-count');
+  if (!countInput) return;
+  if (!countInput.checkValidity() || !countInput.value) {
+    document.querySelector('#gpu-results').dataset.requestKey = '';
+    document.querySelector('#gpu-results').innerHTML = '<p>Enter a whole number from 1 to 10,000 GPUs to see your estimate.</p>';
+    return;
+  }
+  state.gpuRequest = normalizeGpuRequest({
+    gpu: document.querySelector('#gpu-model').value,
+    count: countInput.value,
+    months: document.querySelector('#gpu-term').value
+  });
+  const results = document.querySelector('#gpu-results');
+  const requestKey = JSON.stringify(state.gpuRequest);
+  // A blur/change after typing must not replace the link being clicked.
+  if (results.dataset.requestKey === requestKey) return;
+  results.innerHTML = renderGpuResults(state.gpuRequest);
+  results.dataset.requestKey = requestKey;
+  const url = new URL(window.location.href);
+  for (const [key, value] of Object.entries(state.gpuRequest)) url.searchParams.set(key, value);
+  window.history.replaceState({}, '', url.pathname + url.search + url.hash);
 }
 
 app.addEventListener('input', (event) => {
+  if (event.target?.matches('[data-gpu-input]')) updateGpuCalculator();
   if (event.target?.id === 'search') {
     state.query = event.target.value;
     renderApp();
@@ -299,6 +343,7 @@ app.addEventListener('input', (event) => {
 });
 
 app.addEventListener('change', (event) => {
+  if (event.target?.matches('[data-gpu-input]')) updateGpuCalculator();
   const target = event.target;
   if (!target?.matches('[data-pref-topic]')) return;
 
@@ -357,17 +402,24 @@ document.addEventListener('click', (event) => {
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
   if (link.target === '_blank' || link.hasAttribute('download')) return;
   event.preventDefault();
-  const path = new URL(link.href).pathname;
-  if (path !== window.location.pathname) {
-    window.history.pushState({}, '', path);
-    state.view = viewFromPath(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const url = new URL(link.href);
+  if (url.pathname !== window.location.pathname || url.search !== window.location.search) {
+    window.history.pushState({}, '', url.pathname + url.search + url.hash);
+    state.view = viewFromPath(url.pathname);
+    syncGpuLocation();
     renderApp();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  if (url.hash) {
+    const target = document.getElementById(url.hash.slice(1));
+    if (target?.tagName === 'DETAILS') target.open = true;
+    target?.scrollIntoView();
   }
 });
 
 window.addEventListener('popstate', () => {
   state.view = viewFromPath(window.location.pathname);
+  syncGpuLocation();
   renderApp();
 });
 

@@ -1,5 +1,5 @@
 // supabase/functions/consult/index.ts
-import { validateConsult, checkHoneypot, checkTiming, formatLeadEmail, overRateLimit } from '../_shared/core.mjs';
+import { validateConsult, checkHoneypot, checkTiming, formatLeadEmail, overRateLimit, contactRecipients } from '../_shared/core.mjs';
 import { json, preflight } from '../_shared/http.ts';
 import { verifyTurnstile } from '../_shared/turnstile.ts';
 import { sendEmail } from '../_shared/email.ts';
@@ -56,19 +56,20 @@ Deno.serve(async (req) => {
   });
   if (error) return json({ ok: false, error: 'server' }, 500, origin);
 
-  // Row is durable; a notification failure must not look like data loss.
+  // Keep the saved inquiry, but do not claim email success if sending fails.
   try {
     const mail = formatLeadEmail(value);
     await sendEmail({
       apiKey: Deno.env.get('RESEND_API_KEY')!,
       from: Deno.env.get('NOTIFY_FROM') ?? 'notifications@racklion.com',
-      to: Deno.env.get('CONSULT_NOTIFY_TO') ?? 'consult@racklion.com',
+      to: contactRecipients(Deno.env.get('CONTACT_NOTIFY_TO') ?? Deno.env.get('CONSULT_NOTIFY_TO') ?? 'johnny@racklion.com'),
       replyTo: value.email,
       subject: mail.subject,
       text: mail.text
     });
   } catch (e) {
     console.error('lead notify failed', e);
+    return json({ ok: false, error: 'email_failed' }, 502, origin);
   }
 
   return json({ ok: true }, 200, origin);

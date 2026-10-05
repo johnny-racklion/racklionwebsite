@@ -11,13 +11,13 @@ test('every view has a title and description', () => {
 
 test('canonical for home ends with slash, others do not', () => {
   assert.ok(canonicalForView('home').endsWith('/'));
-  assert.equal(canonicalForView('source'), 'https://racklion.com/source');
+  assert.equal(canonicalForView('source'), 'https://www.racklion.com/source');
 });
 
 test('head fragment includes title, canonical, og and twitter tags', () => {
   const head = headTagsForView('source');
   assert.match(head, /<title>[^<]*Source[^<]*<\/title>/);
-  assert.match(head, /rel="canonical" href="https:\/\/racklion\.com\/source"/);
+  assert.match(head, /rel="canonical" href="https:\/\/www\.racklion\.com\/source"/);
   assert.match(head, /property="og:title"/);
   assert.match(head, /name="twitter:card"/);
 });

@@ -5,9 +5,13 @@ import { SITE_URL, ROUTES } from './routes.js';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.png`;
 
 const META = {
+  'gpu-pricing': {
+    title: 'GPU Hourly Pricing & Reserved Capacity Savings | Racklion',
+    description: 'Compare B300, B200, H200, H100, A100 and L40S GPU-hour prices. Explore potential savings of 30% or more with reserved capacity and request a tailored quote.'
+  },
   home: {
-    title: 'Racklion — Cloud Exit, On-Prem & AI Infrastructure Sourcing',
-    description: 'Racklion helps teams leave rented cloud: cloud-exit economics, on-prem readiness, and sourcing GPUs, power, and data-center space.'
+    title: 'On-Prem Signal — Infrastructure News | Racklion',
+    description: 'The daily infrastructure brief from Racklion: AI compute, GPU capacity, cloud costs, power, and the news behind your next infrastructure decision.'
   },
   signals: {
     title: 'On-Prem Signal — Daily AI Infrastructure & Cloud-Pressure News | Racklion',
@@ -71,7 +75,7 @@ export function metaForView(view) {
 }
 
 export function canonicalForView(view) {
-  const route = ROUTES.find((r) => r.view === view);
+  const route = ROUTES.find((r) => r.view === (view === 'signals' ? 'home' : view));
   const path = route ? route.path : '/';
   return path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`;
 }
