@@ -280,25 +280,51 @@ async function submitLead(form) {
 
   const button = form.querySelector('button[type="submit"]');
   if (button.disabled) return;
+  const status = form.closest('.consultation-panel').querySelector('[role="status"]');
+  function showStatus(message, kind, focus = false) {
+    state.leadStatus = message;
+    status.textContent = message;
+    status.className = `form-status is-visible contact-status ${kind}`;
+    status.setAttribute('tabindex', '-1');
+    if (focus) {
+      status.focus({ preventScroll: true });
+      status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
   button.disabled = true;
   button.textContent = 'Sending…';
+  form.setAttribute('aria-busy', 'true');
+  showStatus('Sending your message. Please wait…', 'is-sending');
   try {
     const response = await fetch(consultEndpoint, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(20000)
     });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.leadStatus = 'Thanks — your message has been sent. We’ll reply by email.';
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.ok !== true) {
+      const messages = {
+        email_failed: 'Your message was saved, but we could not send the email notification. You do not need to submit it again. For urgent inquiries, email johnny@racklion.com.',
+        verification: 'Your security check expired or could not be completed. Complete the check below, then send again.',
+        rate_limited: 'Too many attempts. Please wait 10 minutes before sending again.',
+        timing: 'Please wait a few seconds before sending your message.'
+      };
+      throw new Error(messages[result.error] || 'Your message was not sent. Check your details and try again, or email johnny@racklion.com.');
+    }
     state.gpuQuote = false;
     form.reset();
-    renderApp();
+    form.hidden = true;
+    showStatus('Message sent. Thank you for getting in touch — we’ll reply to your email.', 'is-success', true);
   } catch (error) {
-    state.leadStatus = 'Your message could not be emailed. Please try again.';
-    // Preserve the visitor’s message and contact details on a failed send.
-    form.closest('.consultation-panel').querySelector('[role="status"]').textContent = state.leadStatus;
+    showStatus(error.name === 'TimeoutError' || error.name === 'TypeError'
+      ? 'We could not confirm delivery. Your message is still below. Check your connection or email johnny@racklion.com.'
+      : error.message, 'is-error', true);
+    if (window.turnstile && turnstileSiteKey) window.turnstile.reset();
     button.disabled = false;
     button.textContent = 'Send message';
+  } finally {
+    form.setAttribute('aria-busy', 'false');
   }
 }
 

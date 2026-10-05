@@ -21,8 +21,9 @@ Deno.serve(async (req) => {
   const payload = await req.json().catch(() => null);
   if (!payload) return json({ ok: false, error: 'bad_request' }, 400, origin);
 
-  // Silent accept-drop for honeypot/timing so bots get no signal.
-  if (!checkHoneypot(payload).ok || !checkTiming(payload, now).ok) return json({ ok: true }, 200, origin);
+  // Reject blocked submissions without falsely confirming delivery.
+  if (!checkHoneypot(payload).ok) return json({ ok: false, error: 'bad_request' }, 400, origin);
+  if (!checkTiming(payload, now).ok) return json({ ok: false, error: 'timing' }, 400, origin);
 
   const ip = clientIp(req);
   const passed = await verifyTurnstile(payload.turnstile_token, Deno.env.get('TURNSTILE_SECRET_KEY')!, ip ?? undefined);

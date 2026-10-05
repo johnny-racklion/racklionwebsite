@@ -345,3 +345,10 @@ input[type='checkbox'] { accent-color: var(--accent); width: 16px; height: 16px;
   .site-header { flex-wrap: wrap; gap: 14px; padding-block: 20px; }
   .site-header nav { width: 100%; justify-content: space-between; }
 }
+
+/* Keep contact outcomes visible and easy to find after submitting. */
+.contact-status.is-visible { display: block; padding: 22px 24px; margin-top: 20px; border: 2px solid currentColor; font-size: 18px; line-height: 1.6; }
+.contact-status.is-success { color: #24543c; background: #edf5ee; }
+.contact-status.is-error { color: #8d3020; background: #fff0e8; }
+.contact-status.is-sending { color: var(--ink); background: var(--paper); }
+#lead-form[hidden] { display: none; }
