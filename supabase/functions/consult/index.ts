@@ -62,7 +62,7 @@ Deno.serve(async (req) => {
     const mail = formatLeadEmail(value);
     await sendEmail({
       apiKey: Deno.env.get('RESEND_API_KEY')!,
-      from: Deno.env.get('NOTIFY_FROM') ?? 'notifications@racklion.com',
+      from: Deno.env.get('NOTIFY_FROM') ?? 'notifications@notify.racklion.com',
       to: contactRecipients(Deno.env.get('CONTACT_NOTIFY_TO') ?? Deno.env.get('CONSULT_NOTIFY_TO') ?? 'johnny@racklion.com'),
       replyTo: value.email,
       subject: mail.subject,
