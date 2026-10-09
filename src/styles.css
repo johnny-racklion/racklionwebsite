@@ -366,3 +366,31 @@ input[type='checkbox'] { accent-color: var(--accent); width: 16px; height: 16px;
 .rfs-fields .rfs-unsure { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
 .rfs-unsure input { width: 18px; height: 18px; margin: 0; }
 .rfs-fields p { font-size: 13px; margin-top: 8px; }
+
+/* Calculator and inquiry share one compact decision area. */
+.gpu-inquiry { gap: 48px; align-items: start; padding: 24px 0; }
+.gpu-inquiry .gpu-fields { margin-top: 18px; gap: 14px; }
+.gpu-inquiry .consultation-panel { padding-top: 20px; }
+.gpu-inquiry .consultation-panel h2 { font-size: 30px; margin: 8px 0 12px; }
+.gpu-inquiry .consultation-panel > p { margin: 0 0 20px; font-size: 14px; }
+.gpu-results-compact { padding: 20px 22px; margin-top: 22px; }
+.gpu-results-compact > .eyebrow { display: none; }
+.gpu-results-compact h2 { font-size: 25px; margin: 0 0 12px; }
+.gpu-results-compact h2 span { display: inline; margin-left: 12px; }
+.gpu-results-compact .gpu-costs { margin: 10px 0 14px; }
+.gpu-results-compact .gpu-costs > div { padding: 8px 0; }
+.gpu-results-compact .gpu-saving { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 12px 0; }
+.gpu-results-compact .gpu-saving strong { font-size: 38px; margin: 0; }
+.gpu-results-compact .pricing-note { font-size: 11px; margin-bottom: 0; }
+input[type='date'] { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 0; background: transparent; color: var(--ink); font: inherit; }
+.gpu-inquiry .rfs-fields { margin-block: 14px; }
+.gpu-inquiry .rfs-fields p { font-size: 12px; }
+@media (max-width: 760px) {
+  .gpu-inquiry { gap: 24px; }
+  .gpu-results-compact .gpu-saving strong { font-size: 32px; }
+}
+.gpu-inquiry .consultation-panel { gap: 12px; }
+.gpu-inquiry .consultation-panel > p { margin-bottom: 8px; }
+.gpu-inquiry form { gap: 14px; }
+.gpu-inquiry .rfs-fields { margin-block: 0; }
+.gpu-inquiry textarea { min-height: 90px; }

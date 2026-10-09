@@ -2,10 +2,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
+import { gpuQuoteMessage } from '../src/gpu-pricing.js';
 
 const source = readFileSync(new URL('../src/main.js', import.meta.url), 'utf8');
 const handler = source.slice(source.indexOf('async function submitLead('), source.indexOf('\nfunction syncGpuLocation'));
-function setup(response) {
+function setup(response, state = {}) {
+  let sent;
   const status = { setAttribute() {}, focus() { this.focused = true; }, scrollIntoView() {} };
   const button = { disabled: false };
   const form = {
@@ -15,12 +17,13 @@ function setup(response) {
   };
   const context = vm.createContext({
     FormData: class { get(key) { return { name: 'Test', email: 'test@example.com', message: 'Test message', rendered_at: Date.now() - 5000 }[key]; } },
-    state: {}, consultEndpoint: 'https://example.com/contact',
-    fetch: async () => response, AbortSignal,
+    document: { querySelector: () => null },
+    state, gpuQuoteMessage, consultEndpoint: 'https://example.com/contact',
+    fetch: async (url, options) => { sent = JSON.parse(options.body); return response; }, AbortSignal,
     window: {}, turnstileSiteKey: '',
   });
   vm.runInContext(handler, context);
-  return { run: () => context.submitLead(form), form, status, button };
+  return { run: () => context.submitLead(form), form, status, button, payload: () => sent };
 }
 test('successful contact submission hides form and focuses visible confirmation', async () => {
   const view = setup({ ok: true, json: async () => ({ ok: true }) });
@@ -43,4 +46,11 @@ test('HTTP 200 without confirmed success is never shown as delivered', async () 
   await view.run();
   assert.notEqual(view.form.hidden, true);
   assert.match(view.status.className, /is-error/);
+});
+
+test('GPU inquiries include current calculator selections automatically', async () => {
+  const view = setup({ ok: true, json: async () => ({ ok: true }) }, { view: 'home', gpuRequest: { gpu: 'h100-sxm', count: 64, months: 24 } });
+  await view.run();
+  assert.match(view.payload().message, /64 × NVIDIA H100.*24 months/);
+  assert.equal(view.payload().source, 'racklion-gpu-reservation');
 });

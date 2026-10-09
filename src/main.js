@@ -31,7 +31,7 @@ import { createIcons } from 'lucide';
 import { renderPage, escapeHtml, getTopics } from './render.js';
 import { metaForView, canonicalForView } from './seo.js';
 import { viewFromPath } from './routes.js';
-import { gpuRequestFromSearch, normalizeGpuRequest } from './gpu-pricing.js';
+import { gpuRequestFromSearch, normalizeGpuRequest, gpuQuoteMessage } from './gpu-pricing.js';
 import { renderGpuResults } from './gpu-pricing-render.js';
 
 const app = document.querySelector('#app');
@@ -256,14 +256,17 @@ async function submitSubscription(form) {
 }
 
 async function submitLead(form) {
+  const gpuInquiry = ['home', 'gpu-pricing'].includes(state.view);
+  const count = document.querySelector('#gpu-count');
+  if (gpuInquiry && count && !count.reportValidity()) return;
   const formData = new FormData(form);
   const payload = {
     name: String(formData.get('name') || '').trim(),
     email: String(formData.get('email') || '').trim(),
     company: String(formData.get('company') || '').trim(),
     pressure: String(formData.get('pressure') || '').trim(),
-    message: `${String(formData.get('message') || '').trim()}\n\nReady-for-service (RFS) date: ${formData.get('rfs_unsure') ? 'Not sure yet' : String(formData.get('rfs_date') || 'Not specified')}`,
-    source: state.gpuQuote ? 'racklion-gpu-reservation' : 'racklion-contact',
+    message: `${gpuInquiry ? gpuQuoteMessage(state.gpuRequest) + '\n\n' : ''}${String(formData.get('message') || '').trim()}\n\nReady-for-service (RFS) date: ${formData.get('rfs_unsure') ? 'Not sure yet' : String(formData.get('rfs_date') || 'Not specified')}`,
+    source: gpuInquiry || state.gpuQuote ? 'racklion-gpu-reservation' : 'racklion-contact',
     company_url: String(formData.get('company_url') || ''),
     rendered_at: Number(formData.get('rendered_at') || 0),
     turnstile_token: String(formData.get('cf-turnstile-response') || '')
@@ -350,7 +353,7 @@ function updateGpuCalculator() {
   const requestKey = JSON.stringify(state.gpuRequest);
   // A blur/change after typing must not replace the link being clicked.
   if (results.dataset.requestKey === requestKey) return;
-  results.innerHTML = renderGpuResults(state.gpuRequest);
+  results.innerHTML = renderGpuResults(state.gpuRequest, true);
   results.dataset.requestKey = requestKey;
   const url = new URL(window.location.href);
   for (const [key, value] of Object.entries(state.gpuRequest)) url.searchParams.set(key, value);

@@ -21,27 +21,27 @@ export function renderGpuPreview() {
   </section>`;
 }
 
-export function renderGpuResults(input) {
+export function renderGpuResults(input, compact = false) {
   const e = gpuEstimate(input);
   return `<span class="eyebrow">Your capacity, at a better rate</span>
     <h2>${e.count.toLocaleString('en-US')} × ${e.gpu.name}<span>${e.months}-month reservation</span></h2>
     <dl class="gpu-costs"><div><dt>Average on-demand / month</dt><dd>${usd(e.monthly, 0)}</dd></div><div><dt>At 30% lower / month</dt><dd>${usd(e.reservedMonthly, 0)}</dd></div></dl>
     <div class="gpu-saving"><span>Potential savings over ${e.months} month${e.months === 1 ? '' : 's'}</span><strong>${usd(e.savings, 0)}</strong></div>
-    <a class="primary-action" href="${gpuQuoteUrl({gpu: e.gpu.id, count: e.count, months: e.months})}">Find my reserved rate <span aria-hidden="true">↗</span></a>
+    ${compact ? '' : `<a class="primary-action" href="${gpuQuoteUrl({gpu: e.gpu.id, count: e.count, months: e.months})}">Find my reserved rate <span aria-hidden="true">↗</span></a>`}
     <p class="pricing-note">Illustrates a 30% reduction with continuous use at 730 hours/month. Reserved capacity is billed for the committed term. Actual rates depend on availability, configuration, and term; excludes additional storage, network fees, and taxes.</p>`;
 }
 
-export function renderGpuPricingPage(state) {
+export function renderGpuPricingPage(state, contactForm = '') {
   const request = normalizeGpuRequest(state.gpuRequest);
   return `<main id="main-content" class="page-main gpu-pricing-page">
     <section class="gpu-pricing-hero"><div><span class="eyebrow">Racklion / GPU price watch</span><h1>Reserve now.<br>Thank yourself later.</h1><p>Plan ahead for the GPUs you need. We help you secure long-term capacity, negotiate a better rate, and keep your costs predictable.</p></div><div class="gpu-promise"><strong>30%<span>+</span></strong><p>Potential savings<br>with reserved capacity.</p><a href="#gpu-calculator">Explore your savings ↓</a><a class="text-link" href="#consultation">Tell us what you need ↗</a></div></section>
     <section aria-label="GPU pricing benchmarks"><div class="issue-line"><span>Public on-demand rates / USD per GPU-hour</span><span>Checked ${pricingDate()}</span></div>${pricingTable()}<p class="pricing-note">Averages cover the selected providers below, not the entire market. The 30% column shows a savings scenario, not a bookable offer.</p></section>
-    <section id="gpu-calculator" class="gpu-calculator" aria-labelledby="gpu-calculator-title"><div class="gpu-calculator-inputs"><span class="eyebrow">Put a number on it</span><h2 id="gpu-calculator-title">What could you save?</h2><p>Start with the GPU, the fleet size, and how long you need it.</p>
+    <section id="gpu-calculator" class="gpu-calculator gpu-inquiry" aria-labelledby="gpu-calculator-title"><div class="gpu-calculator-inputs"><span class="eyebrow">Put a number on it</span><h2 id="gpu-calculator-title">What could you save?</h2><p>Start with the GPU, the fleet size, and how long you need it.</p>
       <div class="gpu-fields"><label for="gpu-model">GPU model<select id="gpu-model" data-gpu-input="gpu">${GPU_MODELS.map(gpu => `<option value="${gpu.id}" ${gpu.id === request.gpu ? 'selected' : ''}>NVIDIA ${gpu.name} — ${gpu.variant}</option>`).join('')}</select></label>
       <label for="gpu-count">Number of GPUs<input id="gpu-count" data-gpu-input="count" type="number" min="1" max="10000" step="1" value="${request.count}" inputmode="numeric" /></label>
       <label for="gpu-term">Reservation term<select id="gpu-term" data-gpu-input="months">${[1, 3, 6, 12, 24, 36].map(months => `<option value="${months}" ${months === request.months ? 'selected' : ''}>${months} month${months === 1 ? '' : 's'}</option>`).join('')}</select></label></div>
-      <p class="pricing-note">Need a larger cluster, a specific region, or a custom term? Include it in your request.</p></div>
-      <div id="gpu-results" class="gpu-results" aria-live="polite" aria-atomic="true">${renderGpuResults(request)}</div></section>
+      <div id="gpu-results" class="gpu-results gpu-results-compact" aria-live="polite" aria-atomic="true">${renderGpuResults(request, Boolean(contactForm))}</div></div>
+      ${contactForm}</section>
     <details id="pricing-sources" class="pricing-sources"><summary>Where these prices come from <span aria-hidden="true">+</span></summary>
       <p>Manually checked ${pricingDate()}. Each average is the arithmetic mean of one published on-demand rate per selected provider, normalized per physical GPU-hour. This is a dated reference snapshot, not a live availability feed. Spot, reserved, serverless, fractional GPUs, and contact-sales listings are excluded.</p>
       <p>H100 and A100 rows use SXM models with 80 GB memory. B200 providers list 180–192 GB configurations. Included CPU, RAM, networking, region, node size, and minimum GPU count vary; these are price references, not identical offers. Nebius L40S uses its published starting price. Unused reserved hours still cost money.</p>

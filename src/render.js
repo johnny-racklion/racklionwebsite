@@ -284,10 +284,10 @@ function renderConsultationForm(state) {
       <div class="section-heading">
         <div>
           <span class="eyebrow">Contact us</span>
-          <h2>How can we help?</h2>
+          <h2>${state.gpuInquiry ? 'Let’s find your capacity.' : 'How can we help?'}</h2>
         </div>
       </div>
-      <p>Tell us what you need. We’ll help you work through the details.</p>
+      <p>${state.gpuInquiry ? 'Send us your plans. Your GPU selections are included automatically.' : 'Tell us what you need. We’ll help you work through the details.'}</p>
       <form id="lead-form">
         <div class="form-grid">
           <label>
@@ -305,8 +305,8 @@ function renderConsultationForm(state) {
           <p id="rfs-help">When do you need your capacity or infrastructure ready to use?</p>
         </div>
         <label>
-          <span>What do you need?</span>
-          <textarea name="message" rows="5" placeholder="GPU model, quantity, location, or timing—share what you know. It’s fine if you’re still figuring it out." required>${state.gpuQuote ? escapeHtml(gpuQuoteMessage(state.gpuRequest)) : ''}</textarea>
+          <span>${state.gpuInquiry ? 'Anything else? (optional)' : 'What do you need?'}</span>
+          <textarea name="message" rows="${state.gpuInquiry ? 3 : 5}" placeholder="GPU model, quantity, location, or timing—share what you know. It’s fine if you’re still figuring it out." ${state.gpuInquiry ? '' : 'required'}>${state.gpuQuote && !state.gpuInquiry ? escapeHtml(gpuQuoteMessage(state.gpuRequest)) : ''}</textarea>
         </label>
         ${renderBotFields(state)}
         <button class="form-action" type="submit">
@@ -789,8 +789,8 @@ function renderFaqPage() {
 export function renderPage(view, state) {
   const items = filteredItems(state);
   const views = {
-    home: renderGpuPricingPage(state),
-    'gpu-pricing': renderGpuPricingPage(state),
+    home: renderGpuPricingPage(state, renderConsultationForm({ ...state, gpuInquiry: true })),
+    'gpu-pricing': renderGpuPricingPage(state, renderConsultationForm({ ...state, gpuInquiry: true })),
     signals: renderSignalsPage(state, items),
     source: renderSourcePage(state),
     consulting: renderConsultingPage(state),
@@ -799,7 +799,7 @@ export function renderPage(view, state) {
     subscribe: renderSubscribePage(state)
   };
   const page = views[view] || views.home;
-  const withContact = ['source', 'consulting'].includes(view) ? page
+  const withContact = ['home', 'gpu-pricing', 'source', 'consulting'].includes(view) ? page
     : page.replace('</main>', `<div class="page-contact">${renderConsultationForm(state)}</div></main>`);
   return `${renderSiteHeader(view)}${withContact}${renderFooter()}`;
 }
