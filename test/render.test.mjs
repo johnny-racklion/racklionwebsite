@@ -68,3 +68,12 @@ test('every page offers one direct contact form and a navigation shortcut', () =
   const source = renderPage('source', ctx);
   assert.ok(source.indexOf('id="lead-form"') < source.indexOf('aria-label="What Racklion sources"'));
 });
+
+
+test('Signal exposes newsletter customization and navigation retains both conversions', () => {
+  const html = renderPage('signals', ctx);
+  assert.match(html, /id="subscribe-form"/);
+  assert.match(html, /data-pref-topic=/);
+  assert.match(html, /Build your newsletter/);
+  assert.match(html, /href="#consultation">Contact us/);
+});

@@ -140,7 +140,7 @@ function topTopic(state) {
 }
 
 function renderSiteHeader(view) {
-  const links = [['home', 'GPU pricing'], ['signals', 'The signal'], ['source', 'Source capacity'], ['consulting', 'Consulting'], ['about', 'About']];
+  const links = [['home', 'GPU pricing'], ['signals', 'The signal'], ['source', 'Source capacity'], ['consulting', 'Consulting'], ['about', 'About'], ['subscribe', 'Build your newsletter']];
   return `
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
@@ -459,10 +459,10 @@ function renderSubscribeForm(state, demoSubscriber) {
       <div class="section-heading">
         <div>
           <span class="eyebrow">Subscribe</span>
-          <h2>Get the daily on-prem signal</h2>
+          <h2>Build your newsletter</h2>
         </div>
       </div>
-      <p>One concise brief on infrastructure news that changes the cloud-versus-owning-it decision.</p>
+      <p>Choose the infrastructure topics you care about and subscribe to your tailored brief.</p>
       <form id="subscribe-form">
         <label>
           <span>Email</span>
@@ -609,12 +609,14 @@ function renderSignalsPage(state, items) {
   return `
     <main id="main-content" class="page-main page-view">
       ${renderDigestIntro(items)}
+      <p><a class="text-link" href="#subscribe">Customize your newsletter ↗</a></p>
       ${renderToolbar(state, items)}
       <div class="content-grid">
         <section class="feed" aria-label="Infrastructure signals">
           ${items.length ? items.map(renderArticle).join('') : '<div class="empty-state">No on-prem signals match the current filters.</div>'}
         </section>
         <aside class="right-rail">
+          ${renderSubscribeForm(state, state.demoSubscriber)}
           ${renderIssuePreview(state)}
           ${renderSourceHealth(state)}
         </aside>
