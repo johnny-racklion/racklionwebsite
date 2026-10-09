@@ -8,7 +8,7 @@ const distDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist');
 
 const checks = [
   ['gpu-pricing/index.html', ['B300', 'gpu-calculator', '30%', 'pricing-sources', 'rel="canonical"']],
-  ['index.html',            ['Racklion', 'On-Prem Signal', 'Signal controls', 'Infrastructure signals', 'application/ld+json', 'rel="canonical"']],
+  ['index.html',            ['Racklion', 'B300', 'gpu-calculator', 'pricing-sources', 'application/ld+json', 'rel="canonical"']],
   ['source/index.html',     ['Source', 'GPU', 'colocation', 'application/ld+json']],
   ['consulting/index.html', ['Cloud exit math', 'rel="canonical"', 'og:title']],
   ['faq/index.html',        ['FAQPage', 'repatriation']],

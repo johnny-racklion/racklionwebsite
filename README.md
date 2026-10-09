@@ -4,7 +4,7 @@ A consumer-facing newsletter site for daily data-center, AI infrastructure, and 
 
 ## What It Does
 
-- Opens directly to The Signal news feed at `/`; `/signals` remains a compatible URL.
+- Opens directly to GPU pricing at `/`; `/gpu-pricing` remains compatible and The Signal lives at `/signals`.
 - Uses focused static-friendly views: home, signals, about, consulting, and subscribe.
 - Positions Racklion consulting around cloud exit math, on-prem readiness, hybrid architecture, and resilience strategy.
 - Filters news by data centers, AI infrastructure, cloud cost, cloud risk, power and cooling, private cloud, servers, storage, networking, and security.

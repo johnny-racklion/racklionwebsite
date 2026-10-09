@@ -5,7 +5,7 @@
 export const SITE_URL = 'https://www.racklion.com';
 
 export const ROUTES = [
-  { path: '/',           view: 'home',       label: 'The Signal' },
+  { path: '/',           view: 'home',       label: 'GPU Pricing' },
   { path: '/gpu-pricing', view: 'gpu-pricing', label: 'GPU Pricing' },
   { path: '/signals',    view: 'signals',    label: 'Signals' },
   { path: '/source',     view: 'source',     label: 'Source Capacity' },

@@ -20,7 +20,8 @@ const ctx = { data, query: '', topic: 'all', sort: 'pressure',
 test('renderPage(home) includes hero and brand', () => {
   const html = renderPage('home', ctx);
   assert.match(html, /Racklion/);
-  assert.match(html, /On-Prem Signal/);
+  assert.match(html, /gpu-calculator/);
+  assert.match(html, /B300/);
 });
 
 test('renderPage(signals) includes the item title', () => {

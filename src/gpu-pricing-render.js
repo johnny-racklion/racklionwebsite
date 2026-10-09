@@ -6,18 +6,18 @@ function pricingTable() {
       <thead><tr><th scope="col">NVIDIA GPU</th><th scope="col">Average on-demand</th><th scope="col">At 30% lower</th><th scope="col">Listed range</th><th scope="col"><span class="sr-only">Explore</span></th></tr></thead>
       <tbody>${GPU_MODELS.map(gpu => {
         const b = gpuBenchmark(gpu);
-        return `<tr><th scope="row"><a href="/gpu-pricing?gpu=${gpu.id}#gpu-calculator">${gpu.name}</a><small>${gpu.variant}</small></th>
+        return `<tr><th scope="row"><a href="/?gpu=${gpu.id}#gpu-calculator">${gpu.name}</a><small>${gpu.variant}</small></th>
           <td>${usd(b.average)}<small>${b.providers} providers</small></td><td class="gpu-target">${usd(b.average * .7)}<small>Illustrative / GPU-hr</small></td>
-          <td class="gpu-range">${usd(b.low)}–${usd(b.high)}</td><td><a class="gpu-row-link" href="/gpu-pricing?gpu=${gpu.id}#gpu-calculator" aria-label="Explore ${gpu.name} savings">↗</a></td></tr>`;
+          <td class="gpu-range">${usd(b.low)}–${usd(b.high)}</td><td><a class="gpu-row-link" href="/?gpu=${gpu.id}#gpu-calculator" aria-label="Explore ${gpu.name} savings">↗</a></td></tr>`;
       }).join('')}</tbody></table></div>`;
 }
 
 export function renderGpuPreview() {
   return `<section class="gpu-preview" aria-label="GPU price watch">
-    <div class="section-heading journal-heading"><div><span class="eyebrow">GPU price watch</span><h2>Know the rate.<br>Find a better one.</h2></div><a class="text-link" href="/gpu-pricing">Compare GPU costs <span aria-hidden="true">↗</span></a></div>
+    <div class="section-heading journal-heading"><div><span class="eyebrow">GPU price watch</span><h2>Know the rate.<br>Find a better one.</h2></div><a class="text-link" href="/">Compare GPU costs <span aria-hidden="true">↗</span></a></div>
     <div class="gpu-preview-intro"><p>Potential savings of <strong>30%+</strong> with reserved capacity. Explore published GPU-hour prices, then let Racklion source a deal around your workload.</p><span class="eyebrow">B300 / B200 / H200 / H100 / A100 / L40S</span></div>
     ${pricingTable()}
-    <p class="pricing-note">USD per GPU-hour. Selected-provider averages checked ${pricingDate()}. The 30% comparison is illustrative; actual reserved rates are quoted for your requirements. <a href="/gpu-pricing#pricing-sources">Sources & methodology</a></p>
+    <p class="pricing-note">USD per GPU-hour. Selected-provider averages checked ${pricingDate()}. The 30% comparison is illustrative; actual reserved rates are quoted for your requirements. <a href="/#pricing-sources">Sources & methodology</a></p>
   </section>`;
 }
 

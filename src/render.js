@@ -140,7 +140,7 @@ function topTopic(state) {
 }
 
 function renderSiteHeader(view) {
-  const links = [['home', 'The signal'], ['gpu-pricing', 'GPU pricing'], ['source', 'Source capacity'], ['consulting', 'Consulting'], ['about', 'About']];
+  const links = [['home', 'GPU pricing'], ['signals', 'The signal'], ['source', 'Source capacity'], ['consulting', 'Consulting'], ['about', 'About']];
   return `
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
@@ -149,7 +149,7 @@ function renderSiteHeader(view) {
         <span>racklion<span class="brand-period">.</span></span>
       </a>
       <nav aria-label="Primary navigation">
-        ${links.map(([page, label]) => `<a href="${page === 'home' ? '/' : `/${page}`}" ${(view === 'signals' ? 'home' : view) === page ? 'aria-current="page" class="is-active"' : ''}>${label}</a>`).join('')}
+        ${links.map(([page, label]) => `<a href="${page === 'home' ? '/' : `/${page}`}" ${(view === 'gpu-pricing' ? 'home' : view) === page ? 'aria-current="page" class="is-active"' : ''}>${label}</a>`).join('')}
         <a class="nav-subscribe ${view === 'subscribe' ? 'is-active' : ''}" href="/subscribe" ${view === 'subscribe' ? 'aria-current="page"' : ''}>Get the brief <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -197,7 +197,7 @@ function renderHero() {
 function renderFooter() {
   return `<footer class="site-footer">
     <div><a class="footer-brand" href="/">racklion.</a><p>Infrastructure decisions. Grounded in reality.</p></div>
-    <nav aria-label="Footer navigation"><a href="/gpu-pricing">GPU pricing</a><a href="/">The signal</a><a href="/consulting">Talk to us</a><a href="/faq">FAQ</a><a href="/subscribe">Subscribe ↗</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">GPU pricing</a><a href="/signals">The signal</a><a href="/consulting">Talk to us</a><a href="/faq">FAQ</a><a href="/subscribe">Subscribe ↗</a></nav>
     <div class="footer-note"><span>Racklion / Infrastructure advisory & sourcing</span><span>Compute. Power. Space.</span></div>
   </footer>`;
 }
@@ -582,13 +582,13 @@ function renderHome(state, items) {
   return `<main id="main-content" class="home-main">
     ${renderHero()}
     <section class="practice-strip" aria-label="How Racklion helps">
-      <a href="/"><span class="practice-number">01</span><div><h2>Read the landscape</h2><p>The news behind infrastructure decisions.</p></div><span aria-hidden="true">↗</span></a>
+      <a href="/signals"><span class="practice-number">01</span><div><h2>Read the landscape</h2><p>The news behind infrastructure decisions.</p></div><span aria-hidden="true">↗</span></a>
       <a href="/consulting"><span class="practice-number">02</span><div><h2>Do the math</h2><p>Cloud, colo, or your own stack.</p></div><span aria-hidden="true">↗</span></a>
       <a href="/source"><span class="practice-number">03</span><div><h2>Put it on the floor</h2><p>Source the hardware, power, and space.</p></div><span aria-hidden="true">↗</span></a>
     </section>
     ${renderGpuPreview()}
     <section class="home-preview" aria-label="Latest infrastructure signals">
-      <div class="section-heading journal-heading"><div><span class="eyebrow">The infrastructure journal</span><h2>On-Prem Signal<span class="brand-period">.</span></h2></div><a class="text-link" href="/">All signals <span aria-hidden="true">↗</span></a></div>
+      <div class="section-heading journal-heading"><div><span class="eyebrow">The infrastructure journal</span><h2>On-Prem Signal<span class="brand-period">.</span></h2></div><a class="text-link" href="/signals">All signals <span aria-hidden="true">↗</span></a></div>
       <div class="issue-line"><span>Cloud economics / AI compute / Physical infrastructure</span><span>Latest brief · ${escapeHtml(formatDate(state.data?.generatedAt))}</span></div>
       <div class="mini-signal-grid">${items.slice(0, 3).map(renderHomeSignal).join('') || '<p>The next brief is on its way.</p>'}</div>
     </section>
@@ -720,7 +720,7 @@ The right place to run it.</h1>
             <i data-lucide="clipboard-check"></i>
             <span>Start a sourcing conversation</span>
           </a>
-          <a class="secondary-inline" href="/gpu-pricing">
+          <a class="secondary-inline" href="/">
             <i data-lucide="newspaper"></i>
             <span>Compare GPU pricing</span>
           </a>
@@ -783,7 +783,7 @@ function renderFaqPage() {
 export function renderPage(view, state) {
   const items = filteredItems(state);
   const views = {
-    home: renderSignalsPage(state, items),
+    home: renderGpuPricingPage(state),
     'gpu-pricing': renderGpuPricingPage(state),
     signals: renderSignalsPage(state, items),
     source: renderSourcePage(state),
