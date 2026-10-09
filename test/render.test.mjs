@@ -56,3 +56,15 @@ test('consult and subscribe forms include honeypot + turnstile + rendered_at', (
   assert.match(subscribe, /class="cf-turnstile"/);
   assert.match(subscribe, /name="rendered_at"/);
 });
+
+test('every page offers one direct contact form and a navigation shortcut', () => {
+  for (const view of ['home', 'gpu-pricing', 'signals', 'source', 'consulting', 'about', 'faq', 'subscribe']) {
+    const html = renderPage(view, ctx);
+    assert.equal((html.match(/id="lead-form"/g) || []).length, 1, view);
+    assert.match(html, /name="rfs_date" type="date" required/);
+    assert.match(html, /name="rfs_unsure"/);
+    assert.match(html, /class="nav-subscribe" href="#consultation">Contact us/);
+  }
+  const source = renderPage('source', ctx);
+  assert.ok(source.indexOf('id="lead-form"') < source.indexOf('aria-label="What Racklion sources"'));
+});

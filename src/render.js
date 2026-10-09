@@ -150,7 +150,7 @@ function renderSiteHeader(view) {
       </a>
       <nav aria-label="Primary navigation">
         ${links.map(([page, label]) => `<a href="${page === 'home' ? '/' : `/${page}`}" ${(view === 'gpu-pricing' ? 'home' : view) === page ? 'aria-current="page" class="is-active"' : ''}>${label}</a>`).join('')}
-        <a class="nav-subscribe ${view === 'subscribe' ? 'is-active' : ''}" href="/subscribe" ${view === 'subscribe' ? 'aria-current="page"' : ''}>Get the brief <span aria-hidden="true">↗</span></a>
+        <a class="nav-subscribe" href="#consultation">Contact us <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   `;
@@ -186,7 +186,7 @@ function renderHero() {
         <h1>The cloud has a<br>physical <em>address.</em></h1>
         <p>GPUs. Power. Space. Someone owns the infrastructure behind your cloud bill. We help you decide when it should be you.</p>
         <div class="hero-actions">
-          <a class="primary-action" href="/consulting">Let’s talk infrastructure <span aria-hidden="true">↗</span></a>
+          <a class="primary-action" href="#consultation">Let’s talk infrastructure <span aria-hidden="true">↗</span></a>
           <a class="text-link" href="/source">Explore sourcing <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -197,7 +197,7 @@ function renderHero() {
 function renderFooter() {
   return `<footer class="site-footer">
     <div><a class="footer-brand" href="/">racklion.</a><p>Infrastructure decisions. Grounded in reality.</p></div>
-    <nav aria-label="Footer navigation"><a href="/">GPU pricing</a><a href="/signals">The signal</a><a href="/consulting">Talk to us</a><a href="/faq">FAQ</a><a href="/subscribe">Subscribe ↗</a></nav>
+    <nav aria-label="Footer navigation"><a href="/">GPU pricing</a><a href="/signals">The signal</a><a href="#consultation">Talk to us</a><a href="/faq">FAQ</a><a href="/subscribe">Subscribe ↗</a></nav>
     <div class="footer-note"><span>Racklion / Infrastructure advisory & sourcing</span><span>Compute. Power. Space.</span></div>
   </footer>`;
 }
@@ -287,7 +287,7 @@ function renderConsultationForm(state) {
           <h2>How can we help?</h2>
         </div>
       </div>
-      <p>Send us a message and we’ll get back to you by email.</p>
+      <p>Tell us what you need. We’ll help you work through the details.</p>
       <form id="lead-form">
         <div class="form-grid">
           <label>
@@ -299,9 +299,14 @@ function renderConsultationForm(state) {
             <input name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
           </label>
         </div>
+        <div class="rfs-fields">
+          <label><span>Ready-for-service (RFS) date</span><input name="rfs_date" type="date" required aria-describedby="rfs-help" /></label>
+          <label class="rfs-unsure"><input name="rfs_unsure" type="checkbox" /> <span>Not sure yet</span></label>
+          <p id="rfs-help">When do you need your capacity or infrastructure ready to use?</p>
+        </div>
         <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" placeholder="Tell us what you have in mind." required>${state.gpuQuote ? escapeHtml(gpuQuoteMessage(state.gpuRequest)) : ''}</textarea>
+          <span>What do you need?</span>
+          <textarea name="message" rows="5" placeholder="GPU model, quantity, location, or timing—share what you know. It’s fine if you’re still figuring it out." required>${state.gpuQuote ? escapeHtml(gpuQuoteMessage(state.gpuRequest)) : ''}</textarea>
         </label>
         ${renderBotFields(state)}
         <button class="form-action" type="submit">
@@ -583,7 +588,7 @@ function renderHome(state, items) {
     ${renderHero()}
     <section class="practice-strip" aria-label="How Racklion helps">
       <a href="/signals"><span class="practice-number">01</span><div><h2>Read the landscape</h2><p>The news behind infrastructure decisions.</p></div><span aria-hidden="true">↗</span></a>
-      <a href="/consulting"><span class="practice-number">02</span><div><h2>Do the math</h2><p>Cloud, colo, or your own stack.</p></div><span aria-hidden="true">↗</span></a>
+      <a href="#consultation"><span class="practice-number">02</span><div><h2>Do the math</h2><p>Cloud, colo, or your own stack.</p></div><span aria-hidden="true">↗</span></a>
       <a href="/source"><span class="practice-number">03</span><div><h2>Put it on the floor</h2><p>Source the hardware, power, and space.</p></div><span aria-hidden="true">↗</span></a>
     </section>
     ${renderGpuPreview()}
@@ -594,7 +599,7 @@ function renderHome(state, items) {
     </section>
     <section class="home-brief">
       <div><span class="eyebrow">A question worth asking</span><h2>Does this workload<br>still belong in the cloud?</h2></div>
-      <div><p>The answer depends on utilization, cost, control, and the team running it. We work through those tradeoffs with you, then help source what comes next.</p><a class="text-link" href="/consulting">Bring us your workload <span aria-hidden="true">↗</span></a></div>
+      <div><p>The answer depends on utilization, cost, control, and the team running it. We work through those tradeoffs with you, then help source what comes next.</p><a class="text-link" href="#consultation">Bring us your workload <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="newsletter-band"><div><span class="eyebrow">Stay close to the ground</span><h2>The infrastructure brief.<br>In your inbox.</h2></div><div><p>A daily read on cloud costs, compute, and capacity.</p><a class="primary-action" href="/subscribe">Get On-Prem Signal <span aria-hidden="true">↗</span></a></div></section>
   </main>`;
@@ -648,7 +653,7 @@ function renderAboutPage() {
           <span class="eyebrow">Next Step</span>
           <h2>Bring the workload. We will help pressure-test the decision.</h2>
         </div>
-        <a class="primary-action" href="/consulting">
+        <a class="primary-action" href="#consultation">
           <i data-lucide="clipboard-check"></i>
           <span>Discuss infrastructure strategy</span>
         </a>
@@ -710,13 +715,13 @@ function renderSourcePage(state) {
   ];
   return `
     <main id="main-content" class="page-main page-view">
-      <section class="page-heading">
+      <div class="source-contact-layout"><section class="page-heading">
         <span class="eyebrow">Source Capacity</span>
         <h1>The right hardware.
 The right place to run it.</h1>
         <p>When owning infrastructure makes sense, we help you source it: GPU capacity, servers, colocation, power, and cooling, planned around your workload and timeline.</p>
         <div class="home-actions">
-          <a class="primary-action" href="/consulting">
+          <a class="primary-action" href="#consultation">
             <i data-lucide="clipboard-check"></i>
             <span>Start a sourcing conversation</span>
           </a>
@@ -726,6 +731,7 @@ The right place to run it.</h1>
           </a>
         </div>
       </section>
+      ${renderConsultationForm(state)}</div>
       <section class="driver-strip" aria-label="What Racklion sources">
         ${offerings.map(([icon, title, copy]) => `
           <article>
@@ -741,7 +747,7 @@ The right place to run it.</h1>
           <h2>Advise on the decision, then execute the sourcing.</h2>
           <p>We pressure-test the cloud-versus-own math first, then line up allocation, colocation, and power against your timeline.</p>
         </div>
-        <a class="primary-action" href="/consulting">
+        <a class="primary-action" href="#consultation">
           <i data-lucide="send"></i>
           <span>Tell us what you need to source</span>
         </a>
@@ -771,9 +777,9 @@ function renderFaqPage() {
           <span class="eyebrow">Next Step</span>
           <h2>Have a workload in mind? Let us source it.</h2>
         </div>
-        <a class="primary-action" href="/source">
+        <a class="primary-action" href="#consultation">
           <i data-lucide="clipboard-check"></i>
-          <span>Source capacity</span>
+          <span>Tell us what you need</span>
         </a>
       </section>
     </main>
@@ -792,7 +798,10 @@ export function renderPage(view, state) {
     faq: renderFaqPage(),
     subscribe: renderSubscribePage(state)
   };
-  return `${renderSiteHeader(view)}${views[view] || views.home}${renderFooter()}`;
+  const page = views[view] || views.home;
+  const withContact = ['source', 'consulting'].includes(view) ? page
+    : page.replace('</main>', `<div class="page-contact">${renderConsultationForm(state)}</div></main>`);
+  return `${renderSiteHeader(view)}${withContact}${renderFooter()}`;
 }
 
 export { escapeHtml, getTopics, topicLabel };

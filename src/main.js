@@ -262,7 +262,7 @@ async function submitLead(form) {
     email: String(formData.get('email') || '').trim(),
     company: String(formData.get('company') || '').trim(),
     pressure: String(formData.get('pressure') || '').trim(),
-    message: String(formData.get('message') || '').trim(),
+    message: `${String(formData.get('message') || '').trim()}\n\nReady-for-service (RFS) date: ${formData.get('rfs_unsure') ? 'Not sure yet' : String(formData.get('rfs_date') || 'Not specified')}`,
     source: state.gpuQuote ? 'racklion-gpu-reservation' : 'racklion-contact',
     company_url: String(formData.get('company_url') || ''),
     rendered_at: Number(formData.get('rendered_at') || 0),
@@ -450,3 +450,11 @@ window.addEventListener('popstate', () => {
 });
 
 loadDigest();
+
+// Keep an explicit planning option for buyers who do not have an RFS date yet.
+document.addEventListener('change', (event) => {
+  if (event.target.name !== 'rfs_unsure') return;
+  const date = event.target.form.elements.rfs_date;
+  date.required = !event.target.checked;
+  date.disabled = event.target.checked;
+});

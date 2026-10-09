@@ -23,7 +23,8 @@ test('savings use continuous billed capacity across the selected term', () => {
 test('nondefault GPU, count, and term survive quote URLs and lead messages', () => {
   const request = {gpu: 'h100-sxm', count: 64, months: 24};
   const url = new URL(gpuQuoteUrl(request), 'https://www.racklion.com');
-  assert.equal(url.pathname, '/consulting');
+  assert.equal(url.pathname, '/');
+  assert.equal(url.hash, '#consultation');
   assert.equal(url.searchParams.get('intent'), 'gpu-reservation');
   assert.deepEqual(gpuRequestFromSearch(url.search), request);
   assert.match(gpuQuoteMessage(request), /64 × NVIDIA H100.*24 months/);

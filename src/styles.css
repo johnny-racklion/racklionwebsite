@@ -352,3 +352,17 @@ input[type='checkbox'] { accent-color: var(--accent); width: 16px; height: 16px;
 .contact-status.is-error { color: #8d3020; background: #fff0e8; }
 .contact-status.is-sending { color: var(--ink); background: var(--paper); }
 #lead-form[hidden] { display: none; }
+
+.source-contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.source-contact-layout .page-heading { margin: 0; }
+.source-contact-layout h1 { font-size: clamp(40px, 4.6vw, 68px); }
+.page-contact { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); }
+.page-contact .consultation-panel { max-width: 760px; margin-inline: auto; }
+#consultation { scroll-margin-top: 28px; }
+.gpu-promise .text-link { display: block; margin-top: 16px; }
+@media (max-width: 760px) { .source-contact-layout { grid-template-columns: 1fr; gap: 28px; } .page-contact { margin-top: 36px; padding-top: 28px; } }
+
+.rfs-fields { margin-block: 18px; }
+.rfs-fields .rfs-unsure { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+.rfs-unsure input { width: 18px; height: 18px; margin: 0; }
+.rfs-fields p { font-size: 13px; margin-top: 8px; }

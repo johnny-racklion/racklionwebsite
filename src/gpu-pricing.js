@@ -71,11 +71,11 @@ export function gpuEstimate(input) {
 }
 export function gpuQuoteUrl(input) {
   const request = normalizeGpuRequest(input);
-  return `/consulting?${new URLSearchParams({ ...request, intent: 'gpu-reservation' })}`;
+  return `/?${new URLSearchParams({ ...request, intent: 'gpu-reservation' })}#consultation`;
 }
 export function gpuQuoteMessage(input) {
   const { gpu, count, months } = gpuEstimate(input);
-  return `I’m interested in reserved capacity for ${count} × NVIDIA ${gpu.name} (${gpu.variant}) over ${months} month${months === 1 ? '' : 's'}. Please help me explore pricing and availability.\n\nPreferred region:\nTarget start date:\nWorkload / interconnect requirements:`;
+  return `I’m interested in reserved capacity for ${count} × NVIDIA ${gpu.name} (${gpu.variant}) over ${months} month${months === 1 ? '' : 's'}. Please help me explore pricing and availability.\n\nPreferred region:\n\nWorkload / interconnect requirements:`;
 }
 export function usd(value, decimals = 2) {
   return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: decimals, maximumFractionDigits: decimals}).format(value);
