@@ -15,50 +15,66 @@ const META = {
   },
   signals: {
     title: 'On-Prem Signal — Daily AI Infrastructure & Cloud-Pressure News | Racklion',
-    description: 'A daily brief on GPU scarcity, cloud cost, outages, power, and sovereignty — scored by how hard each story pushes workloads back on-prem.'
+    description: 'A daily brief on GPU capacity, cloud costs, data centers, power, and resilience to inform infrastructure and sourcing decisions.'
   },
   source: {
     title: 'Source GPUs, Power & Data-Center Space | Racklion',
-    description: 'Stop renting. Racklion sources GPU capacity (H100/H200/GB200), colocation, power, and data-center space so you can own the stack behind your AI workloads.'
+    description: 'Source B300, B200, H200 and H100 GPU capacity, servers, colocation and power. Compare providers, reservation terms and ready-for-service dates.'
   },
   consulting: {
-    title: 'Cloud-Exit & On-Prem Consulting | Racklion',
-    description: 'Pressure-test the cloud-versus-own decision: exit math, on-prem readiness, hybrid architecture, and resilience — before you commit budget.'
+    title: 'Cloud Cost & GPU Capacity Consulting | Racklion',
+    description: 'Reduce cloud waste, evaluate commitments and plan GPU capacity. Racklion helps align cloud, reserved compute and owned infrastructure with your workload.'
   },
   about: {
     title: 'About Racklion — Infrastructure Decisions Made With Evidence',
-    description: 'Racklion tracks the pressure building beneath modern workloads and helps teams decide whether to keep renting cloud or own their infrastructure.'
+    description: 'Racklion helps teams improve cloud economics and source GPU capacity, colocation and infrastructure around their workload, budget and timeline.'
   },
   faq: {
-    title: 'AI Infrastructure & Cloud-Exit FAQ | Racklion',
-    description: 'Answers on renting versus owning GPUs, sourcing H200 capacity, colocation versus cloud cost, cloud repatriation, and data-center power.'
+    title: 'GPU Reservations & Cloud Cost FAQ | Racklion',
+    description: 'Answers on GPU reservations, dedicated versus shared capacity, RFS dates, pricing and cloud savings that can free budget for AI workloads.'
   },
   subscribe: {
     title: 'Subscribe to the Daily On-Prem Signal | Racklion',
-    description: 'One concise daily brief on the infrastructure news that changes the cloud-versus-owning-it decision.'
+    description: 'Choose the infrastructure news that matters to you: GPUs, cloud costs, data centers, power, storage and networking.'
   }
 };
 
 export const FAQ_ENTRIES = [
   {
-    q: 'Is it cheaper to own GPUs or rent them from the cloud?',
-    a: 'For steady, high-utilization AI workloads, owning or colocating GPUs usually beats on-demand cloud within 12–24 months once you account for egress, reserved-instance lock-in, and premium managed-service margins. Racklion models your specific utilization before you commit.'
+    "q": "Can cloud savings help fund more GPU capacity?",
+    "a": "Yes. Reducing idle resources, right-sizing workloads and matching commitments to steady usage can free budget for GPU capacity. GPUs can run in public cloud, specialist GPU clouds, colocation or your own environment. We assess the combined budget and workload rather than assuming everything should move out of the cloud."
   },
   {
-    q: 'How do I source H100, H200, or GB200 capacity?',
-    a: 'Supply is allocation-constrained and moves through OEMs, integrators, and colocation partners rather than a public price list. Racklion sources allocation, negotiates terms, and lines up the power and space to run it.'
+    "q": "When does reserving GPUs make sense?",
+    "a": "A reservation can offer a lower rate and more predictable costs when you know the GPU configuration, usage and term you need. Compare total committed spend with realistic utilization: unused reserved hours can still be billable. For short or uncertain workloads, on-demand capacity may be a better fit."
   },
   {
-    q: 'What is cloud repatriation and when does it make sense?',
-    a: 'Cloud repatriation is moving workloads from rented public cloud back to owned or colocated infrastructure. It makes sense when spend grows faster than workload value, when data gravity and egress dominate the bill, or when latency, sovereignty, or vendor concentration become risks.'
+    "q": "Does a GPU reservation guarantee the hardware and start date?",
+    "a": "Do not assume a pricing commitment alone guarantees physical capacity. Ask the provider to specify the GPU model and count, memory, region, tenancy, reservation term and ready-for-service date in the offer. Confirm availability and acceptance criteria before signing."
   },
   {
-    q: 'Do I have to build my own data center to leave the cloud?',
-    a: 'No. Most teams start with colocation — you own or lease the servers and GPUs and rent space, power, and cooling in an existing data center. Racklion sources the colo, the hardware, and the power so you get ownership economics without building a facility.'
+    "q": "What is the difference between dedicated and shared GPU capacity?",
+    "a": "Dedicated may refer to an entire GPU, server or cluster; it does not automatically mean the network or storage is dedicated too. Shared offers may divide GPU resources or place multiple tenants on a host. Ask what is exclusive, what is shared and how isolation and performance are enforced."
   },
   {
-    q: 'How much power and cooling do modern GPU racks need?',
-    a: 'Dense AI racks now draw 40–130 kW each, well beyond legacy 5–10 kW designs, which is why power and cooling — not chips — is often the real constraint. Racklion sources data-center space with the power envelope and liquid-cooling readiness your hardware requires.'
+    "q": "How do I confirm I am getting the GPU configuration I ordered?",
+    "a": "Record the exact accelerator model, GPU count and memory, plus CPU, RAM, storage and interconnect requirements in the order. Agree on a hardware inventory check and workload acceptance test at handover, including how substitutions or failures will be handled."
+  },
+  {
+    "q": "What does RFS mean, and why do you ask for it?",
+    "a": "RFS means ready for service: the date you need the capacity or infrastructure usable. It helps us compare options against your timeline. Your requested date is a planning requirement, not a confirmed delivery promise; provider availability and acceptance terms still need agreement."
+  },
+  {
+    "q": "What affects the total cost of reserved GPU capacity?",
+    "a": "GPU model and quantity, term, region, tenancy, interconnect, storage, network transfer, support and payment terms all affect the offer. Compare the full committed cost and included services, not only the advertised GPU-hour rate. Ask about cancellation, renewal and unused-capacity charges."
+  },
+  {
+    "q": "Are the savings on this site a guaranteed quote?",
+    "a": "No. The calculator illustrates a 30% reduction from the selected published on-demand averages. Actual savings and availability depend on your requirements and the offer we can source. Reserving can provide price predictability, but market prices can move in either direction."
+  },
+  {
+    "q": "Do we need to leave the cloud to work with Racklion?",
+    "a": "No. We can help evaluate cloud spending, source reserved GPU capacity or plan a hybrid environment. Cloud repatriation means moving selected workloads back to owned or colocated infrastructure; it is one option, not a requirement. The goal is to put your budget where it serves the workload best."
   }
 ];
 
@@ -87,7 +103,7 @@ export function organizationJsonLd() {
     name: 'Racklion',
     url: `${SITE_URL}/`,
     logo: `${SITE_URL}/favicon.svg`,
-    description: 'Cloud-exit advisory and infrastructure sourcing: GPUs, power, colocation, and data-center space.'
+    description: 'Cloud cost advisory and infrastructure sourcing: reserved GPUs, servers, power, colocation, and data-center space.'
   };
 }
 
@@ -95,10 +111,10 @@ export function serviceJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'Infrastructure sourcing and cloud-exit advisory',
+    serviceType: 'GPU capacity sourcing and cloud cost advisory',
     provider: { '@type': 'Organization', name: 'Racklion', url: `${SITE_URL}/` },
     areaServed: 'Global',
-    description: 'Source GPU capacity, colocation, power, and data-center space, and pressure-test the cloud-versus-own decision.'
+    description: 'Optimize cloud spending and source GPU capacity, colocation, power, and data-center space around workload requirements.'
   };
 }
 
@@ -138,6 +154,9 @@ export function headTagsForView(view) {
     `<meta property="og:description" content="${escapeAttr(meta.description)}" />`,
     `<meta property="og:url" content="${canonical}" />`,
     `<meta property="og:image" content="${image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="Racklion: Cloud savings. GPU capacity. Room to grow." />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${escapeAttr(meta.title)}" />`,
     `<meta name="twitter:description" content="${escapeAttr(meta.description)}" />`,

@@ -206,8 +206,8 @@ function renderConsultingSection() {
   const services = [
     [
       'gauge',
-      'Cloud exit math',
-      'Model egress, reserved spend, utilization, managed-service dependency, and the real total cost of staying put.'
+      'Cloud cost planning',
+      'Review utilization, idle resources, commitments, egress and managed-service costs to find budget that could support your next GPU workload.'
     ],
     [
       'server',
@@ -230,7 +230,7 @@ function renderConsultingSection() {
     <section class="consulting-section compact-consulting" id="consulting">
       <div class="consulting-copy">
         <span class="eyebrow">Racklion Consulting</span>
-        <h2>Make the cloud-versus-on-prem call with a clearer model.</h2>
+        <h2>Make room in your budget for what comes next.</h2>
         <p>
           Racklion helps teams pressure-test workload economics, infrastructure risk, and practical paths before they commit budget or complexity.
         </p>
@@ -639,7 +639,7 @@ function renderAboutPage() {
       <section class="about-grid" aria-label="About Racklion">
         <article>
           <h2>What We Believe</h2>
-          <p>Public cloud is useful. It is not inevitable. The right answer depends on workload economics, operating maturity, risk tolerance, and the physical constraints behind the stack.</p>
+          <p>Cloud and GPUs belong in the same conversation. The right answer depends on workload economics, operating maturity, risk tolerance, and the physical constraints behind the stack.</p>
         </article>
         <article>
           <h2>What We Watch</h2>
@@ -647,7 +647,7 @@ function renderAboutPage() {
         </article>
         <article>
           <h2>How We Help</h2>
-          <p>We help teams reason through cloud exit math, on-prem readiness, hybrid architecture, resilience posture, and practical migration paths before they commit budget or complexity.</p>
+          <p>We help teams evaluate cloud costs, GPU reservations, on-prem readiness and hybrid architecture before they commit budget or complexity.</p>
         </article>
       </section>
       <section class="about-cta">
@@ -670,7 +670,7 @@ function renderConsultingPage(state) {
       <section class="consulting-lead-hero">
         <div>
           <span class="eyebrow">Racklion Consulting</span>
-          <h1>Before you move a workload, do the math.</h1>
+          <h1>Make your infrastructure budget go further.</h1>
           <p>Start with the workload. We will help pressure-test the economics, risk, and path forward.</p>
         </div>
       </section>
@@ -721,7 +721,7 @@ function renderSourcePage(state) {
         <span class="eyebrow">Source Capacity</span>
         <h1>The right hardware.
 The right place to run it.</h1>
-        <p>When owning infrastructure makes sense, we help you source it: GPU capacity, servers, colocation, power, and cooling, planned around your workload and timeline.</p>
+        <p>We help you source GPU capacity, servers, colocation, power and cooling alongside your cloud strategy, planned around your workload, budget and timeline.</p>
         <div class="home-actions">
           <a class="primary-action" href="#consultation">
             <i data-lucide="clipboard-check"></i>
@@ -747,7 +747,7 @@ The right place to run it.</h1>
         <div>
           <span class="eyebrow">How it works</span>
           <h2>Advise on the decision, then execute the sourcing.</h2>
-          <p>We pressure-test the cloud-versus-own math first, then line up allocation, colocation, and power against your timeline.</p>
+          <p>We work through the requirements and costs, then line up GPU capacity, infrastructure and service dates around your plans.</p>
         </div>
         <a class="primary-action" href="#consultation">
           <i data-lucide="send"></i>
@@ -763,8 +763,8 @@ function renderFaqPage() {
     <main id="main-content" class="page-main page-view">
       <section class="page-heading">
         <span class="eyebrow">FAQ</span>
-        <h1>Renting versus owning GPUs, power, and space.</h1>
-        <p>Straight answers to the questions teams ask before leaving rented cloud.</p>
+        <h1>GPU capacity. Cloud savings. Clear answers.</h1>
+        <p>What to ask before reserving GPUs, how to compare offers, and where cloud savings fit into the plan.</p>
       </section>
       <section class="about-grid" aria-label="Frequently asked questions">
         ${FAQ_ENTRIES.map((e) => `
