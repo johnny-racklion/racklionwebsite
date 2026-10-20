@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-10-19T18:42:28.713Z",
+  "generatedAt": "2026-10-20T04:47:05.907Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
-  "sourcesSucceeded": 11,
-  "sourceFailures": [],
-  "recommendedSubject": "On-prem signal: servers, storage, data centers",
+  "sourcesSucceeded": 10,
+  "sourceFailures": [
+    {
+      "source": "Blocks & Files",
+      "message": "No RSS items or Atom entries were found"
+    }
+  ],
+  "recommendedSubject": "On-prem signal: servers, data centers, storage",
   "topics": [
     {
       "name": "servers",
       "count": 19
     },
     {
-      "name": "storage",
-      "count": 18
+      "name": "data-centers",
+      "count": 14
     },
     {
-      "name": "data-centers",
-      "count": 15
+      "name": "storage",
+      "count": 14
     },
     {
       "name": "ai-infrastructure",
@@ -28,24 +33,24 @@
       "count": 11
     },
     {
-      "name": "chips",
+      "name": "security",
       "count": 5
+    },
+    {
+      "name": "chips",
+      "count": 4
     },
     {
       "name": "networking",
       "count": 4
     },
     {
-      "name": "security",
-      "count": 3
+      "name": "cloud-cost",
+      "count": 2
     },
     {
       "name": "cloud-risk",
       "count": 2
-    },
-    {
-      "name": "capacity",
-      "count": 1
     }
   ],
   "sources": [
@@ -85,13 +90,6 @@
       "itemCount": 12
     },
     {
-      "id": "blocks-and-files",
-      "name": "Blocks & Files",
-      "homepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "itemCount": 12
-    },
-    {
       "id": "nvidia-technical-blog",
       "name": "NVIDIA Technical Blog",
       "homepage": "https://developer.nvidia.com/blog",
@@ -103,7 +101,7 @@
       "name": "AWS News Blog",
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "category": "Cloud",
-      "itemCount": 3
+      "itemCount": 2
     },
     {
       "id": "azure-blog",
@@ -124,29 +122,10 @@
       "name": "Cloudflare Blog",
       "homepage": "https://blog.cloudflare.com",
       "category": "Network & Edge",
-      "itemCount": 4
+      "itemCount": 5
     }
   ],
   "items": [
-    {
-      "id": "bd7ff4afba7561",
-      "title": "Nscale Loses Microsoft Deal as Power Delays Threaten AI",
-      "url": "https://www.datacenterknowledge.com/build-design/microsoft-exits-nscale-data-center-deal-over-uk-power-delays",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-10-19T15:09:50.000Z",
-      "summary": "The cancellation highlights the financial risks developers face when grid connections fall behind project schedules and customers cannot wait for capacity.",
-      "tags": [
-        "data-centers",
-        "power-cooling",
-        "capacity"
-      ],
-      "score": 164,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 94
-    },
     {
       "id": "695d2887d46364",
       "title": "Survey findings link higher redundancy to lower outage risk",
@@ -169,6 +148,25 @@
       "pressure": 100
     },
     {
+      "id": "bd7ff4afba7561",
+      "title": "Nscale Loses Microsoft Deal as Power Delays Threaten AI",
+      "url": "https://www.datacenterknowledge.com/build-design/microsoft-exits-nscale-data-center-deal-over-uk-power-delays",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-10-19T15:09:50.000Z",
+      "summary": "The cancellation highlights the financial risks developers face when grid connections fall behind project schedules and customers cannot wait for capacity.",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "capacity"
+      ],
+      "score": 159,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 94
+    },
+    {
       "id": "4c282373a351b9",
       "title": "Optical PCIe Extends the Reach of AI Rack Design",
       "url": "https://www.datacenterknowledge.com/ai-data-centers/optical-pcie-extends-the-reach-of-ai-rack-design",
@@ -181,31 +179,10 @@
         "data-centers",
         "chips"
       ],
-      "score": 121,
+      "score": 115,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
-    },
-    {
-      "id": "f378ce975f6368",
-      "title": "Best Enterprise GPUs 2026: PCIe AI Accelerators, Lab-Tested and Ranked",
-      "url": "https://www.storagereview.com/best/enterprise-gpus",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-14T21:19:15.000Z",
-      "summary": "Published October 14, 2026. Five PCIe accelerators ranked on one vLLM container and one model set, with the H100 NVL in Also Tested; the H200 NVL carries a power note explained below. Every accelerator ranked on this page has been through the StorageReview la...",
-      "tags": [
-        "ai-infrastructure",
-        "power-cooling",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 121,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 100
     },
     {
       "id": "9a984c0ad42282",
@@ -239,7 +216,7 @@
         "power-cooling",
         "private-cloud"
       ],
-      "score": 112,
+      "score": 108,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 86
@@ -278,6 +255,41 @@
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
+    },
+    {
+      "id": "a50452f8c49f95",
+      "title": "Amazon makes vague commitment to unproven nuclear tech to power Indiana datacenters",
+      "url": "https://www.theregister.com/offbeat/2026/10/19/amazon-makes-vague-commitment-to-unproven-nuclear-tech-to-power-indiana-datacenters/5303974",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "offbeat",
+      "publishedAt": "2026-10-19T20:22:47.000Z",
+      "summary": "Partner X-energy has not built a single working reactor yet",
+      "tags": [
+        "power-cooling"
+      ],
+      "score": 105,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 86
+    },
+    {
+      "id": "5df95823d3b3cb",
+      "title": "NVIDIA BlueField-4 STX Server for CMX at OCP 2026",
+      "url": "https://www.servethehome.com/nvidia-bluefield-4-stx-server-for-cmx-at-ocp-2026/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-10-20T03:53:34.000Z",
+      "summary": "At OCP 2026, we saw the NVIDIA BlueField-4 STX server for context memory (CMX) a single NVIDIA Vera platform The post NVIDIA BlueField-4 STX Server for CMX at OCP 2026 appeared first on ServeTheHome .",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 104,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
     },
     {
       "id": "804203d385bffd",
@@ -357,25 +369,6 @@
       "pressure": 100
     },
     {
-      "id": "b86d3199b596a9",
-      "title": "Meta Prometheus: Inside the Gigawatt Supercluster Scaling to 1 Million GPUs on GB200 and GB300 NVL72",
-      "url": "https://www.storagereview.com/news/meta-prometheus-gigawatt-supercluster-1-million-gpus-gb200-gb300-nvl72",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-19T16:17:27.000Z",
-      "summary": "Meta published a detailed look inside Prometheus today, the gigawatt-scale AI supercluster it is building in New Albany, Ohio. The first phase is complete and has trained the Muse family of foundation models, including the Muse Wonder models, and Meta says th...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 97,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
       "id": "cd7a3a2bb9aa23",
       "title": "How Chiplets Could Transform Server Design – And Data Centers",
       "url": "https://www.datacenterknowledge.com/data-center-chips/how-chiplets-could-transform-server-design-and-data-centers",
@@ -393,24 +386,6 @@
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 84
-    },
-    {
-      "id": "4ac6182b9406fc",
-      "title": "ConnectWise turns off its SaaS-y backup, security, and management services to probe security SNAFU",
-      "url": "https://www.theregister.com/security/2026/10/19/connectwise-turns-off-its-saas-y-backup-security-and-management-services-to-probe-security-snafu/5303758",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-10-19T04:31:00.000Z",
-      "summary": "Huntress alleges takeover of M365 accounts",
-      "tags": [
-        "storage",
-        "security"
-      ],
-      "score": 95,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 68
     },
     {
       "id": "128519dcdcbf3b",
@@ -451,6 +426,43 @@
       "pressure": 76
     },
     {
+      "id": "b86d3199b596a9",
+      "title": "Meta Prometheus: Inside the Gigawatt Supercluster Scaling to 1 Million GPUs on GB200 and GB300 NVL72",
+      "url": "https://www.storagereview.com/news/meta-prometheus-gigawatt-supercluster-1-million-gpus-gb200-gb300-nvl72",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-10-19T16:17:27.000Z",
+      "summary": "Meta published a detailed look inside Prometheus today, the gigawatt-scale AI supercluster it is building in New Albany, Ohio. The first phase is complete and has trained the Muse family of foundation models, including the Muse Wonder models, and Meta says th...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage"
+      ],
+      "score": 92,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "4ac6182b9406fc",
+      "title": "ConnectWise turns off its SaaS-y backup, security, and management services to probe security SNAFU",
+      "url": "https://www.theregister.com/security/2026/10/19/connectwise-turns-off-its-saas-y-backup-security-and-management-services-to-probe-security-snafu/5303758",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-10-19T04:31:00.000Z",
+      "summary": "Huntress alleges takeover of M365 accounts",
+      "tags": [
+        "storage",
+        "security"
+      ],
+      "score": 90,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 68
+    },
+    {
       "id": "52c1707ac0d2dd",
       "title": "Security patches need patches now that attackers have AI",
       "url": "https://www.theregister.com/patches/2026/10/19/security-patches-need-patches-now-that-attackers-have-ai/5303927",
@@ -462,28 +474,28 @@
       "tags": [
         "security"
       ],
-      "score": 89,
+      "score": 85,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
     },
     {
-      "id": "39bf8c20903e99",
-      "title": "Komprise: AI needs AI-ready data and there isn’t enough of it",
-      "url": "https://www.blocksandfiles.com/data-management/2026/10/19/komprise-ai-needs-ai-ready-data-and-there-isnt-enough-of-it/5303841",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-10-19T15:02:47.000Z",
-      "summary": "No summary was provided by the source feed.",
+      "id": "80c557cf2beb39",
+      "title": "Open WebUI Desktop Hands-On: Running Local LLMs on Windows",
+      "url": "https://www.storagereview.com/review/open-webui-desktop-hands-on-running-local-llms-on-windows",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-10-19T23:25:11.000Z",
+      "summary": "Open WebUI combines chat, model management, files, web search, tool calling, image support, knowledge features, and API access in one local AI interface. For this hands-on review, we focused on the Windows desktop version and used the same hardware and model...",
       "tags": [
-        "storage",
-        "data"
+        "servers",
+        "storage"
       ],
-      "score": 89,
+      "score": 84,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
+      "pressure": 58
     },
     {
       "id": "83af1f44206e1e",
@@ -498,27 +510,10 @@
         "ai-infrastructure",
         "storage"
       ],
-      "score": 87,
+      "score": 82,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 58
-    },
-    {
-      "id": "e854decbe8bcec",
-      "title": "Geniez AI acquired by Rocket Software",
-      "url": "https://www.blocksandfiles.com/data-management/2026/10/19/geniez-ai-acquired-by-rocket-software/5303774",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-10-19T12:42:00.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 81,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
     },
     {
       "id": "8656259062ff4d",
@@ -537,6 +532,41 @@
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
+    },
+    {
+      "id": "7f4374d751dd93",
+      "title": "DeepSeek deep-sixed at all US federal civilian agencies",
+      "url": "https://www.theregister.com/security/2026/10/20/deepseek-deep-sixed-at-all-us-federal-civilian-agencies/5304010",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-10-20T00:11:10.000Z",
+      "summary": "Order disallowing use of Chinese AI service is unhelpfully vague and broad",
+      "tags": [
+        "security"
+      ],
+      "score": 78,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "be6fbeceea2ea4",
+      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
+      "url": "https://blog.cloudflare.com/obsessive-inference-optimization/",
+      "source": "Cloudflare Blog",
+      "sourceHomepage": "https://blog.cloudflare.com",
+      "category": "agents",
+      "publishedAt": "2026-10-19T19:12:53.000Z",
+      "summary": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
+      "tags": [
+        "ai-infrastructure",
+        "cloud-cost"
+      ],
+      "score": 78,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 68
     },
     {
       "id": "6454ffad2774a4",
@@ -558,92 +588,21 @@
       "pressure": 74
     },
     {
-      "id": "1e6f3a90fa2e3d",
-      "title": "GL.iNet Comet Q GL-RMQ1 Review A Single USB Type-C Cable Remote KVM Device with Tailscale",
-      "url": "https://www.servethehome.com/gl-inet-comet-q-gl-rmq1-review-a-single-usb-type-c-cable-remote-kvm-device-with-tailscale/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-10-18T22:16:42.000Z",
-      "summary": "In our GL.iNet Comet Q (GL-RMQ1) review, we see how this USB Type-C remote KVM device with Tailscale makes connectivity easy The post GL.iNet Comet Q GL-RMQ1 Review A Single USB Type-C Cable Remote KVM Device with Tailscale appeared first on ServeTheHome .",
-      "tags": [
-        "servers"
-      ],
-      "score": 75,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "fe275568e67f93",
-      "title": "Huawei's bridgehead embiggening in the EU",
-      "url": "https://www.blocksandfiles.com/ai-ml/2026/10/19/huaweis-bridgehead-embiggening-in-the-eu/5303880",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-10-19T15:36:32.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 73,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "0ffe5f2a7b9fab",
-      "title": "Admin: 'I spent all weekend on my servers' after Microsoft breaks Exchange Server with October updates",
-      "url": "https://www.theregister.com/software/2026/10/19/admin-i-spent-all-weekend-on-my-servers-after-microsoft-breaks-exchange-server-with-october-updates/5303724",
+      "id": "8c37683283ce47",
+      "title": "Grocery giant Ahold Delhaize confirms cyberattack forced US and European systems offline",
+      "url": "https://www.theregister.com/security/2026/10/19/grocery-giant-ahold-delhaize-confirms-cyberattack-forced-us-and-european-systems-offline/5303970",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "software",
-      "publishedAt": "2026-10-19T13:00:00.000Z",
-      "summary": "OWA borked and lengthy email queues reported on busy servers after Microsoft tweaks a Server default",
+      "category": "security",
+      "publishedAt": "2026-10-19T20:26:21.000Z",
+      "summary": "Second security snafu in two years",
       "tags": [
-        "servers"
+        "security"
       ],
-      "score": 73,
+      "score": 76,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "3b791d0ab10017",
-      "title": "NVIDIA RTX Spark N1X Launch Overview: NVIDIA Arms Windows",
-      "url": "https://www.servethehome.com/nvidia-rtx-spark-n1x-launch-overview-nvidia-arms-windows/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-10-17T17:00:47.000Z",
-      "summary": "This week NVIDIA launched their high-end RTX Spark N1X platform. Bringing their powerful GB10 SoC to Windows for the first time, the company is seeking to remake the Windows laptop market with their powerful, AI-focused SoC The post NVIDIA RTX Spark N1X Launc...",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 73,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "c0ee1684bcd35b",
-      "title": "HP OmniBook Ultra 16 Review: RTX Spark With 128GB Tops Our Local Coding Agent Test",
-      "url": "https://www.storagereview.com/review/hp-omnibook-ultra-16-review-rtx-spark-n1x",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-16T20:53:58.000Z",
-      "summary": "The HP OmniBook Ultra 16 is HP’s 16-inch NVIDIA RTX Spark notebook, a 0.62-inch-thick laptop built around NVIDIA’s N1X superchip and a 3K OLED display. We tested two units side by side: one with the full 20-core N1X, 128GB of LPDDR5X, and a 2TB Gen5 SSD, and...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 72,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
+      "pressure": 60
     },
     {
       "id": "567a53828abf9b",
@@ -703,21 +662,92 @@
       "pressure": 66
     },
     {
-      "id": "59841ad2af7a2c",
-      "title": "Accelerating Mamba-2 with High-Performance Forward Pass Kernels in NVIDIA CUDA Tile",
-      "url": "https://developer.nvidia.com/blog/accelerating-mamba-2-with-high-performance-forward-pass-kernels-in-nvidia-cuda-tile/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data science",
-      "publishedAt": "2026-10-19T17:00:00.000Z",
-      "summary": "NVIDIA CUDA Tile (cuTile) is a Python-based DSL and parallel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to...",
+      "id": "06d898588f617f",
+      "title": "ICANN testing tech to let law enforcement access non-public WHOIS info",
+      "url": "https://www.theregister.com/networks/2026/10/20/icann-testing-tech-to-let-law-enforcement-access-non-public-whois-info/5304036",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "networks",
+      "publishedAt": "2026-10-20T02:11:27.000Z",
+      "summary": "Single sign-on to help address imminent threats to life, critical infrastructure, or kids",
       "tags": [
-        "ai-infrastructure"
+        "infrastructure"
       ],
-      "score": 70,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "score": 69,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
+    },
+    {
+      "id": "1e6f3a90fa2e3d",
+      "title": "GL.iNet Comet Q GL-RMQ1 Review A Single USB Type-C Cable Remote KVM Device with Tailscale",
+      "url": "https://www.servethehome.com/gl-inet-comet-q-gl-rmq1-review-a-single-usb-type-c-cable-remote-kvm-device-with-tailscale/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-10-18T22:16:42.000Z",
+      "summary": "In our GL.iNet Comet Q (GL-RMQ1) review, we see how this USB Type-C remote KVM device with Tailscale makes connectivity easy The post GL.iNet Comet Q GL-RMQ1 Review A Single USB Type-C Cable Remote KVM Device with Tailscale appeared first on ServeTheHome .",
+      "tags": [
+        "servers"
+      ],
+      "score": 69,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "0ffe5f2a7b9fab",
+      "title": "Admin: 'I spent all weekend on my servers' after Microsoft breaks Exchange Server with October updates",
+      "url": "https://www.theregister.com/software/2026/10/19/admin-i-spent-all-weekend-on-my-servers-after-microsoft-breaks-exchange-server-with-october-updates/5303724",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "software",
+      "publishedAt": "2026-10-19T13:00:00.000Z",
+      "summary": "OWA borked and lengthy email queues reported on busy servers after Microsoft tweaks a Server default",
+      "tags": [
+        "servers"
+      ],
+      "score": 68,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "3b791d0ab10017",
+      "title": "NVIDIA RTX Spark N1X Launch Overview: NVIDIA Arms Windows",
+      "url": "https://www.servethehome.com/nvidia-rtx-spark-n1x-launch-overview-nvidia-arms-windows/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-10-17T17:00:47.000Z",
+      "summary": "This week NVIDIA launched their high-end RTX Spark N1X platform. Bringing their powerful GB10 SoC to Windows for the first time, the company is seeking to remake the Windows laptop market with their powerful, AI-focused SoC The post NVIDIA RTX Spark N1X Launc...",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 68,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "c0ee1684bcd35b",
+      "title": "HP OmniBook Ultra 16 Review: RTX Spark With 128GB Tops Our Local Coding Agent Test",
+      "url": "https://www.storagereview.com/review/hp-omnibook-ultra-16-review-rtx-spark-n1x",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-10-16T20:53:58.000Z",
+      "summary": "The HP OmniBook Ultra 16 is HP’s 16-inch NVIDIA RTX Spark notebook, a 0.62-inch-thick laptop built around NVIDIA’s N1X superchip and a 3K OLED display. We tested two units side by side: one with the full 20-core N1X, 128GB of LPDDR5X, and a 2TB Gen5 SSD, and...",
+      "tags": [
+        "ai-infrastructure",
+        "servers",
+        "storage"
+      ],
+      "score": 67,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
     },
     {
       "id": "d6c29f64f639cd",
@@ -733,10 +763,27 @@
         "servers",
         "storage"
       ],
-      "score": 69,
+      "score": 67,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 74
+    },
+    {
+      "id": "59841ad2af7a2c",
+      "title": "Accelerating Mamba-2 with High-Performance Forward Pass Kernels in NVIDIA CUDA Tile",
+      "url": "https://developer.nvidia.com/blog/accelerating-mamba-2-with-high-performance-forward-pass-kernels-in-nvidia-cuda-tile/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data science",
+      "publishedAt": "2026-10-19T17:00:00.000Z",
+      "summary": "NVIDIA CUDA Tile (cuTile) is a Python-based DSL and parallel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 65,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "b0a0b281e4a107",
@@ -750,7 +797,24 @@
       "tags": [
         "networking"
       ],
-      "score": 67,
+      "score": 63,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "7daefb5a15f570",
+      "title": "AWS Weekly Roundup: AWS Lambda Web Functions, Amazon S3 on the Vercel Marketplace, and more (October 19, 2026)",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/",
+      "source": "AWS News Blog",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "category": "Cloud",
+      "publishedAt": "2026-10-19T15:34:59.000Z",
+      "summary": "Nothing last week added a new kind of compute. What it did instead was shorten the distance between the code you already have and that code being live. AWS Lambda learned to run a plain HTTP server with no adapter in front of it, and Amazon S3 became somethin...",
+      "tags": [
+        "servers"
+      ],
+      "score": 62,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
@@ -769,27 +833,10 @@
         "servers",
         "storage"
       ],
-      "score": 67,
+      "score": 62,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
-    },
-    {
-      "id": "7daefb5a15f570",
-      "title": "AWS Weekly Roundup: AWS Lambda Web Functions, Amazon S3 on the Vercel Marketplace, and more (October 19, 2026)",
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/",
-      "source": "AWS News Blog",
-      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
-      "category": "Cloud",
-      "publishedAt": "2026-10-19T15:34:59.000Z",
-      "summary": "Nothing last week added a new kind of compute. What it did instead was shorten the distance between the code you already have and that code being live. AWS Lambda learned to run a plain HTTP server with no adapter in front of it, and Amazon S3 became somethin...",
-      "tags": [
-        "servers"
-      ],
-      "score": 66,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     },
     {
       "id": "7f2e3c0467b477",
@@ -805,62 +852,10 @@
         "servers",
         "storage"
       ],
-      "score": 66,
+      "score": 62,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
-    },
-    {
-      "id": "dd5c2f89fb7556",
-      "title": "Closing the Skills Gap in Data Center Facilities Management",
-      "url": "https://www.datacenterknowledge.com/management/closing-the-skills-gap-in-data-center-facilities-management",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-10-16T17:18:01.000Z",
-      "summary": "Data centers require skilled professionals. Collaboration between IT and facilities, along with proactive maintenance and remote monitoring, helps address workforce shortages.",
-      "tags": [
-        "data-centers"
-      ],
-      "score": 64,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "42837ce8d23c57",
-      "title": "Marvell boosts CXL-connected memory capacity and speed with AI in mind",
-      "url": "https://www.blocksandfiles.com/ai-ml/2026/10/13/marvell-boosts-cxl-connected-memory-capacity-and-speed-with-ai-in-mind/5302832",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "Storage",
-      "publishedAt": "2026-10-13T15:29:17.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 63,
-      "whyUseful": "Capacity pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 68
-    },
-    {
-      "id": "37acfc8632062d",
-      "title": "Microsoft Surface Laptop Ultra 128GB Review",
-      "url": "https://www.servethehome.com/microsoft-surface-laptop-ultra-review-rtx-spark-n1x/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-10-16T17:00:27.000Z",
-      "summary": "We review the Microsoft Surface Ultra to see how the NVIDIA RTX Spark powered laptop fares and try to answer who the platform is for The post Microsoft Surface Laptop Ultra 128GB Review appeared first on ServeTheHome .",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 61,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     }
   ]
 }
