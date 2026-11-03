@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-02T21:42:01.269Z",
+  "generatedAt": "2026-11-03T06:44:14.444Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
   "sourcesSucceeded": 11,
   "sourceFailures": [],
-  "recommendedSubject": "On-prem signal: data centers, AI infrastructure, servers",
+  "recommendedSubject": "On-prem signal: servers, AI infrastructure, data centers",
   "topics": [
     {
-      "name": "data-centers",
+      "name": "servers",
       "count": 16
     },
     {
@@ -16,31 +16,31 @@
       "count": 15
     },
     {
-      "name": "servers",
+      "name": "data-centers",
       "count": 15
     },
     {
       "name": "storage",
-      "count": 14
+      "count": 12
     },
     {
       "name": "power-cooling",
-      "count": 9
+      "count": 8
     },
     {
       "name": "security",
-      "count": 7
-    },
-    {
-      "name": "networking",
-      "count": 5
+      "count": 8
     },
     {
       "name": "private-cloud",
-      "count": 5
+      "count": 6
     },
     {
       "name": "chips",
+      "count": 5
+    },
+    {
+      "name": "networking",
       "count": 4
     },
     {
@@ -96,7 +96,7 @@
       "name": "NVIDIA Technical Blog",
       "homepage": "https://developer.nvidia.com/blog",
       "category": "AI Infrastructure",
-      "itemCount": 11
+      "itemCount": 12
     },
     {
       "id": "aws-news",
@@ -124,7 +124,7 @@
       "name": "Cloudflare Blog",
       "homepage": "https://blog.cloudflare.com",
       "category": "Network & Edge",
-      "itemCount": 3
+      "itemCount": 2
     }
   ],
   "items": [
@@ -142,7 +142,7 @@
         "cloud-risk",
         "power-cooling"
       ],
-      "score": 182,
+      "score": 177,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Cloud bill pressure",
       "pressure": 100
@@ -161,7 +161,7 @@
         "servers",
         "storage"
       ],
-      "score": 131,
+      "score": 127,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
@@ -181,7 +181,7 @@
         "storage",
         "chips"
       ],
-      "score": 128,
+      "score": 123,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 84
@@ -200,10 +200,29 @@
         "servers",
         "security"
       ],
-      "score": 119,
+      "score": 116,
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Private infrastructure signal",
       "pressure": 86
+    },
+    {
+      "id": "6f70f1b6aea6d7",
+      "title": "Diagnose Distributed AI Workload Failures with NVIDIA Attribution",
+      "url": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-11-02T23:39:34.000Z",
+      "summary": "In distributed AI workloads, a single error can produce a cascade of symptoms. A GPU or fabric event may surface as NCCL errors on other ranks, scheduler state...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "chips"
+      ],
+      "score": 114,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
     },
     {
       "id": "c192b41e4d9a54",
@@ -219,7 +238,7 @@
         "private-cloud",
         "networking"
       ],
-      "score": 115,
+      "score": 111,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 84
@@ -242,24 +261,6 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 90
-    },
-    {
-      "id": "5ab8564217dae7",
-      "title": "NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives",
-      "url": "https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-01T03:00:28.000Z",
-      "summary": "As production hardware starts shipping, NVIDIA has updated some of the specifications for its Rubin GPU platforms The post NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives appeared first on ServeTheHome .",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 106,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 76
     },
     {
       "id": "8794e8aed037ab",
@@ -294,44 +295,6 @@
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
-    },
-    {
-      "id": "42e9e69ba0c3da",
-      "title": "CloudCasa DR Adds Dell PowerStore Failover for Kubernetes and a Read-Only MCP Server",
-      "url": "https://www.storagereview.com/news/cloudcasa-dr-dell-powerstore-kubernetes-failover-mcp-server",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-02T15:55:57.000Z",
-      "summary": "CloudCasa by Catalogic has added Dell PowerStore to the storage arrays CloudCasa Disaster Recovery can drive for Kubernetes failover, alongside HPE Alletra and SUSE Storage. The same feature update adds a read-only Model Context Protocol (MCP) server that let...",
-      "tags": [
-        "private-cloud",
-        "servers",
-        "storage"
-      ],
-      "score": 105,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 82
-    },
-    {
-      "id": "ce6b4701ffda30",
-      "title": "Liquid-Cooled NVIDIA Servers at the ASRock Rack OCP 2026 Booth",
-      "url": "https://www.servethehome.com/liquid-cooled-nvidia-servers-at-the-asrock-rack-ocp-2026-booth/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-02T04:00:03.000Z",
-      "summary": "We checked out the ASRock Rack booth at OCP 2026 and saw servers ranging from fully integrated NVIDIA NVL72 racks to liquid-cooled switches The post Liquid-Cooled NVIDIA Servers at the ASRock Rack OCP 2026 Booth appeared first on ServeTheHome .",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 104,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
     },
     {
       "id": "f097f25c9b7315",
@@ -373,6 +336,62 @@
       "pressure": 82
     },
     {
+      "id": "42e9e69ba0c3da",
+      "title": "CloudCasa DR Adds Dell PowerStore Failover for Kubernetes and a Read-Only MCP Server",
+      "url": "https://www.storagereview.com/news/cloudcasa-dr-dell-powerstore-kubernetes-failover-mcp-server",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-02T15:55:57.000Z",
+      "summary": "CloudCasa by Catalogic has added Dell PowerStore to the storage arrays CloudCasa Disaster Recovery can drive for Kubernetes failover, alongside HPE Alletra and SUSE Storage. The same feature update adds a read-only Model Context Protocol (MCP) server that let...",
+      "tags": [
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 101,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 82
+    },
+    {
+      "id": "5ab8564217dae7",
+      "title": "NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives",
+      "url": "https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-01T03:00:28.000Z",
+      "summary": "As production hardware starts shipping, NVIDIA has updated some of the specifications for its Rubin GPU platforms The post NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives appeared first on ServeTheHome .",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 101,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 76
+    },
+    {
+      "id": "ce6b4701ffda30",
+      "title": "Liquid-Cooled NVIDIA Servers at the ASRock Rack OCP 2026 Booth",
+      "url": "https://www.servethehome.com/liquid-cooled-nvidia-servers-at-the-asrock-rack-ocp-2026-booth/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-02T04:00:03.000Z",
+      "summary": "We checked out the ASRock Rack booth at OCP 2026 and saw servers ranging from fully integrated NVIDIA NVL72 racks to liquid-cooled switches The post Liquid-Cooled NVIDIA Servers at the ASRock Rack OCP 2026 Booth appeared first on ServeTheHome .",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 99,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
       "id": "1fc47ac1797df9",
       "title": "Cigent Software Full Drive Encryption Clears Intel vPro Power and CPU Targets, Earns Certified App Status",
       "url": "https://www.storagereview.com/news/cigent-software-full-drive-encryption-intel-vpro-certified-app",
@@ -387,29 +406,10 @@
         "storage",
         "security"
       ],
-      "score": 100,
+      "score": 99,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 92
-    },
-    {
-      "id": "6413000ed50dff",
-      "title": "Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure",
-      "url": "https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-10-30T22:43:29.000Z",
-      "summary": "Intel's Q3 2026 earnings highlighted how well the data center segment is doing and how rough the client segment is due to DRAM and NAND pricing The post Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure appeared first on ServeTheHome .",
-      "tags": [
-        "data-centers",
-        "cloud-cost",
-        "servers"
-      ],
-      "score": 99,
-      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 76
     },
     {
       "id": "9b9be9baf19a41",
@@ -450,6 +450,25 @@
       "pressure": 100
     },
     {
+      "id": "6413000ed50dff",
+      "title": "Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure",
+      "url": "https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-10-30T22:43:29.000Z",
+      "summary": "Intel's Q3 2026 earnings highlighted how well the data center segment is doing and how rough the client segment is due to DRAM and NAND pricing The post Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure appeared first on ServeTheHome .",
+      "tags": [
+        "data-centers",
+        "cloud-cost",
+        "servers"
+      ],
+      "score": 94,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 76
+    },
+    {
       "id": "b91087a3b6e099",
       "title": "Where Solid-State Micro-Cooling Fits in Data Centers",
       "url": "https://www.datacenterknowledge.com/cooling/where-solid-state-micro-cooling-fits-in-data-centers",
@@ -484,6 +503,23 @@
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
+    },
+    {
+      "id": "62ce4aba549d40",
+      "title": "Marvell Proposes Acquiring Lumentum to Combine Optical Circuit Switching with AI Connectivity Silicon",
+      "url": "https://www.servethehome.com/marvell-to-acquire-lumentum-115-billion-optical-ai-connectivity/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-02T22:30:09.000Z",
+      "summary": "Marvell announced its intention to acquire Lumentum in a $115B acquisition to further optical connectivity in the AI era The post Marvell Proposes Acquiring Lumentum to Combine Optical Circuit Switching with AI Connectivity Silicon appeared first on ServeTheH...",
+      "tags": [
+        "servers"
+      ],
+      "score": 92,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "05c1e94659294e",
@@ -537,7 +573,7 @@
         "ai-infrastructure",
         "networking"
       ],
-      "score": 90,
+      "score": 86,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
@@ -555,7 +591,7 @@
         "data-centers",
         "ai-infrastructure"
       ],
-      "score": 89,
+      "score": 85,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
@@ -573,7 +609,7 @@
         "power-cooling",
         "security"
       ],
-      "score": 88,
+      "score": 84,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
@@ -590,7 +626,7 @@
       "tags": [
         "servers"
       ],
-      "score": 87,
+      "score": 82,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
@@ -608,37 +644,20 @@
         "servers",
         "storage"
       ],
-      "score": 84,
+      "score": 80,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     },
     {
-      "id": "0481c3d56dfa52",
-      "title": "Token thieves costing companies $100K+ per day in illicit LLM charges",
-      "url": "https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967",
+      "id": "8f4869ff1aa54c",
+      "title": "Max-severity bug in widely used OT programming tool exploited to deliver Linux malware",
+      "url": "https://www.theregister.com/security/2026/11/02/max-severity-bug-in-widely-used-ot-programming-tool-exploited-to-deliver-linux-malware/5307086",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
       "category": "security",
-      "publishedAt": "2026-11-02T16:00:00.000Z",
-      "summary": "Don't let the LLMjackers hit you",
-      "tags": [
-        "security"
-      ],
-      "score": 77,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
-      "id": "2c20fc16e9c572",
-      "title": "FBI pins $6.3B Binance crypto heist on North Korean hackers",
-      "url": "https://www.theregister.com/security/2026/11/02/fbi-pins-63b-binance-crypto-heist-on-north-korean-hackers/5306889",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-11-02T11:45:00.000Z",
-      "summary": "Exchange scrambles to replace stolen funds as customers withdraw billions and hackers get busy laundering their haul",
+      "publishedAt": "2026-11-02T22:55:17.000Z",
+      "summary": "Your industrial IoT gateway isn't exposed to the internet, right? RIGHT?!",
       "tags": [
         "security"
       ],
@@ -666,23 +685,21 @@
       "pressure": 58
     },
     {
-      "id": "b380dece9da832",
-      "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
-      "url": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-10-30T15:01:36.000Z",
-      "summary": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
+      "id": "83bee733b564d6",
+      "title": "Architect creates open-source replacement for VM migration tool VMware has hidden",
+      "url": "https://www.theregister.com/virtualization/2026/11/03/architect-creates-open-source-replacement-for-vm-migration-tool-vmware-has-hidden/5307124",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "virtualization",
+      "publishedAt": "2026-11-03T04:45:59.000Z",
+      "summary": "OpenVDDK is reportedly already being used in production, at scale",
       "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "storage"
+        "private-cloud"
       ],
       "score": 74,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 84
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
     },
     {
       "id": "33a52b27ea1922",
@@ -705,6 +722,76 @@
       "pressure": 74
     },
     {
+      "id": "0481c3d56dfa52",
+      "title": "Token thieves costing companies $100K+ per day in illicit LLM charges",
+      "url": "https://www.theregister.com/security/2026/11/02/token-thieves-costing-companies-100k-per-day-in-illicit-llm-charges/5306967",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-11-02T16:00:00.000Z",
+      "summary": "Don't let the LLMjackers hit you",
+      "tags": [
+        "security"
+      ],
+      "score": 73,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "b380dece9da832",
+      "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
+      "url": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-10-30T15:01:36.000Z",
+      "summary": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "storage"
+      ],
+      "score": 73,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
+    },
+    {
+      "id": "7cf649e6fab31d",
+      "title": "Keep Distributed Training Running with Automated Workload Recovery",
+      "url": "https://developer.nvidia.com/blog/keep-distributed-training-running-with-automated-workload-recovery/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-11-02T22:43:05.000Z",
+      "summary": "As distributed AI training scales, failures across hardware and software dependencies increasingly disrupt training progress, making fast, reliable recovery...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 72,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 58
+    },
+    {
+      "id": "2c20fc16e9c572",
+      "title": "FBI pins $6.3B Binance crypto heist on North Korean hackers",
+      "url": "https://www.theregister.com/security/2026/11/02/fbi-pins-63b-binance-crypto-heist-on-north-korean-hackers/5306889",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-11-02T11:45:00.000Z",
+      "summary": "Exchange scrambles to replace stolen funds as customers withdraw billions and hackers get busy laundering their haul",
+      "tags": [
+        "security"
+      ],
+      "score": 72,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
       "id": "8a1ab604532b38",
       "title": "Cohesity protects HashiCorp’s self-hosted Terraform hybrid cloud control plane",
       "url": "https://www.blocksandfiles.com/data-protection/2026/10/29/cohesity-protects-hashicorps-self-hosted-terraform-hybrid-cloud-control-plane/5306379",
@@ -722,74 +809,6 @@
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Private infrastructure signal",
       "pressure": 76
-    },
-    {
-      "id": "0c0bb729b4d3a4",
-      "title": "Kioxia's SSD revenues explode",
-      "url": "https://www.blocksandfiles.com/flash/2026/11/02/kioxias-ssd-revenues-explode/5306907",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "flash",
-      "publishedAt": "2026-11-02T12:38:35.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 70,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "ead19ea6f5d348",
-      "title": "Oracle gobbles $20 billion borrowing limit a week after setting it",
-      "url": "https://www.theregister.com/paas-and-iaas/2026/11/02/oracle-gobbles-20-billion-borrowing-limit-a-week-after-setting-it/5307014",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "paas and iaas",
-      "publishedAt": "2026-11-02T17:35:00.000Z",
-      "summary": "In the middle of a datacenter capex binge, vendor promises no more borrowing until the end of 2030",
-      "tags": [
-        "data-centers"
-      ],
-      "score": 69,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "0c178f89a72422",
-      "title": "Scale-In? What the heck is that?",
-      "url": "https://www.blocksandfiles.com/architecture/2026/11/02/scale-in-what-the-heck-is-that/5307019",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "architecture",
-      "publishedAt": "2026-11-02T18:46:22.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 68,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 42
-    },
-    {
-      "id": "fb4831711ae9f6",
-      "title": "Build World Models for Interactive Simulation with NVIDIA Cosmos",
-      "url": "https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-11-02T17:00:00.000Z",
-      "summary": "Physical AI developers working with world models face two distinct challenges: adapting models to their sensors, tasks, and data, and getting those models into...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 68,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
     },
     {
       "id": "43be6b353ec861",
@@ -810,6 +829,23 @@
       "pressure": 78
     },
     {
+      "id": "cbe789d682bb58",
+      "title": "Anthropic's compute tab could top $1T as Q3 revenue nears $17B",
+      "url": "https://www.theregister.com/ai-and-ml/2026/11/02/anthropics-compute-tab-could-top-1t-as-q3-revenue-nears-17b/5307089",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "ai and ml",
+      "publishedAt": "2026-11-02T23:25:00.000Z",
+      "summary": "Revised IPO filing warns 12x revenue growth is unlikely to continue",
+      "tags": [
+        "infrastructure"
+      ],
+      "score": 67,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
       "id": "acf958eed3f5f3",
       "title": "IBM FlashSystem Flags Data Theft in the Drive Before Ransomware Encrypts, Under 1% False Positives",
       "url": "https://www.storagereview.com/news/ibm-flashsystem-data-exfiltration-detection-post-quantum-cryptography",
@@ -827,42 +863,6 @@
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
-    },
-    {
-      "id": "ef2796d9ed567f",
-      "title": "Run AI Models for Edge Application Development with Just a Few Commands",
-      "url": "https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-10-30T20:33:18.000Z",
-      "summary": "AI is expanding beyond the data center as developers build a new generation of agents to act at the edge: monitoring driver attention and cabin conditions,...",
-      "tags": [
-        "data-centers",
-        "networking"
-      ],
-      "score": 65,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "e27aeba36c80a4",
-      "title": "What’s new in AI infrastructure and orchestration in October",
-      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/whats-new-in-ai-infrastructure-this-month/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "ai & machine learning",
-      "publishedAt": "2026-10-30T16:00:00.000Z",
-      "summary": "The Google Cloud AI Infrastructure team had another busy month in October, filled with new product launches and updates to power today’s AI and agentic workloads scalably and efficiently. We were also honored to share our progress with customers, partners, an...",
-      "tags": [
-        "ai-infrastructure",
-        "power-cooling"
-      ],
-      "score": 65,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
     }
   ]
 }
