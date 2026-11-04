@@ -1,51 +1,51 @@
 {
-  "generatedAt": "2026-11-04T06:14:56.010Z",
+  "generatedAt": "2026-11-04T19:43:18.208Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
   "sourcesSucceeded": 11,
   "sourceFailures": [],
-  "recommendedSubject": "On-prem signal: data centers, servers, AI infrastructure",
+  "recommendedSubject": "On-prem signal: data centers, servers, storage",
   "topics": [
     {
       "name": "data-centers",
-      "count": 20
+      "count": 16
     },
     {
       "name": "servers",
-      "count": 15
-    },
-    {
-      "name": "ai-infrastructure",
-      "count": 14
+      "count": 16
     },
     {
       "name": "storage",
-      "count": 12
+      "count": 14
     },
     {
       "name": "power-cooling",
       "count": 11
     },
     {
-      "name": "chips",
-      "count": 6
-    },
-    {
-      "name": "cloud-risk",
-      "count": 5
-    },
-    {
-      "name": "security",
-      "count": 5
+      "name": "ai-infrastructure",
+      "count": 10
     },
     {
       "name": "private-cloud",
-      "count": 4
+      "count": 7
     },
     {
-      "name": "networking",
-      "count": 3
+      "name": "cloud-risk",
+      "count": 6
+    },
+    {
+      "name": "security",
+      "count": 6
+    },
+    {
+      "name": "chips",
+      "count": 5
+    },
+    {
+      "name": "data",
+      "count": 2
     }
   ],
   "sources": [
@@ -54,7 +54,7 @@
       "name": "Data Center Knowledge",
       "homepage": "https://www.datacenterknowledge.com",
       "category": "Data Centers",
-      "itemCount": 12
+      "itemCount": 10
     },
     {
       "id": "the-register-infrastructure",
@@ -96,14 +96,14 @@
       "name": "NVIDIA Technical Blog",
       "homepage": "https://developer.nvidia.com/blog",
       "category": "AI Infrastructure",
-      "itemCount": 10
+      "itemCount": 12
     },
     {
       "id": "aws-news",
       "name": "AWS News Blog",
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "category": "Cloud",
-      "itemCount": 6
+      "itemCount": 5
     },
     {
       "id": "azure-blog",
@@ -117,7 +117,7 @@
       "name": "Google Cloud Blog",
       "homepage": "https://cloud.google.com/blog",
       "category": "Cloud",
-      "itemCount": 9
+      "itemCount": 10
     },
     {
       "id": "cloudflare",
@@ -142,7 +142,7 @@
         "power-cooling",
         "capacity"
       ],
-      "score": 167,
+      "score": 160,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
@@ -161,9 +161,30 @@
         "cloud-risk",
         "power-cooling"
       ],
-      "score": 164,
+      "score": 156,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Cloud bill pressure",
+      "pressure": 100
+    },
+    {
+      "id": "e585339185a96d",
+      "title": "Supermicro Plans 10,000 SambaNova SN50 RDUs for GPU-Paired Inference Racks, With GPUs on Prefill and RDUs on Decode",
+      "url": "https://www.storagereview.com/news/supermicro-sambanova-sn50-rdu-inference-racks-10000-chips",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-04T18:31:43.000Z",
+      "summary": "SambaNova and Supermicro will build and sell disaggregated inference systems that pair NVIDIA GPUs with SambaNova’s SN50 Reconfigurable Dataflow Units (RDUs), with Supermicro initially planning for 10,000 SN50 chips. The racks join Supermicro’s Data Center Bu...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "chips"
+      ],
+      "score": 151,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
       "pressure": 100
     },
     {
@@ -179,7 +200,44 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 150,
+      "score": 143,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 94
+    },
+    {
+      "id": "9c15bb0b27179a",
+      "title": "Liquid Cooling Is Changing What Data Centers Need to Measure",
+      "url": "https://www.datacenterknowledge.com/cooling/liquid-cooling-is-changing-what-data-centers-need-to-measure",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-11-04T14:00:00.000Z",
+      "summary": "Liquid cooling changes data center operations by making precise, real-time measurement across both liquid and air environments essential.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 136,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 76
+    },
+    {
+      "id": "2a8c9376ddc0e4",
+      "title": "Datacenter operators must win hearts and minds, not just permits",
+      "url": "https://www.theregister.com/on-prem/2026/11/04/datacenter-operators-must-win-hearts-and-minds-not-just-permits/5306895",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "on-prem",
+      "publishedAt": "2026-11-04T09:30:00.000Z",
+      "summary": "Schneider sees no slowdown despite backlash, but says communities deserve answers on power, water, and noise",
+      "tags": [
+        "data-centers",
+        "power-cooling",
+        "private-cloud"
+      ],
+      "score": 122,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -197,10 +255,48 @@
         "data-centers",
         "power-cooling"
       ],
-      "score": 130,
+      "score": 122,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 76
+    },
+    {
+      "id": "587a2945451bd1",
+      "title": "Broadcom Launches 128-Core vSphere Express and Adds Live Recovery and Compliance Services to VMware Cloud Foundation",
+      "url": "https://www.storagereview.com/news/broadcom-vcf-portfolio-update-vsphere-express-live-recovery",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-04T17:52:04.000Z",
+      "summary": "Broadcom today updated the VMware Cloud Foundation (VCF) portfolio with two new Advanced Services, VMware Live Recovery and VMware Compliance and Configuration Management, and introduced VMware vSphere Express, a 128-core package built on vSphere 9 for smalle...",
+      "tags": [
+        "cloud-risk",
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 119,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 84
+    },
+    {
+      "id": "58ab0ba59d792e",
+      "title": "Bare metal boom: On-prem server sales for HPC and AI up 20% this year",
+      "url": "https://www.theregister.com/on-prem/2026/11/04/bare-metal-boom-on-prem-server-sales-for-hpc-and-ai-up-20-this-year/5307611",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "on-prem",
+      "publishedAt": "2026-11-04T17:30:00.000Z",
+      "summary": "Firms still want kit on-premises, but spike in revenue is as much about increased costs as higher sales",
+      "tags": [
+        "private-cloud",
+        "servers"
+      ],
+      "score": 114,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Private infrastructure signal",
+      "pressure": 86
     },
     {
       "id": "d7cf7732243642",
@@ -216,10 +312,29 @@
         "servers",
         "storage"
       ],
-      "score": 119,
+      "score": 113,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 84
+    },
+    {
+      "id": "a6d6ed4c8e88c9",
+      "title": "Simplyblock Earns Red Hat Certification for OpenShift Virtualization Storage, With Zero-RPO DR Built In",
+      "url": "https://www.storagereview.com/news/simplyblock-red-hat-certified-openshift-virtualization-storage",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-04T17:37:52.000Z",
+      "summary": "Simplyblock’s Container Storage Interface (CSI) driver and Kubernetes operator now carry Red Hat certification and are listed in the Red Hat Ecosystem Catalog, which gives OpenShift Virtualization customers a validated storage layer for VMs moved off VMware v...",
+      "tags": [
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 112,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 90
     },
     {
       "id": "f8d5df5417006e",
@@ -235,105 +350,10 @@
         "servers",
         "storage"
       ],
-      "score": 116,
+      "score": 110,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 100
-    },
-    {
-      "id": "9c15bb0b27179a",
-      "title": "Liquid Cooling Is Changing What Data Centers Need to Measure",
-      "url": "https://www.datacenterknowledge.com/cooling/liquid-cooling-is-changing-what-data-centers-need-to-measure",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-11-02T14:00:00.000Z",
-      "summary": "Liquid cooling changes data center operations by making precise, real-time measurement across both liquid and air environments essential.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 116,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
-    },
-    {
-      "id": "f2d3767abf268e",
-      "title": "AMD Instinct MI350P First Look: 144GB of HBM3E in a 600W PCIe Card",
-      "url": "https://www.storagereview.com/review/amd-instinct-mi350p-first-look",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-03T17:07:17.000Z",
-      "summary": "The AMD Instinct MI350P is AMD’s first new PCIe Instinct GPU in four years, following the MI210 in 2022. It brings the company’s CDNA 4 architecture to a conventional add-in card, with up to 4.6 PFLOPS of MXFP4 performance, 144GB of HBM3E, and 4TB/s of memory...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 114,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 84
-    },
-    {
-      "id": "9b1d2a3f7ab92e",
-      "title": "Drax wants to feed Britain's AI habit with £20B datacenter at biomass power station",
-      "url": "https://www.theregister.com/on-prem/2026/11/03/drax-wants-to-feed-britains-ai-habit-with-20b-datacenter-at-biomass-power-station/5307237",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "on-prem",
-      "publishedAt": "2026-11-03T13:27:33.000Z",
-      "summary": "But first it needs planning permission, government approval and, rather importantly, a customer",
-      "tags": [
-        "data-centers",
-        "power-cooling",
-        "private-cloud"
-      ],
-      "score": 114,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 86
-    },
-    {
-      "id": "6b75078cdcbbc2",
-      "title": "Cadence Maestro AI Models Claim Up to 5X Token Efficiency for Chip Design Super Agents",
-      "url": "https://www.storagereview.com/news/cadence-maestro-ai-models-chip-design-super-agents",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-02T16:13:39.000Z",
-      "summary": "Cadence has introduced the Maestro AI Model Portfolio, a set of domain-specialized models that power its AI Super Agents across chip and system design. Maestro combines post-trained large language models, trained decision models, and self-improving agent skil...",
-      "tags": [
-        "power-cooling",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 113,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 84
-    },
-    {
-      "id": "b01581edb693c5",
-      "title": "AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter",
-      "url": "https://www.servethehome.com/amd-q3-2026-earnings-data-center-growth/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-04T05:24:08.000Z",
-      "summary": "AMD Q3 2026 earnings were massive with the data center and embedded segments seeing big uplift with the clear Venice x86 leadership looming The post AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter appeared first on ServeTheHome .",
-      "tags": [
-        "data-centers",
-        "servers"
-      ],
-      "score": 110,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
     },
     {
       "id": "177215c2888aa3",
@@ -355,22 +375,44 @@
       "pressure": 90
     },
     {
-      "id": "af7885216fb8a7",
-      "title": "AI policy wonks declare 'sovereign agents' a threat to civilization",
-      "url": "https://www.theregister.com/security/2026/11/03/ai-policy-wonks-declare-sovereign-agents-a-threat-to-civilization/5307354",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-11-03T19:33:01.000Z",
-      "summary": "These are AI agents that operate outside of human control and 'pursue open-ended, evolving survival'",
+      "id": "f2d3767abf268e",
+      "title": "AMD Instinct MI350P First Look: 144GB of HBM3E in a 600W PCIe Card",
+      "url": "https://www.storagereview.com/review/amd-instinct-mi350p-first-look",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-03T17:07:17.000Z",
+      "summary": "The AMD Instinct MI350P is AMD’s first new PCIe Instinct GPU in four years, following the MI210 in 2022. It brings the company’s CDNA 4 architecture to a conventional add-in card, with up to 4.6 PFLOPS of MXFP4 performance, 144GB of HBM3E, and 4TB/s of memory...",
       "tags": [
-        "cloud-risk",
-        "security"
+        "ai-infrastructure",
+        "servers",
+        "storage",
+        "chips"
       ],
-      "score": 106,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 78
+      "score": 108,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
+    },
+    {
+      "id": "6b75078cdcbbc2",
+      "title": "Cadence Maestro AI Models Claim Up to 5X Token Efficiency for Chip Design Super Agents",
+      "url": "https://www.storagereview.com/news/cadence-maestro-ai-models-chip-design-super-agents",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-02T16:13:39.000Z",
+      "summary": "Cadence has introduced the Maestro AI Model Portfolio, a set of domain-specialized models that power its AI Super Agents across chip and system design. Maestro combines post-trained large language models, trained decision models, and self-improving agent skil...",
+      "tags": [
+        "power-cooling",
+        "servers",
+        "storage",
+        "chips"
+      ],
+      "score": 107,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
+      "pressure": 84
     },
     {
       "id": "8794e8aed037ab",
@@ -407,81 +449,58 @@
       "pressure": 50
     },
     {
-      "id": "6f70f1b6aea6d7",
-      "title": "Diagnose Distributed AI Workload Failures with NVIDIA Attribution",
-      "url": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-11-02T23:39:34.000Z",
-      "summary": "In distributed AI workloads, a single error can produce a cascade of symptoms. A GPU or fabric event may surface as NCCL errors on other ranks, scheduler state...",
+      "id": "b01581edb693c5",
+      "title": "AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter",
+      "url": "https://www.servethehome.com/amd-q3-2026-earnings-data-center-growth/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-04T05:24:08.000Z",
+      "summary": "AMD Q3 2026 earnings were massive with the data center and embedded segments seeing big uplift with the clear Venice x86 leadership looming The post AMD Q3 2026 Earnings Data Center Growth Drives Record Quarter appeared first on ServeTheHome .",
       "tags": [
         "data-centers",
-        "ai-infrastructure",
-        "chips"
-      ],
-      "score": 104,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 84
-    },
-    {
-      "id": "f097f25c9b7315",
-      "title": "AMD Helios Racks Are Running at Meta, With a Custom Instinct GPU and a $1 Billion Stake to Follow",
-      "url": "https://www.storagereview.com/news/amd-helios-racks-running-at-meta-custom-instinct-gpu-6th-gen-epyc-muse",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-29T16:41:34.000Z",
-      "summary": "AMD says the first AMD Helios rackscale systems are installed and under test at Meta, with a broader deployment to follow, and that the two companies have aligned product roadmaps around Meta’s workloads across EPYC CPUs, Instinct GPUs, Pensando networking, a...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "networking"
-      ],
-      "score": 104,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 100
-    },
-    {
-      "id": "60a6a1b7423513",
-      "title": "Oracle Cloud to Offer Google TPUs and New AI Chips",
-      "url": "https://www.datacenterknowledge.com/data-center-chips/oracle-cloud-to-offer-google-tpus-and-new-ai-chips",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-10-28T14:38:56.000Z",
-      "summary": "Oracle is broadening OCI’s AI infrastructure with Google TPUs and other chips while deepening its Nvidia partnership to give customers more workload choice.",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "chips"
+        "servers"
       ],
       "score": 103,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 82
+      "pressure": 58
     },
     {
-      "id": "c192b41e4d9a54",
-      "title": "Making Kubernetes AI-Ready for NVIDIA Vera Rubin on Day One",
-      "url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/",
+      "id": "3f27d4bf105cf4",
+      "title": "How NVIDIA Factory Operations Blueprint Coordinates AI Agents to Investigate Production Issues",
+      "url": "https://developer.nvidia.com/blog/how-nvidia-factory-operations-blueprint-coordinates-ai-agents-to-investigate-production-issues/",
       "source": "NVIDIA Technical Blog",
       "sourceHomepage": "https://developer.nvidia.com/blog",
       "category": "agentic ai / generative ai",
-      "publishedAt": "2026-11-02T18:00:00.000Z",
-      "summary": "Configuring and optimizing Kubernetes for new GPU hardware such as NVIDIA Vera Rubin is complex and error-prone. Drivers, kernels, runtimes, networking,...",
+      "publishedAt": "2026-11-04T17:00:00.000Z",
+      "summary": "A Siemens report estimates that unplanned downtime costs an average large plant in the surveyed sectors $253 million per year. Whether investigating a failed...",
       "tags": [
         "ai-infrastructure",
-        "private-cloud",
-        "networking"
+        "cloud-risk"
       ],
-      "score": 101,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 84
+      "score": 100,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
+      "pressure": 68
+    },
+    {
+      "id": "af7885216fb8a7",
+      "title": "AI policy wonks declare 'sovereign agents' a threat to civilization",
+      "url": "https://www.theregister.com/security/2026/11/03/ai-policy-wonks-declare-sovereign-agents-a-threat-to-civilization/5307354",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-11-03T19:33:01.000Z",
+      "summary": "These are AI agents that operate outside of human control and 'pursue open-ended, evolving survival'",
+      "tags": [
+        "cloud-risk",
+        "security"
+      ],
+      "score": 100,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 78
     },
     {
       "id": "1fc47ac1797df9",
@@ -504,6 +523,25 @@
       "pressure": 92
     },
     {
+      "id": "6f70f1b6aea6d7",
+      "title": "Diagnose Distributed AI Workload Failures with NVIDIA Attribution",
+      "url": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-11-02T23:39:34.000Z",
+      "summary": "In distributed AI workloads, a single error can produce a cascade of symptoms. A GPU or fabric event may surface as NCCL errors on other ranks, scheduler state...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "chips"
+      ],
+      "score": 98,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
+    },
+    {
       "id": "9b9be9baf19a41",
       "title": "One Array for AI: Inside the IBM FlashSystem and Broadcom Fibre Channel Architecture Behind Oracle AI Database 26ai",
       "url": "https://www.storagereview.com/review/ibm-flashsystem-broadcom-fibre-channel-oracle-ai-database-26ai-validation",
@@ -523,6 +561,25 @@
       "pressure": 100
     },
     {
+      "id": "c192b41e4d9a54",
+      "title": "Making Kubernetes AI-Ready for NVIDIA Vera Rubin on Day One",
+      "url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-11-02T18:00:00.000Z",
+      "summary": "Configuring and optimizing Kubernetes for new GPU hardware such as NVIDIA Vera Rubin is complex and error-prone. Drivers, kernels, runtimes, networking,...",
+      "tags": [
+        "ai-infrastructure",
+        "private-cloud",
+        "networking"
+      ],
+      "score": 96,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 84
+    },
+    {
       "id": "6413000ed50dff",
       "title": "Intel Q3 2026 Earnings Data Center Soars While PC Faces Memory Pressure",
       "url": "https://www.servethehome.com/intel-q3-2026-earnings-data-center-foundry-client/",
@@ -539,42 +596,6 @@
       "score": 94,
       "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
       "onPremAngle": "Cloud bill pressure",
-      "pressure": 76
-    },
-    {
-      "id": "b91087a3b6e099",
-      "title": "Where Solid-State Micro-Cooling Fits in Data Centers",
-      "url": "https://www.datacenterknowledge.com/cooling/where-solid-state-micro-cooling-fits-in-data-centers",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-10-28T09:00:00.000Z",
-      "summary": "Solid-state micro-cooling could help data centers reduce hotspots in SSDs and other subsystems that liquid cooling and system fans don't fully reach.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 94,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 76
-    },
-    {
-      "id": "3ba57eeee5096d",
-      "title": "North Korean fake job interview led to $6.3B Binance heist",
-      "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-11-03T22:04:45.000Z",
-      "summary": "'It was not a single isolated breach or a simple phishing incident,' exchange says",
-      "tags": [
-        "cloud-risk",
-        "security"
-      ],
-      "score": 92,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Build-versus-rent signal",
       "pressure": 76
     },
     {
@@ -598,40 +619,58 @@
       "pressure": 84
     },
     {
-      "id": "aecfe1272a998a",
-      "title": "72-GPU NVIDIA Vera Rubin NVL72 Racks Anchor OCI’s Planned Multi-Gigawatt Expansion",
-      "url": "https://www.storagereview.com/news/nvidia-vera-rubin-nvl72-vera-cpus-generally-available-oci-multi-gigawatt-superclusters",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-29T15:32:37.000Z",
-      "summary": "NVIDIA and Oracle plan to expand Oracle Cloud Infrastructure (OCI) Superclusters with NVIDIA Vera Rubin NVL72 systems to multi-gigawatt scale, and both Vera Rubin NVL72 and NVIDIA Vera CPUs are now generally available on OCI. The companies announced the pair...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 92,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 92
-    },
-    {
-      "id": "0ec6940c7d2478",
-      "title": "Britain on notice: AI-powered ransomware attacks to arrive by 2028",
-      "url": "https://www.theregister.com/security/2026/11/03/britain-on-notice-ai-powered-ransomware-attacks-to-arrive-by-2028/5307200",
+      "id": "3ba57eeee5096d",
+      "title": "North Korean fake job interview led to $6.3B Binance heist",
+      "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
       "category": "security",
-      "publishedAt": "2026-11-03T12:39:25.000Z",
-      "summary": "Cyber agency warns critical infrastructure is a likely target as chief urges bosses to stop doing 'tech on the cheap'",
+      "publishedAt": "2026-11-03T22:04:45.000Z",
+      "summary": "'It was not a single isolated breach or a simple phishing incident,' exchange says",
       "tags": [
+        "cloud-risk",
         "security"
       ],
-      "score": 91,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "score": 87,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 76
+    },
+    {
+      "id": "5ab8564217dae7",
+      "title": "NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives",
+      "url": "https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-01T03:00:28.000Z",
+      "summary": "As production hardware starts shipping, NVIDIA has updated some of the specifications for its Rubin GPU platforms The post NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives appeared first on ServeTheHome .",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 86,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 76
+    },
+    {
+      "id": "e8651672f0b831",
+      "title": "VMware returns to low-end server virtualization with 'vSphere Express'",
+      "url": "https://www.theregister.com/virtualization/2026/11/04/vmware-returns-to-low-end-server-virtualization-with-vsphere-express/5307466",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "virtualization",
+      "publishedAt": "2026-11-04T17:01:00.000Z",
+      "summary": "128-cores max, sold on distributors' marketplaces, and in with a shot of restoring some trust",
+      "tags": [
+        "private-cloud",
+        "servers"
+      ],
+      "score": 85,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
     },
     {
       "id": "42e9e69ba0c3da",
@@ -647,28 +686,27 @@
         "servers",
         "storage"
       ],
-      "score": 91,
+      "score": 85,
       "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 82
     },
     {
-      "id": "5ab8564217dae7",
-      "title": "NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives",
-      "url": "https://www.servethehome.com/nvidia-updates-rubin-gpu-specs-as-first-production-hardware-arrives/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-01T03:00:28.000Z",
-      "summary": "As production hardware starts shipping, NVIDIA has updated some of the specifications for its Rubin GPU platforms The post NVIDIA Updates Rubin GPU Specs as First Production Hardware Arrives appeared first on ServeTheHome .",
+      "id": "3ffb3a22224ae0",
+      "title": "MariaDB upscales into single database for enterprise AI agents",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/11/04/mariadb-upscales-into-single-database-for-enterprise-ai-agents/5307312",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "ai-ml",
+      "publishedAt": "2026-11-04T11:11:00.000Z",
+      "summary": "No summary was provided by the source feed.",
       "tags": [
-        "ai-infrastructure",
-        "servers"
+        "storage"
       ],
-      "score": 89,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 76
+      "score": 80,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     },
     {
       "id": "ce6b4701ffda30",
@@ -684,94 +722,129 @@
         "ai-infrastructure",
         "servers"
       ],
-      "score": 87,
+      "score": 80,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
     },
     {
-      "id": "62ce4aba549d40",
-      "title": "Marvell Proposes Acquiring Lumentum to Combine Optical Circuit Switching with AI Connectivity Silicon",
-      "url": "https://www.servethehome.com/marvell-to-acquire-lumentum-115-billion-optical-ai-connectivity/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-02T22:30:09.000Z",
-      "summary": "Marvell announced its intention to acquire Lumentum in a $115B acquisition to further optical connectivity in the AI era The post Marvell Proposes Acquiring Lumentum to Combine Optical Circuit Switching with AI Connectivity Silicon appeared first on ServeTheH...",
+      "id": "3425401c0e9e8e",
+      "title": "US gov IT worker pleads guilty to sending Top Secret files to Ethiopia",
+      "url": "https://www.theregister.com/security/2026/11/04/us-gov-it-worker-pleads-guilty-to-sending-top-secret-files-to-ethiopia/5307595",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-11-04T15:39:30.000Z",
+      "summary": "Help desk technician agrees to minimum 10-year jail term after being caught copying files for more than 2 years",
       "tags": [
-        "servers"
+        "security"
       ],
-      "score": 80,
+      "score": 78,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
+    },
+    {
+      "id": "1df006372828d9",
+      "title": "Veeam goes to Southend-On-Sea",
+      "url": "https://www.blocksandfiles.com/data-protection/2026/11/04/veeam-goes-to-southend-on-sea/5307574",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "data protection",
+      "publishedAt": "2026-11-04T14:01:57.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage",
+        "data"
+      ],
+      "score": 78,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
     },
     {
-      "id": "25864ebd9cd6f0",
-      "title": "AMD on track to overtake Intel as biggest x86 outfit",
-      "url": "https://www.theregister.com/systems/2026/11/04/amd-on-track-to-overtake-intel-as-biggest-x86-outfit/5307448",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "systems",
-      "publishedAt": "2026-11-04T04:24:06.000Z",
-      "summary": "CEO says supply chain can cope with surging datacenter and AI demand",
+      "id": "8827bc1ad03ae6",
+      "title": "New capabilities to power agents at scale with Google's Agentic Data Cloud",
+      "url": "https://cloud.google.com/blog/products/databases/whats-new-across-googles-agentic-data-cloud/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "data analytics",
+      "publishedAt": "2026-11-04T14:00:00.000Z",
+      "summary": "Not long ago, we were entering the agentic era; today, organizations are deriving significant value from running agents in production. The opportunity to capture new revenue streams, improve efficiency, and manage risk makes reimagining operations with agents...",
       "tags": [
-        "data-centers"
+        "power-cooling"
       ],
-      "score": 79,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
+      "score": 78,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
       "pressure": 60
     },
     {
-      "id": "6181477e241437",
-      "title": "British fintech Revolut slashes AI coding costs 10x by cutting out Claude and going self-hosted",
-      "url": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "ai and ml",
-      "publishedAt": "2026-11-03T20:07:29.000Z",
-      "summary": "Turns out cheap tokens get engineers doing things that save time, like debugging and tackling Jira tickets",
+      "id": "da9c7cb545de8a",
+      "title": "Commvault looking to identify identity attack risks and get them fixed",
+      "url": "https://www.blocksandfiles.com/data-protection/2026/11/04/commvault-looking-to-identify-identity-attack-risks-and-get-them-fixed/5307501",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "data protection",
+      "publishedAt": "2026-11-04T13:56:52.000Z",
+      "summary": "No summary was provided by the source feed.",
       "tags": [
-        "private-cloud"
+        "storage",
+        "data"
       ],
-      "score": 75,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "score": 78,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 50
     },
     {
-      "id": "b64589e4339314",
-      "title": "GSMA warns of growing risks to mobile networks from extreme weather",
-      "url": "https://www.theregister.com/networks/2026/11/03/gsma-warns-of-growing-risks-to-mobile-networks-from-extreme-weather/5307308",
+      "id": "d5be299d7b6bc1",
+      "title": "Cyberattack on French plasma stores is enough to make your blood boil",
+      "url": "https://www.theregister.com/security/2026/11/04/cyberattack-on-french-plasma-stores-is-enough-to-make-your-blood-boil/5307519",
       "source": "The Register",
       "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "networks",
-      "publishedAt": "2026-11-03T17:54:41.000Z",
-      "summary": "Mobile comms body wants a joined-up approach from governments and regulators to mitigate downtime",
+      "category": "security",
+      "publishedAt": "2026-11-04T11:56:54.000Z",
+      "summary": "Attackers reportedly set cold-room controls to 110°C, but safeguards prevented stock losses",
       "tags": [
-        "cloud-risk"
+        "security"
       ],
-      "score": 75,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
+      "score": 76,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
       "pressure": 60
     },
     {
-      "id": "a07ecafbd592d4",
-      "title": "Support New AI Frameworks Faster Using NVIDIA Workload Map",
-      "url": "https://developer.nvidia.com/blog/support-new-ai-frameworks-faster-using-nvidia-workload-map/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-11-02T16:00:00.000Z",
-      "summary": "NVIDIA DSX AI Factory Platform brings together technologies to help the ecosystem design, build, and operate more efficient AI factories, including open source,...",
+      "id": "b9b83da427004a",
+      "title": "Chrome Enterprise Premium drives 50%+ projected cost reduction for Mercari",
+      "url": "https://cloud.google.com/blog/products/chrome-enterprise/chrome-enterprise-premium-drives-50-projected-cost-reduction-for-mercari/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "chrome enterprise",
+      "publishedAt": "2026-11-04T09:00:00.000Z",
+      "summary": "Editor's Note: Today's post is by Yu Susaki, Manager of Enterprise Security at Mercari , a leading consumer-to-consumer (C2C) marketplace with more than 20 million monthly active users. Mercari selected Chrome Enterprise Premium and Chromebooks to secure its...",
       "tags": [
-        "data-centers",
-        "ai-infrastructure"
+        "security"
+      ],
+      "score": 76,
+      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 70
+    },
+    {
+      "id": "ded4cd27b96c43",
+      "title": "Musk's Colossus DC cluster – what's the storage situation?",
+      "url": "https://www.blocksandfiles.com/flash/2026/11/04/musks-colossus-dc-cluster-whats-the-storage-situation/5307253",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "flash",
+      "publishedAt": "2026-11-04T10:09:00.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage"
       ],
       "score": 75,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     },
@@ -790,79 +863,6 @@
       ],
       "score": 75,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "0f539e1158bd42",
-      "title": "Password manager mSecure tells users to change passwords, won't say why",
-      "url": "https://www.theregister.com/security/2026/11/03/password-manager-msecure-tells-users-to-change-passwords-wont-say-why/5307296",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-11-03T16:10:00.000Z",
-      "summary": "Customers left wondering what's been compromised after vendor advises resetting passwords, 2FA and passkeys",
-      "tags": [
-        "security"
-      ],
-      "score": 74,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
-      "id": "33a52b27ea1922",
-      "title": "Dell XPS 16 Creator Edition Review: RTX Spark N1X Holds Full Speed in a 17.8mm Chassis",
-      "url": "https://www.storagereview.com/review/dell-xps-16-creator-edition-review-rtx-spark-n1x",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-10-29T21:02:44.000Z",
-      "summary": "The Dell XPS 16 Creator Edition is the first XPS built on NVIDIA’s RTX Spark N1X. Dell houses the chip in what it calls its thinnest high-performance XPS yet: a 17.8mm CNC aluminum chassis with a 3.2K Tandem OLED touch panel, a 99Wh battery, three USB4 ports,...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage",
-        "chips"
-      ],
-      "score": 74,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
-    },
-    {
-      "id": "b380dece9da832",
-      "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
-      "url": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-10-30T15:01:36.000Z",
-      "summary": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "storage"
-      ],
-      "score": 73,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 84
-    },
-    {
-      "id": "e69bcbe86be86a",
-      "title": "Backblaze leaves backup behind as cloud storage takes off",
-      "url": "https://www.blocksandfiles.com/disk/2026/11/03/backblaze-leaves-backup-behind-as-cloud-storage-takes-off/5307206",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "disk",
-      "publishedAt": "2026-11-03T14:14:34.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 72,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     }
