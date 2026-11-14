@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T06:17:43.367Z",
+  "generatedAt": "2026-11-14T17:58:25.177Z",
   "windowHours": 168,
   "maxArticleAgeDays": 30,
   "sourcesChecked": 11,
@@ -25,7 +25,7 @@
     },
     {
       "name": "cloud-risk",
-      "count": 7
+      "count": 6
     },
     {
       "name": "security",
@@ -44,7 +44,7 @@
       "count": 2
     },
     {
-      "name": "networking",
+      "name": "cloud-cost",
       "count": 2
     }
   ],
@@ -142,7 +142,7 @@
         "power-cooling",
         "capacity"
       ],
-      "score": 144,
+      "score": 138,
       "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
       "onPremAngle": "Capacity pressure",
       "pressure": 94
@@ -167,26 +167,6 @@
       "pressure": 100
     },
     {
-      "id": "710bd913f78290",
-      "title": "Run Native DLA Inference in Python on NVIDIA Jetson AGX Orin Using cuDLA",
-      "url": "https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "computer vision / video analytics",
-      "publishedAt": "2026-11-13T18:57:10.000Z",
-      "summary": "AI applications at the edge often need to run multiple neural networks within limited compute and power budgets. NVIDIA Deep Learning Accelerator (DLA)...",
-      "tags": [
-        "ai-infrastructure",
-        "power-cooling",
-        "networking",
-        "chips"
-      ],
-      "score": 119,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 100
-    },
-    {
       "id": "4422a4680fe59b",
       "title": "Google Adds TPU 8tx, 8i Max for Enterprise AI",
       "url": "https://www.datacenterknowledge.com/data-center-chips/google-adds-tpu-8tx-8i-max-for-enterprise-ai",
@@ -207,22 +187,24 @@
       "pressure": 84
     },
     {
-      "id": "fb7d5d7fe7c1c1",
-      "title": "Huang Resigns: Nvidia's AI Infrastructure Roadmap in Question",
-      "url": "https://www.datacenterknowledge.com/data-center-chips/huang-resigns-nvidia-s-ai-infrastructure-roadmap-in-question",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-11-12T21:25:45.000Z",
-      "summary": "The departure of Jensen Huang without a clear long-term successor could mean turmoil at the data center economy bellwether, analysts say.",
+      "id": "710bd913f78290",
+      "title": "Run Native DLA Inference in Python on NVIDIA Jetson AGX Orin Using cuDLA",
+      "url": "https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "computer vision / video analytics",
+      "publishedAt": "2026-11-13T18:57:10.000Z",
+      "summary": "AI applications at the edge often need to run multiple neural networks within limited compute and power budgets. NVIDIA Deep Learning Accelerator (DLA)...",
       "tags": [
-        "data-centers",
-        "ai-infrastructure"
+        "ai-infrastructure",
+        "power-cooling",
+        "networking",
+        "chips"
       ],
       "score": 114,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 74
+      "onPremAngle": "Capacity pressure",
+      "pressure": 100
     },
     {
       "id": "ee5800fd18ab75",
@@ -239,10 +221,28 @@
         "storage",
         "chips"
       ],
-      "score": 113,
+      "score": 108,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
       "pressure": 90
+    },
+    {
+      "id": "fb7d5d7fe7c1c1",
+      "title": "Huang Resigns: Nvidia's AI Infrastructure Roadmap in Question",
+      "url": "https://www.datacenterknowledge.com/data-center-chips/huang-resigns-nvidia-s-ai-infrastructure-roadmap-in-question",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-11-12T21:25:45.000Z",
+      "summary": "The departure of Jensen Huang without a clear long-term successor could mean turmoil at the data center economy bellwether, analysts say.",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure"
+      ],
+      "score": 107,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 74
     },
     {
       "id": "8794e8aed037ab",
@@ -279,79 +279,6 @@
       "pressure": 50
     },
     {
-      "id": "095b923a0c6ce0",
-      "title": "Lenovo ThinkPad T14 Gen 7 Review: LPCAMM2 Memory, Ethernet, and a 75Wh Battery",
-      "url": "https://www.storagereview.com/review/lenovo-thinkpad-t14-gen-7-review",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T20:45:39.000Z",
-      "summary": "The Lenovo ThinkPad T14 Gen 7 is the mainstream 14-inch member of Lenovo’s business lineup, and the Intel version pairs Core Ultra Series 3 processors with replaceable LPCAMM2 memory, a Gigabit Ethernet port, two USB-A ports, and a 75Wh battery option in a ch...",
-      "tags": [
-        "servers",
-        "storage",
-        "networking"
-      ],
-      "score": 94,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "bcf4cb042f3ca6",
-      "title": "Labor Shortages Threaten Data Center Schedules",
-      "url": "https://www.datacenterknowledge.com/data-center-construction/labor-shortages-threaten-data-center-schedules",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-11-13T10:00:00.000Z",
-      "summary": "Labor shortages and rising costs are making data center schedules more fragile, especially in Southern markets where specialized crews are already stretched.",
-      "tags": [
-        "data-centers"
-      ],
-      "score": 94,
-      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "7f3abb4a91d20b",
-      "title": "The Rural Shift in Data Center Development",
-      "url": "https://www.datacenterknowledge.com/data-center-site-selection/the-rural-shift-in-data-center-development",
-      "source": "Data Center Knowledge",
-      "sourceHomepage": "https://www.datacenterknowledge.com",
-      "category": "Data Centers",
-      "publishedAt": "2026-11-11T10:00:00.000Z",
-      "summary": "As pressure on power, land, and permitting intensifies, more data centers are moving to rural areas, making remote sites a growing part of future development.",
-      "tags": [
-        "data-centers",
-        "power-cooling"
-      ],
-      "score": 94,
-      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
-      "onPremAngle": "Capacity pressure",
-      "pressure": 68
-    },
-    {
-      "id": "e009d22767a918",
-      "title": "Lenovo ThinkPad T1g Gen 9 Review: A 12GB GeForce RTX 5070 in a vPro ThinkPad",
-      "url": "https://www.storagereview.com/review/lenovo-thinkpad-t1g-gen-9-review-geforce-rtx-5070",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-12T18:59:02.000Z",
-      "summary": "The Lenovo ThinkPad T1g Gen 9 pairs a business ThinkPad with a consumer graphics card. It is a 16-inch aluminum notebook with Intel vPro, MIL-STD-810H testing, a discrete TPM, and a TrackPoint. Its top graphics option is the GeForce RTX 5070 Laptop GPU with 1...",
-      "tags": [
-        "ai-infrastructure",
-        "servers",
-        "storage"
-      ],
-      "score": 92,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 76
-    },
-    {
       "id": "05c1e94659294e",
       "title": "IT-agnostic DLC systems: key considerations",
       "url": "https://journal.uptimeinstitute.com/it-agnostic-dlc-systems-key-considerations/",
@@ -372,149 +299,77 @@
       "pressure": 84
     },
     {
-      "id": "6b4fdf108feb19",
-      "title": "Broadcom Hands VM API to the CNCF Sandbox, Co-Chairs a Workload Conformance Group, and Validates 20+ Partners on VKS",
-      "url": "https://www.storagereview.com/news/broadcom-vm-api-cncf-sandbox-workload-conformance-vks-validated-partners",
+      "id": "095b923a0c6ce0",
+      "title": "Lenovo ThinkPad T14 Gen 7 Review: LPCAMM2 Memory, Ethernet, and a 75Wh Battery",
+      "url": "https://www.storagereview.com/review/lenovo-thinkpad-t14-gen-7-review",
       "source": "StorageReview",
       "sourceHomepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T14:31:16.000Z",
-      "summary": "Broadcom made three Kubernetes announcements at KubeCon North America 2026: its VM API project has been accepted into the CNCF Sandbox, it is co-chairing a newly formed Workload Conformance Working Group in the Kubernetes community, and more than 20 partner s...",
-      "tags": [
-        "private-cloud",
-        "servers",
-        "storage"
-      ],
-      "score": 91,
-      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "233284593346ec",
-      "title": "Druva Agent Recovery Brings Point-in-Time Restores to Copilot Studio Agents",
-      "url": "https://www.storagereview.com/news/druva-agent-recovery-copilot-studio-power-platform-azure-sre-agent",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T14:12:35.000Z",
-      "summary": "Druva announced Druva Agent Recovery, a set of AI Resilience capabilities that back up custom AI agents and restore them when they are deleted or unexpectedly changed. Support starts with Microsoft Copilot Studio, Microsoft’s platform for building custom agen...",
-      "tags": [
-        "cloud-risk",
-        "servers",
-        "storage"
-      ],
-      "score": 91,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "4473a8e2969c9d",
-      "title": "This is the Meta MetaRoCE Network Adapter",
-      "url": "https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-12T04:51:39.000Z",
-      "summary": "At OCP Summit 2026, Meta showed off its MetaRoCE adapter designed to scale to million-GPU training clusters The post This is the Meta MetaRoCE Network Adapter appeared first on ServeTheHome .",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 91,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 76
-    },
-    {
-      "id": "93bf135a5cd49c",
-      "title": "Faster Scientific Simulations with New FP64 Algorithms in NVIDIA cuBLAS",
-      "url": "https://developer.nvidia.com/blog/faster-scientific-simulations-with-new-fp64-algorithms-in-nvidia-cublas/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data center / cloud",
-      "publishedAt": "2026-11-13T22:13:51.000Z",
-      "summary": "Many scientific simulations, from molecular chemistry to materials science, spend the majority of their execution time computing high-precision dense general...",
-      "tags": [
-        "data-centers",
-        "ai-infrastructure",
-        "cloud-cost"
-      ],
-      "score": 90,
-      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
-    },
-    {
-      "id": "d93e45e65f730b",
-      "title": "Run GPU-Powered Black Hole Interferometry with NVIDIA cuPhoton",
-      "url": "https://developer.nvidia.com/blog/run-gpu-powered-black-hole-interferometry-with-nvidia-cuphoton/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "data science",
-      "publishedAt": "2026-11-13T21:17:17.000Z",
-      "summary": "Imaging black holes is challenging because they are distant and appear tiny in the sky—for example, M87*’s observed ring spans just 42 microarcseconds. The...",
-      "tags": [
-        "ai-infrastructure"
-      ],
-      "score": 90,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
-      "pressure": 68
-    },
-    {
-      "id": "1ac58729de0276",
-      "title": "IBM and Microsoft Launch Imagine Enterprise With More Than 6,000 Prebuilt AI Agents and Assets",
-      "url": "https://www.storagereview.com/news/ibm-microsoft-imagine-enterprise-ai-agent-platform",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T14:18:25.000Z",
-      "summary": "IBM and Microsoft announced Imagine Enterprise, a platform for building, running, and governing AI agents that carry out industry-specific business processes. IBM Consulting contributes more than 6,000 prebuilt AI agents and assets built on IBM Consulting Adv...",
+      "publishedAt": "2026-11-13T20:45:39.000Z",
+      "summary": "The Lenovo ThinkPad T14 Gen 7 is the mainstream 14-inch member of Lenovo’s business lineup, and the Intel version pairs Core Ultra Series 3 processors with replaceable LPCAMM2 memory, a Gigabit Ethernet port, two USB-A ports, and a 75Wh battery option in a ch...",
       "tags": [
         "servers",
-        "storage"
-      ],
-      "score": 89,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "27bb72006f05fb",
-      "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
-      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
-      "source": "NVIDIA Technical Blog",
-      "sourceHomepage": "https://developer.nvidia.com/blog",
-      "category": "agentic ai / generative ai",
-      "publishedAt": "2026-11-13T17:00:00.000Z",
-      "summary": "Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no longer fit on one machine. Two NVIDIA DGX Stations...",
-      "tags": [
-        "ai-infrastructure"
+        "storage",
+        "networking"
       ],
       "score": 88,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "AI compute pressure",
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "7f3abb4a91d20b",
+      "title": "The Rural Shift in Data Center Development",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/the-rural-shift-in-data-center-development",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-11-11T10:00:00.000Z",
+      "summary": "As pressure on power, land, and permitting intensifies, more data centers are moving to rural areas, making remote sites a growing part of future development.",
+      "tags": [
+        "data-centers",
+        "power-cooling"
+      ],
+      "score": 88,
+      "whyUseful": "Power and cooling constraints shape where dense compute can realistically live.",
+      "onPremAngle": "Capacity pressure",
       "pressure": 68
     },
     {
-      "id": "2a4edaa01fa994",
-      "title": "Dell Pro Precision 9 T4 Review: 86 Xeon Cores and Two RTX PRO 6000 GPUs for Models Too Big for One Card",
-      "url": "https://www.storagereview.com/review/dell-pro-precision-9-t4-review",
+      "id": "bcf4cb042f3ca6",
+      "title": "Labor Shortages Threaten Data Center Schedules",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/labor-shortages-threaten-data-center-schedules",
+      "source": "Data Center Knowledge",
+      "sourceHomepage": "https://www.datacenterknowledge.com",
+      "category": "Data Centers",
+      "publishedAt": "2026-11-13T10:00:00.000Z",
+      "summary": "Labor shortages and rising costs are making data center schedules more fragile, especially in Southern markets where specialized crews are already stretched.",
+      "tags": [
+        "data-centers"
+      ],
+      "score": 87,
+      "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "e009d22767a918",
+      "title": "Lenovo ThinkPad T1g Gen 9 Review: A 12GB GeForce RTX 5070 in a vPro ThinkPad",
+      "url": "https://www.storagereview.com/review/lenovo-thinkpad-t1g-gen-9-review-geforce-rtx-5070",
       "source": "StorageReview",
       "sourceHomepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T22:08:22.000Z",
-      "summary": "The Dell Pro Precision 9 T4 is the single-socket tower at the top of Dell’s Pro Precision line, and our review unit is configured for local AI at a scale most workstations can’t reach. It pairs Intel’s 86-core Xeon 698X with 256GB of DDR5-6400 ECC memory, two...",
+      "publishedAt": "2026-11-12T18:59:02.000Z",
+      "summary": "The Lenovo ThinkPad T1g Gen 9 pairs a business ThinkPad with a consumer graphics card. It is a 16-inch aluminum notebook with Intel vPro, MIL-STD-810H testing, a discrete TPM, and a TrackPoint. Its top graphics option is the GeForce RTX 5070 Laptop GPU with 1...",
       "tags": [
+        "ai-infrastructure",
         "servers",
         "storage"
       ],
       "score": 87,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 66
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 76
     },
     {
       "id": "5b0b2ba25eb34a",
@@ -536,6 +391,151 @@
       "pressure": 92
     },
     {
+      "id": "6b4fdf108feb19",
+      "title": "Broadcom Hands VM API to the CNCF Sandbox, Co-Chairs a Workload Conformance Group, and Validates 20+ Partners on VKS",
+      "url": "https://www.storagereview.com/news/broadcom-vm-api-cncf-sandbox-workload-conformance-vks-validated-partners",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-13T14:31:16.000Z",
+      "summary": "Broadcom made three Kubernetes announcements at KubeCon North America 2026: its VM API project has been accepted into the CNCF Sandbox, it is co-chairing a newly formed Workload Conformance Working Group in the Kubernetes community, and more than 20 partner s...",
+      "tags": [
+        "private-cloud",
+        "servers",
+        "storage"
+      ],
+      "score": 86,
+      "whyUseful": "A direct private-cloud or hybrid-cloud signal for teams reconsidering what should run on-prem.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "233284593346ec",
+      "title": "Druva Agent Recovery Brings Point-in-Time Restores to Copilot Studio Agents",
+      "url": "https://www.storagereview.com/news/druva-agent-recovery-copilot-studio-power-platform-azure-sre-agent",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-13T14:12:35.000Z",
+      "summary": "Druva announced Druva Agent Recovery, a set of AI Resilience capabilities that back up custom AI agents and restore them when they are deleted or unexpectedly changed. Support starts with Microsoft Copilot Studio, Microsoft’s platform for building custom agen...",
+      "tags": [
+        "cloud-risk",
+        "servers",
+        "storage"
+      ],
+      "score": 86,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "93bf135a5cd49c",
+      "title": "Faster Scientific Simulations with New FP64 Algorithms in NVIDIA cuBLAS",
+      "url": "https://developer.nvidia.com/blog/faster-scientific-simulations-with-new-fp64-algorithms-in-nvidia-cublas/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data center / cloud",
+      "publishedAt": "2026-11-13T22:13:51.000Z",
+      "summary": "Many scientific simulations, from molecular chemistry to materials science, spend the majority of their execution time computing high-precision dense general...",
+      "tags": [
+        "data-centers",
+        "ai-infrastructure",
+        "cloud-cost"
+      ],
+      "score": 85,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
+      "id": "d93e45e65f730b",
+      "title": "Run GPU-Powered Black Hole Interferometry with NVIDIA cuPhoton",
+      "url": "https://developer.nvidia.com/blog/run-gpu-powered-black-hole-interferometry-with-nvidia-cuphoton/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "data science",
+      "publishedAt": "2026-11-13T21:17:17.000Z",
+      "summary": "Imaging black holes is challenging because they are distant and appear tiny in the sky—for example, M87*’s observed ring spans just 42 microarcseconds. The...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 85,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 68
+    },
+    {
+      "id": "4473a8e2969c9d",
+      "title": "This is the Meta MetaRoCE Network Adapter",
+      "url": "https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-12T04:51:39.000Z",
+      "summary": "At OCP Summit 2026, Meta showed off its MetaRoCE adapter designed to scale to million-GPU training clusters The post This is the Meta MetaRoCE Network Adapter appeared first on ServeTheHome .",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 85,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 76
+    },
+    {
+      "id": "1ac58729de0276",
+      "title": "IBM and Microsoft Launch Imagine Enterprise With More Than 6,000 Prebuilt AI Agents and Assets",
+      "url": "https://www.storagereview.com/news/ibm-microsoft-imagine-enterprise-ai-agent-platform",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-13T14:18:25.000Z",
+      "summary": "IBM and Microsoft announced Imagine Enterprise, a platform for building, running, and governing AI agents that carry out industry-specific business processes. IBM Consulting contributes more than 6,000 prebuilt AI agents and assets built on IBM Consulting Adv...",
+      "tags": [
+        "servers",
+        "storage"
+      ],
+      "score": 84,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "27bb72006f05fb",
+      "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
+      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+      "source": "NVIDIA Technical Blog",
+      "sourceHomepage": "https://developer.nvidia.com/blog",
+      "category": "agentic ai / generative ai",
+      "publishedAt": "2026-11-13T17:00:00.000Z",
+      "summary": "Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no longer fit on one machine. Two NVIDIA DGX Stations...",
+      "tags": [
+        "ai-infrastructure"
+      ],
+      "score": 83,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "AI compute pressure",
+      "pressure": 68
+    },
+    {
+      "id": "2a4edaa01fa994",
+      "title": "Dell Pro Precision 9 T4 Review: 86 Xeon Cores and Two RTX PRO 6000 GPUs for Models Too Big for One Card",
+      "url": "https://www.storagereview.com/review/dell-pro-precision-9-t4-review",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-13T22:08:22.000Z",
+      "summary": "The Dell Pro Precision 9 T4 is the single-socket tower at the top of Dell’s Pro Precision line, and our review unit is configured for local AI at a scale most workstations can’t reach. It pairs Intel’s 86-core Xeon 698X with 256GB of DDR5-6400 ECC memory, two...",
+      "tags": [
+        "servers",
+        "storage"
+      ],
+      "score": 82,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 66
+    },
+    {
       "id": "af923722ba7390",
       "title": "KIOXIA LC9 245.76TB SSDs Put 157PB of Dell ObjectScale Flash in a Single 42U Rack",
       "url": "https://www.storagereview.com/news/kioxia-lc9-dell-objectscale-157pb-42u-rack",
@@ -549,10 +549,28 @@
         "servers",
         "storage"
       ],
-      "score": 86,
+      "score": 81,
       "whyUseful": "A facility, capacity, or colocation signal tied to the physical layer behind cloud and AI.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 74
+    },
+    {
+      "id": "ad7e0c10803a86",
+      "title": "Autonomous defense at cloud speed with SentinelOne and Google Security Operations",
+      "url": "https://cloud.google.com/blog/topics/partners/autonomous-defense-at-cloud-speed-with-sentinelone-and-google-security-operations/",
+      "source": "Google Cloud Blog",
+      "sourceHomepage": "https://cloud.google.com/blog",
+      "category": "security & identity",
+      "publishedAt": "2026-11-12T17:00:00.000Z",
+      "summary": "Modern security operations centers (SOCs) face an ongoing pipeline dilemma. While ingesting comprehensive endpoint telemetry is non-negotiable for defense, conventional delivery paths often drive up transfer overhead and alert latency. As attackers operate at...",
+      "tags": [
+        "cloud-risk",
+        "security"
+      ],
+      "score": 80,
+      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
+      "onPremAngle": "Resilience pressure",
+      "pressure": 78
     },
     {
       "id": "5e0d8fe2bcc3a5",
@@ -567,7 +585,7 @@
         "servers",
         "security"
       ],
-      "score": 84,
+      "score": 79,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
@@ -584,28 +602,10 @@
       "tags": [
         "cloud-risk"
       ],
-      "score": 84,
+      "score": 79,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Resilience pressure",
       "pressure": 68
-    },
-    {
-      "id": "ad7e0c10803a86",
-      "title": "Autonomous defense at cloud speed with SentinelOne and Google Security Operations",
-      "url": "https://cloud.google.com/blog/topics/partners/autonomous-defense-at-cloud-speed-with-sentinelone-and-google-security-operations/",
-      "source": "Google Cloud Blog",
-      "sourceHomepage": "https://cloud.google.com/blog",
-      "category": "security & identity",
-      "publishedAt": "2026-11-12T17:00:00.000Z",
-      "summary": "Modern security operations centers (SOCs) face an ongoing pipeline dilemma. While ingesting comprehensive endpoint telemetry is non-negotiable for defense, conventional delivery paths often drive up transfer overhead and alert latency. As attackers operate at...",
-      "tags": [
-        "cloud-risk",
-        "security"
-      ],
-      "score": 84,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 78
     },
     {
       "id": "483c4341b3ed4f",
@@ -619,7 +619,7 @@
       "tags": [
         "cloud-risk"
       ],
-      "score": 83,
+      "score": 78,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Resilience pressure",
       "pressure": 60
@@ -637,10 +637,27 @@
         "cloud-risk",
         "security"
       ],
-      "score": 83,
+      "score": 78,
       "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
+    },
+    {
+      "id": "8bcec772a8112a",
+      "title": "Microsoft's school email bill gives rivals something to smile about",
+      "url": "https://www.theregister.com/saas/2026/11/14/microsofts-school-email-bill-gives-rivals-something-to-smile-about/5309296",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "saas",
+      "publishedAt": "2026-11-14T10:27:00.000Z",
+      "summary": "Collabora and Nextcloud pitch alternatives as education customers weigh the cost of losing free services",
+      "tags": [
+        "cloud-cost"
+      ],
+      "score": 77,
+      "whyUseful": "A cost or pricing signal that can change the math between public cloud and owned infrastructure.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 60
     },
     {
       "id": "f69daa6f1651f3",
@@ -656,10 +673,27 @@
         "storage",
         "chips"
       ],
-      "score": 83,
+      "score": 77,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 66
+    },
+    {
+      "id": "99f04482870550",
+      "title": "Big Tech takes a beating as online safety experts accuse companies of doing bare minimum",
+      "url": "https://www.theregister.com/security/2026/11/14/big-tech-takes-a-beating-as-online-safety-experts-accuse-companies-of-doing-bare-minimum/5309302",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "security",
+      "publishedAt": "2026-11-14T08:18:00.000Z",
+      "summary": "Accessing banned content is as easy as whipping out a thesaurus, Parliament's Communications and Digital Committee hears",
+      "tags": [
+        "security"
+      ],
+      "score": 76,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 60
     },
     {
       "id": "06f42d999cedf1",
@@ -673,27 +707,9 @@
       "tags": [
         "ai-infrastructure"
       ],
-      "score": 81,
+      "score": 76,
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "AI compute pressure",
-      "pressure": 58
-    },
-    {
-      "id": "8fca4401ef65e7",
-      "title": "Lenovo ThinkPad X1 2-in-1 Gen 11 Aura Edition Review: An 8-Core Convertible at 2.52 Pounds",
-      "url": "https://www.storagereview.com/review/lenovo-thinkpad-x1-2-in-1-gen-11-aura-edition-review",
-      "source": "StorageReview",
-      "sourceHomepage": "https://www.storagereview.com",
-      "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T18:53:58.000Z",
-      "summary": "The Lenovo ThinkPad X1 2-in-1 Gen 11 Aura Edition is a 14-inch business convertible that weighs 1.14kg (2.52lb) and folds through laptop, tent, stand, and tablet modes on a 360-degree hinge. Lenovo positions it as a convertible business laptop for multi-mode...",
-      "tags": [
-        "servers",
-        "storage"
-      ],
-      "score": 81,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
     },
     {
@@ -708,131 +724,28 @@
       "tags": [
         "security"
       ],
-      "score": 80,
+      "score": 76,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 68
     },
     {
-      "id": "ef17f5087ddda6",
-      "title": "HPE debuts hybrid storage configs: Rising SSD costs hit supercomputing",
-      "url": "https://www.theregister.com/storage/2026/11/13/hpe-debuts-hybrid-storage-configs-rising-ssd-costs-hit-supercomputing/5309679",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "storage",
-      "publishedAt": "2026-11-13T16:15:00.000Z",
-      "summary": "HPE aims for the market with faster, more cost-effective HPC storage to combat rising costs",
-      "tags": [
-        "storage"
-      ],
-      "score": 79,
-      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Cloud bill pressure",
-      "pressure": 68
-    },
-    {
-      "id": "70884b10b18044",
-      "title": "10ZiG Adds Amazon DCV to Its Thin Clients and RepurpOS PCs as an HP Anyware Alternative",
-      "url": "https://www.storagereview.com/news/10zig-amazon-dcv-thin-clients-repurpos-hp-anyware",
+      "id": "8fca4401ef65e7",
+      "title": "Lenovo ThinkPad X1 2-in-1 Gen 11 Aura Edition Review: An 8-Core Convertible at 2.52 Pounds",
+      "url": "https://www.storagereview.com/review/lenovo-thinkpad-x1-2-in-1-gen-11-aura-edition-review",
       "source": "StorageReview",
       "sourceHomepage": "https://www.storagereview.com",
       "category": "Storage & Servers",
-      "publishedAt": "2026-11-13T14:34:36.000Z",
-      "summary": "10ZiG Technology announced support for Amazon DCV on its thin clients and on PCs converted with its RepurpOS software, adding a remote display protocol built for graphics-intensive Windows and Linux workloads. 10ZiG is pitching the support at organizations mo...",
+      "publishedAt": "2026-11-13T18:53:58.000Z",
+      "summary": "The Lenovo ThinkPad X1 2-in-1 Gen 11 Aura Edition is a 14-inch business convertible that weighs 1.14kg (2.52lb) and folds through laptop, tent, stand, and tablet modes on a 360-degree hinge. Lenovo positions it as a convertible business laptop for multi-mode...",
       "tags": [
         "servers",
         "storage"
       ],
-      "score": 79,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "f3677d8c261b94",
-      "title": "NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately",
-      "url": "https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-12T15:08:54.000Z",
-      "summary": "NVIDIA's CEO and Co-Founder Jensen Huang has resigned from the company, effective immediately, marking a pivotal moment for the company and the AI and graphics industries at large The post NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately...",
-      "tags": [
-        "ai-infrastructure",
-        "servers"
-      ],
-      "score": 79,
-      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 58
-    },
-    {
-      "id": "156a4585a94619",
-      "title": "Patrick at Micro Center Grand Opening in Austin Texas Today",
-      "url": "https://www.servethehome.com/patrick-at-micro-center-grand-opening-in-austin-texas-today/",
-      "source": "ServeTheHome",
-      "sourceHomepage": "https://www.servethehome.com",
-      "category": "Servers & Hardware",
-      "publishedAt": "2026-11-13T16:00:18.000Z",
-      "summary": "Patrick and Jeff will be at the grand opening of the Micro Center in Austin, Texas today so if you are around, come say hi The post Patrick at Micro Center Grand Opening in Austin Texas Today appeared first on ServeTheHome .",
-      "tags": [
-        "servers"
-      ],
-      "score": 78,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "34f84cd1e001a7",
-      "title": "Neo4j’s rusty in-memory AI Agent graph database",
-      "url": "https://www.blocksandfiles.com/ai-ml/2026/11/13/neo4js-rusty-in-memory-ai-agent-graph-database/5309746",
-      "source": "Blocks & Files",
-      "sourceHomepage": "https://blocksandfiles.com",
-      "category": "ai-ml",
-      "publishedAt": "2026-11-13T15:09:45.000Z",
-      "summary": "No summary was provided by the source feed.",
-      "tags": [
-        "storage"
-      ],
-      "score": 77,
-      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
-      "onPremAngle": "Build-versus-rent signal",
-      "pressure": 50
-    },
-    {
-      "id": "8f9d7ae4bb5f31",
-      "title": "This year’s bug count just passed 100K",
-      "url": "https://www.theregister.com/security/2026/11/13/this-years-bug-count-just-passed-100k/5309882",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "security",
-      "publishedAt": "2026-11-13T20:52:17.000Z",
-      "summary": "‘We don’t have a security problem anymore. We have a data problem now’",
-      "tags": [
-        "security"
-      ],
       "score": 76,
       "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
       "onPremAngle": "Build-versus-rent signal",
-      "pressure": 60
-    },
-    {
-      "id": "c8ee2879605c48",
-      "title": "Microsoft struggling to fix massive cloud outage that's taken down email and Intune",
-      "url": "https://www.theregister.com/saas/2026/11/12/microsoft-struggling-to-fix-massive-cloud-outage-thats-taken-down-email-and-intune/5309531",
-      "source": "The Register",
-      "sourceHomepage": "https://www.theregister.com/on-prem/",
-      "category": "saas",
-      "publishedAt": "2026-11-12T23:06:06.000Z",
-      "summary": "‘Actions taken thus far have not provided the anticipated relief’",
-      "tags": [
-        "cloud-risk"
-      ],
-      "score": 76,
-      "whyUseful": "A risk, outage, latency, or compliance signal that can make controlled infrastructure more attractive.",
-      "onPremAngle": "Resilience pressure",
-      "pressure": 60
+      "pressure": 58
     },
     {
       "id": "baa9c4b439556d",
@@ -851,6 +764,93 @@
       "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
       "onPremAngle": "Build-versus-rent signal",
       "pressure": 58
+    },
+    {
+      "id": "ef17f5087ddda6",
+      "title": "HPE debuts hybrid storage configs: Rising SSD costs hit supercomputing",
+      "url": "https://www.theregister.com/storage/2026/11/13/hpe-debuts-hybrid-storage-configs-rising-ssd-costs-hit-supercomputing/5309679",
+      "source": "The Register",
+      "sourceHomepage": "https://www.theregister.com/on-prem/",
+      "category": "storage",
+      "publishedAt": "2026-11-13T16:15:00.000Z",
+      "summary": "HPE aims for the market with faster, more cost-effective HPC storage to combat rising costs",
+      "tags": [
+        "storage"
+      ],
+      "score": 74,
+      "whyUseful": "Cloud bill pressure for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Cloud bill pressure",
+      "pressure": 68
+    },
+    {
+      "id": "70884b10b18044",
+      "title": "10ZiG Adds Amazon DCV to Its Thin Clients and RepurpOS PCs as an HP Anyware Alternative",
+      "url": "https://www.storagereview.com/news/10zig-amazon-dcv-thin-clients-repurpos-hp-anyware",
+      "source": "StorageReview",
+      "sourceHomepage": "https://www.storagereview.com",
+      "category": "Storage & Servers",
+      "publishedAt": "2026-11-13T14:34:36.000Z",
+      "summary": "10ZiG Technology announced support for Amazon DCV on its thin clients and on PCs converted with its RepurpOS software, adding a remote display protocol built for graphics-intensive Windows and Linux workloads. 10ZiG is pitching the support at organizations mo...",
+      "tags": [
+        "servers",
+        "storage"
+      ],
+      "score": 74,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "f3677d8c261b94",
+      "title": "NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately",
+      "url": "https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-12T15:08:54.000Z",
+      "summary": "NVIDIA's CEO and Co-Founder Jensen Huang has resigned from the company, effective immediately, marking a pivotal moment for the company and the AI and graphics industries at large The post NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately...",
+      "tags": [
+        "ai-infrastructure",
+        "servers"
+      ],
+      "score": 73,
+      "whyUseful": "AI compute demand is stressing capacity, GPU access, and deployment economics.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 58
+    },
+    {
+      "id": "156a4585a94619",
+      "title": "Patrick at Micro Center Grand Opening in Austin Texas Today",
+      "url": "https://www.servethehome.com/patrick-at-micro-center-grand-opening-in-austin-texas-today/",
+      "source": "ServeTheHome",
+      "sourceHomepage": "https://www.servethehome.com",
+      "category": "Servers & Hardware",
+      "publishedAt": "2026-11-13T16:00:18.000Z",
+      "summary": "Patrick and Jeff will be at the grand opening of the Micro Center in Austin, Texas today so if you are around, come say hi The post Patrick at Micro Center Grand Opening in Austin Texas Today appeared first on ServeTheHome .",
+      "tags": [
+        "servers"
+      ],
+      "score": 72,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
+    },
+    {
+      "id": "34f84cd1e001a7",
+      "title": "Neo4j’s rusty in-memory AI Agent graph database",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/11/13/neo4js-rusty-in-memory-ai-agent-graph-database/5309746",
+      "source": "Blocks & Files",
+      "sourceHomepage": "https://blocksandfiles.com",
+      "category": "ai-ml",
+      "publishedAt": "2026-11-13T15:09:45.000Z",
+      "summary": "No summary was provided by the source feed.",
+      "tags": [
+        "storage"
+      ],
+      "score": 72,
+      "whyUseful": "Build-versus-rent signal for teams weighing cloud convenience against control, cost, and resilience.",
+      "onPremAngle": "Build-versus-rent signal",
+      "pressure": 50
     }
   ]
 }
